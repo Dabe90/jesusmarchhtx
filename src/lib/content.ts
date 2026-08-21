@@ -208,24 +208,115 @@ export const dailyBlessings = [
 export const houstonPrayer =
   "Father, bless Houston. Fill our streets with worship, our neighborhoods with revival, and every heart with the love of Jesus. Let this city shine with Your light. Amen.";
 
+export const salvationPrayer =
+  "Lord Jesus, I believe You died for me and rose again. I turn from sin and receive You as my Savior and Lord. Fill me with Your Holy Spirit, and teach me to walk in Your Word. Amen.";
+
+export const organizer = {
+  name: "Dear Daughter Bible Study Group",
+  credit: "Jesus March is organized by Dear Daughter Bible Study Group.",
+  summary:
+    "A Spirit-led, non-denominational Bible study open to men and women of all ages. Young people carrying Scripture — the same Spirit that moved the early church moves us today.",
+  body: [
+    "Dear Daughter Bible Study Group exists to teach the undiluted Word of God and reach every nation with the gospel of Jesus Christ.",
+    "We meet in the Word together: weekly materials and discussion guides, Class of David training for Glory-Carriers, and daily prayer for Houston and the nations.",
+    "From this study flow Jesus March, Houston Prayer City, The Rec, and Global 360 Partners. You can request a gathering in your community — and we will come.",
+  ],
+  verses: [
+    { ref: "Psalm 119:11", text: "I have hidden your word in my heart." },
+    { ref: "2 Timothy 3:16", text: "All Scripture is God-breathed." },
+    { ref: "Colossians 3:16", text: "Let the message of Christ dwell among you." },
+  ],
+} as const;
+
 export const whatWeDo = [
   {
-    title: "Citywide Marches & Worship",
-    body: "We take worship, prayer, and the gospel into Houston’s streets — lifting Jesus high and taking spiritual authority over our city.",
+    title: "Citywide Marches",
+    body: "Walking downtown streets, speaking the Word, and taking spiritual authority over depression, addiction, and violence.",
     href: "/gallery",
     image: "/images/houston-1.jpg",
   },
   {
-    title: "Dear Daughter Bible Study Gatherings",
-    body: "A Spirit-led, non-denominational Bible study open to all ages. Request a gathering in your community and we’ll come teach the undiluted Word.",
-    href: "/newfamily",
+    title: "Dear Daughter Bible Study",
+    body: "Weekly Scripture, discussion guides, and discipleship. Young people carrying the Word — the same Spirit that moved the early church moves us today.",
+    href: "/#family",
     image: "/images/houston-2.jpg",
   },
   {
-    title: "Local Outreach & Community Impact",
-    body: "From The Rec with young people to neighborhood evangelism, we serve Houston with practical love, Bibles, and the name of Jesus.",
-    href: "/therec",
-    image: "/images/houston-3.jpg",
+    title: "Global Impact & Global 360",
+    body: "Reaching Houston, D.C., and Tulsa, and lifting Jesus high across Nigeria and the nations through prayer and partnership.",
+    href: "/getinvolved",
+    image: "/images/dc-1.jpg",
+  },
+] as const;
+
+export const marchStories = [
+  {
+    slug: "houston",
+    city: "Houston",
+    summary: "A Holy Spirit movement of worship, prayer, and evangelism in Houston’s streets.",
+    video: "/videos/hero.mp4",
+    poster: "/images/houston-1.jpg",
+    photos: ["/images/houston-1.jpg", "/images/houston-2.jpg", "/images/houston-3.jpg"],
+  },
+  {
+    slug: "dc",
+    city: "Washington, D.C.",
+    summary: "The Lord said go to D.C. and make His name known — and we obeyed.",
+    poster: "/images/dc-1.jpg",
+    photos: ["/images/dc-1.jpg", "/images/dc-2.jpg", "/images/dc-3.jpg"],
+  },
+  {
+    slug: "tulsa",
+    city: "Tulsa",
+    summary: "When darkness was invited in, we chose action and brought God’s light to the city.",
+    poster: "/images/gallery/g13.jpg",
+    photos: ["/images/gallery/g13.jpg", "/images/gallery/g14.jpg"],
+  },
+  {
+    slug: "nigeria",
+    city: "Nigeria",
+    summary: "A nationwide January march from the birthplace of Dear Daughter Bible Study.",
+    poster: "/images/tulsa-flag-1.png",
+    photos: ["/images/dc-4.jpg", "/images/tulsa-flag-1.png", "/images/tulsa-flag-2.png"],
+  },
+] as const;
+
+export const volunteerMarchRoles = [
+  "Lead Marcher",
+  "Rear Marcher",
+  "Worship Chants",
+] as const;
+
+export const partnerWays = [
+  "Monthly Global Prayer Zoom",
+  "Outreach & Bible Sponsor Support",
+  "Connections and advisory",
+] as const;
+
+export const nextPrograms = [
+  {
+    city: "Tulsa",
+    title: "Jesus March Tulsa",
+    when: "Saturday, 26 September 2026 · 10AM",
+    where: "Tulsa, Oklahoma",
+    href: "/marches/tulsa",
+    image: "/images/flyer-tulsa.png",
+  },
+  {
+    city: "Washington, D.C.",
+    title: "Jesus March Washington DC",
+    when: "Monday, 19 October 2026 · 10AM",
+    where: "The National Mall, Washington D.C.",
+    href: "/marches/dc",
+    image: "/images/flyer-dc.png",
+  },
+  {
+    city: "Nigeria",
+    title: "Jesus March Nigeria",
+    when: "January 2027 · last Saturday of the month",
+    where: "Lagos, Ibadan, Benin, Abuja, Port Harcourt, and more",
+    href: links.prayerCity,
+    image: "/images/tulsa-flag-1.png",
   },
 ] as const;
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Jesus March HTX",
   },
   description:
-    "Jesus March is a movement of worship, intercession, prayer, and evangelism. We teach the undiluted Word of God to all nations.",
+    "Jesus March is organized by Dear Daughter Bible Study Group — a Spirit-led Bible study teaching the undiluted Word of God to all nations.",
   icons: {
     icon: "/images/favicon.jpg",
     apple: "/images/favicon.jpg",

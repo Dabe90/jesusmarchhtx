@@ -9,13 +9,21 @@ export function Footer() {
     <footer className="overflow-x-hidden bg-midnight text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div className="min-w-0">
-          <Image src="/images/logo.png" alt="" width={56} height={50} className="mb-4 h-12 w-auto" />
+          <Image src="/images/logo-march.png" alt="Jesus March" width={64} height={64} className="mb-4 h-14 w-14 rounded-full bg-white object-contain" />
           <p className="max-w-sm text-2xl font-semibold text-white">
-            Spreading worship and revival across Houston.
+            Uniting believers. Lifting up cities. Preaching Jesus.
           </p>
           <p className="mt-4 text-sm text-white/70">
-            Dear Daughter Bible Study · Jesus March HTX
+            Jesus March is organized by Dear Daughter Bible Study Group.
           </p>
+          <div className="mt-6">
+            <Link
+              href="/donate"
+              className="inline-flex rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-black hover:bg-gold-2"
+            >
+              Give
+            </Link>
+          </div>
           <p className="mt-4 text-sm text-white/80">
             <a className="hover:text-gold" href={`mailto:${FORM_INBOX}`}>
               {FORM_INBOX}
@@ -67,7 +75,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-white/50">
-        © {new Date().getFullYear()} Jesus March · Dear Daughter Bible Study. All rights reserved.
+        © {new Date().getFullYear()} Jesus March · Dear Daughter Bible Study Group. All rights reserved.
       </div>
     </footer>
   );

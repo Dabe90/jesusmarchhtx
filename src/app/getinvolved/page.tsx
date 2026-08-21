@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Kicker } from "@/components/Kicker";
+import { organizer } from "@/lib/content";
+import { links } from "@/lib/links";
 
 export const metadata: Metadata = { title: "Get Involved" };
 
@@ -12,18 +14,14 @@ export default function GetInvolvedPage() {
         <Kicker>Volunteers needed</Kicker>
         <h1 className="mt-3 font-display text-5xl text-black">Global 360 Partner</h1>
         <p className="mt-6 text-lg text-ink-3">
-          Join the Global 360 Partner Network of Dear Daughter Bible Study (DDBS).
+          Join the Global 360 Partner Network of {organizer.name}.
         </p>
-        <p className="mt-4 text-muted">
-          Dear Daughter Bible Study is a Spirit-led, non-denominational Bible study group open to men
-          and women of all ages. Our mission is simple but profound: to teach the undiluted Word of
-          God and reach every nation with the gospel of Jesus Christ.
-        </p>
-        <p className="mt-4 text-muted">
-          From city marches to global outreach, we are answering God’s call to bring light to the
-          world. We’ve seen His move in Houston, Tulsa, Washington D.C., Nigeria, and many more
-          cities to come. Now we invite you to partner with us.
-        </p>
+        <p className="mt-4 text-muted">{organizer.summary}</p>
+        {organizer.body.map((paragraph) => (
+          <p key={paragraph} className="mt-4 text-muted">
+            {paragraph}
+          </p>
+        ))}
 
         <h2 className="mt-10 font-display text-3xl text-black">Wherever you are, stand with us</h2>
         <ul className="mt-5 space-y-3 text-ink-3">
@@ -45,14 +43,13 @@ export default function GetInvolvedPage() {
         </ul>
 
         <blockquote className="mt-10 border-l-2 border-gold pl-5 text-ink-3">
-          Jesus March is organized by the Dear Daughter Bible Study, a Bible study group of young
-          believers committed to sharing the undiluted Word of God and the gospel of Jesus. You can
-          request a Bible study in your community, and we’ll be there.
+          {organizer.credit} You can request a Bible study in your community, and we’ll be there.
         </blockquote>
         <div className="mt-8 flex flex-wrap gap-3">
           <ButtonLink href="/donate">Contribute</ButtonLink>
           <ButtonLink href="/volunteer" variant="outline">Volunteer roles</ButtonLink>
           <ButtonLink href="/newfamily" variant="outline">Request a Bible study</ButtonLink>
+          <ButtonLink href={links.prayerCity} variant="outline">Houston Prayer City</ButtonLink>
         </div>
       </div>
 

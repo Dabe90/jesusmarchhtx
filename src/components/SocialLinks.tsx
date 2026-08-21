@@ -24,20 +24,12 @@ function YouTubeIcon() {
   );
 }
 
-function XIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-current">
-      <path d="M14.7 10.3 22.4 2h-2.2l-6.4 7-5.3-7H2.3l8.1 10.7L2.3 22h2.2l6.9-7.6L16.8 22h6.2l-8.3-11.7Zm-2.4 2.7-.8-1.1-6.3-8.6h2.7l5.1 7 .8 1.1 6.6 9h-2.7l-5.4-7.4Z" />
-    </svg>
-  );
-}
-
 export function SocialLinks({ className = "" }: { className?: string }) {
   const items = [
     { href: links.instagram, label: "Instagram @ddbs.htx", icon: <InstagramIcon /> },
     { href: links.facebook, label: "Facebook Jesus March HTX", icon: <FacebookIcon /> },
-    { href: links.youtube, label: "YouTube", icon: <YouTubeIcon /> },
-    { href: links.twitter, label: "Twitter / X", icon: <XIcon /> },
+    { href: links.youtube, label: "YouTube @abedamilola", icon: <YouTubeIcon /> },
+    { href: links.youtubeDearDaughter, label: "YouTube @deardaughter_bs", icon: <YouTubeIcon /> },
   ].filter((item) => Boolean(item.href));
 
   return (
@@ -58,4 +50,4 @@ export function SocialLinks({ className = "" }: { className?: string }) {
   );
 }
 
-export { InstagramIcon, FacebookIcon };
+export { InstagramIcon, FacebookIcon, YouTubeIcon };

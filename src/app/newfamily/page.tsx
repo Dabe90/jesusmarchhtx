@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { InquiryForm } from "@/components/InquiryForm";
+import { organizer } from "@/lib/content";
 
 export const metadata: Metadata = { title: "New Family" };
 
@@ -8,7 +9,9 @@ export default function NewFamilyPage() {
     <section className="mx-auto grid max-w-5xl gap-10 px-5 py-16 md:grid-cols-2">
       <div>
         <h1 className="font-display text-5xl text-black">Welcome to the family</h1>
-        <p className="mt-6 text-ink-3">
+        <p className="mt-6 text-ink-3">{organizer.credit}</p>
+        <p className="mt-4 text-ink-3">{organizer.summary}</p>
+        <p className="mt-4 text-muted">
           Experience the fullness of God’s love. Jesus offers a life filled with hope, purpose, and
           peace, and His gift of salvation is for everyone.
         </p>

@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Our Vision" };
 export default function VisionPage() {
   return (
     <section className="mx-auto max-w-3xl px-5 py-16">
-      <Kicker>Dear Daughter Bible Study</Kicker>
+      <Kicker>Dear Daughter Bible Study Group</Kicker>
       <h1 className="mt-3 font-display text-5xl text-black">Our vision</h1>
       <ol className="mt-10 space-y-4 text-lg text-ink-3">
         <li>1. Teach the undiluted Word of God to all nations.</li>

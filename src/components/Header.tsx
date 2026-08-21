@@ -13,11 +13,11 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image
-            src="/images/logo.png"
-            alt="Jesus March HTX"
+            src="/images/logo-march.png"
+            alt="Jesus March"
             width={56}
-            height={50}
-            className="h-12 w-auto"
+            height={56}
+            className="h-12 w-12 rounded-full bg-white object-contain"
             priority
           />
           <span className="hidden text-lg font-semibold tracking-wide text-white sm:block">
