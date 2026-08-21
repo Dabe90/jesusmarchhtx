@@ -2,20 +2,50 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { GalleryGrid } from "@/components/GalleryGrid";
+import { Kicker } from "@/components/Kicker";
+import { PlayableVideo } from "@/components/PlayableVideo";
+import { SectionFrame } from "@/components/SectionFrame";
 import { shirtArt, signs, vendors } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Gallery" };
 
-const houston = Array.from({ length: 12 }, (_, i) => `/images/gallery/g${String(i + 1).padStart(2, "0")}.jpg`);
-const tulsa = Array.from({ length: 8 }, (_, i) => `/images/gallery/g${String(i + 13).padStart(2, "0")}.jpg`);
-const dc = Array.from({ length: 8 }, (_, i) => `/images/gallery/g${String(i + 21).padStart(2, "0")}.jpg`);
+/** Original Wix /gallery Pro Galleries, in page order. */
+const houston = [
+  "/images/gallery/g01.jpg",
+  "/images/gallery/g02.jpg",
+  "/images/gallery/g03.jpg",
+  "/images/gallery/g04.jpg",
+  "/images/gallery/g05.jpg",
+];
+const tulsa = [
+  "/images/gallery/g06.jpg",
+  "/images/gallery/g07.jpg",
+  "/images/gallery/g08.jpg",
+  "/images/gallery/g09.jpg",
+  "/images/gallery/g10.jpg",
+  "/images/gallery/g11.jpg",
+  "/images/gallery/g12.jpg",
+  "/images/gallery/g13.jpg",
+  "/images/gallery/g14.jpg",
+];
+const dc = [
+  "/images/gallery/g15.jpg",
+  "/images/gallery/g16.jpg",
+  "/images/gallery/g17.jpg",
+  "/images/gallery/g18.jpg",
+  "/images/gallery/g19.jpg",
+  "/images/gallery/g20.jpg",
+  "/images/gallery/g21.jpg",
+  "/images/gallery/g22.jpg",
+  "/images/gallery/g23.jpg",
+];
 
 export default function GalleryPage() {
   return (
     <>
       <section className="border-b border-black/10 bg-black px-5 py-16">
         <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Sights and sounds</p>
+          <Kicker tone="dark">Sights and sounds</Kicker>
           <h1 className="mt-3 text-5xl font-bold text-white">Gallery</h1>
           <p className="mt-4 max-w-2xl text-white/80">
             Experience our joy, worship, and God through pictures from Houston, Tulsa, and Washington, D.C.
@@ -23,9 +53,35 @@ export default function GalleryPage() {
           </p>
         </div>
       </section>
-      <GalleryGrid title="Houston" images={houston} />
-      <GalleryGrid title="Tulsa" images={tulsa} />
-      <GalleryGrid title="D.C." images={dc} />
+
+      <div className="bg-mist">
+        <SectionFrame>
+          <h2 className="text-4xl font-bold text-black">Videos</h2>
+          <p className="mt-3 max-w-2xl text-ink-3">Watch Jesus March 01 and COMBINE AD.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <PlayableVideo
+              src="/videos/hero.mp4"
+              poster="/images/hero-banner.jpg"
+              title="Jesus March 01 — Play video"
+            />
+            <PlayableVideo
+              src="/videos/quote.mp4"
+              poster="/images/quote-bg.jpg"
+              title="COMBINE AD (STOMP) — Play video"
+            />
+          </div>
+        </SectionFrame>
+
+        <SectionFrame>
+          <GalleryGrid title="Houston" images={houston} />
+        </SectionFrame>
+        <SectionFrame>
+          <GalleryGrid title="Tulsa" images={tulsa} />
+        </SectionFrame>
+        <SectionFrame>
+          <GalleryGrid title="D.C." images={dc} />
+        </SectionFrame>
+      </div>
 
       <section className="bg-cream text-ink">
         <div className="mx-auto max-w-6xl px-5 py-16">

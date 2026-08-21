@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { InquiryForm } from "@/components/InquiryForm";
-import { links } from "@/lib/links";
+import { Kicker } from "@/components/Kicker";
 
 export const metadata: Metadata = { title: "Programs" };
 
 export default function ProgramsPage() {
   return (
     <section className="mx-auto max-w-6xl px-5 py-16">
-      <p className="text-xs uppercase tracking-[0.25em] text-gold">Class of David · The Rec Podcast</p>
+      <Kicker>Class of David · The Rec Podcast</Kicker>
       <h1 className="mt-3 text-5xl font-bold text-black">Programs</h1>
       <div className="mt-12 grid gap-8 md:grid-cols-2">
-        <article className="overflow-hidden rounded-3xl border border-black/10 bg-pink">
+        <article className="overflow-hidden rounded-3xl border border-black/10 bg-white">
           <div className="relative h-64">
             <Image src="/images/card-david.jpg" alt="Class of David" fill className="object-cover" />
           </div>
@@ -23,7 +23,7 @@ export default function ProgramsPage() {
             </p>
           </div>
         </article>
-        <article className="overflow-hidden rounded-3xl border border-black/10 bg-pink">
+        <article className="overflow-hidden rounded-3xl border border-black/10 bg-white">
           <div className="relative h-64">
             <Image src="/images/card-podcast.jpg" alt="The Rec Podcast" fill className="object-cover" />
           </div>
@@ -37,17 +37,15 @@ export default function ProgramsPage() {
               Catch us on Spotify, Apple Podcasts, Google Podcasts, Amazon Music, and more.
             </p>
             <a
-              href={links.instagram}
-              target="_blank"
-              rel="noreferrer"
+              href="/#media"
               className="mt-6 inline-flex rounded-full bg-black px-5 py-3 text-sm font-semibold text-white"
             >
-              Follow @ddbs.htx for new episodes
+              Listen on the homepage
             </a>
           </div>
         </article>
       </div>
-      <div className="mt-12 max-w-xl rounded-3xl border border-black/10 bg-pink p-8">
+      <div className="mt-12 max-w-xl rounded-3xl border border-black/10 bg-cream-2 p-8">
         <h3 className="text-2xl font-bold text-black">Subscribe now</h3>
         <p className="mt-2 mb-6 text-sm text-muted">Links will be sent to you.</p>
         <InquiryForm

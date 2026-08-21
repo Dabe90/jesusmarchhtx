@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
+import { Kicker } from "@/components/Kicker";
 
 export const metadata: Metadata = { title: "Our Vision" };
 
 export default function VisionPage() {
   return (
     <section className="mx-auto max-w-3xl px-5 py-16">
-      <p className="text-xs uppercase tracking-[0.25em] text-gold">Dear Daughter Bible Study</p>
+      <Kicker>Dear Daughter Bible Study</Kicker>
       <h1 className="mt-3 font-display text-5xl text-black">Our vision</h1>
       <ol className="mt-10 space-y-4 text-lg text-ink-3">
         <li>1. Teach the undiluted Word of God to all nations.</li>

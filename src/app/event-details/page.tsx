@@ -1,5 +1,6 @@
 import { ButtonLink } from "@/components/ButtonLink";
 import { InquiryForm } from "@/components/InquiryForm";
+import { Kicker } from "@/components/Kicker";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Event Details" };
@@ -8,7 +9,7 @@ export default function EventDetailsPage() {
   return (
     <section className="mx-auto grid max-w-5xl gap-10 px-5 py-16 md:grid-cols-2">
       <div>
-        <p className="text-xs uppercase tracking-[0.25em] text-gold">Join thousands of Jesus lovers</p>
+        <Kicker>Join thousands of Jesus lovers</Kicker>
         <h1 className="mt-3 font-display text-4xl text-black">Event details & registration</h1>
         <p className="mt-6 text-ink-3">
           Join thousands of Jesus lovers across Houston for Jesus March Houston, a gathering of
@@ -27,7 +28,7 @@ export default function EventDetailsPage() {
           <ButtonLink href="/volunteer">See volunteer roles</ButtonLink>
         </div>
       </div>
-      <div className="rounded-3xl border border-black/10 bg-pink p-6">
+      <div className="rounded-3xl border border-black/10 bg-cream-2 p-6">
         <InquiryForm
           formName="Event registration"
           fields={[

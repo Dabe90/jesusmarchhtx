@@ -9,6 +9,8 @@ type Field = {
   type?: string;
   required?: boolean;
   placeholder?: string;
+  options?: readonly string[];
+  defaultValue?: string;
 };
 
 type Props = {
@@ -44,13 +46,14 @@ export function InquiryForm({
 
   const hasName = fields.some((field) => field.name === "name");
   const hasEmail = fields.some((field) => field.name === "email");
+  const honeyId = `honey-${formName.replace(/\s+/g, "-").toLowerCase()}`;
 
   return (
     <form
       method="POST"
       action={`https://formsubmit.co/${FORM_INBOX}`}
       onSubmit={onSubmit}
-      className="grid gap-4"
+      className="relative grid w-full min-w-0 gap-4"
     >
       <input type="hidden" name="_subject" value={`${formName} — Jesus March HTX`} />
       <input type="hidden" name="_template" value="table" />
@@ -58,10 +61,10 @@ export function InquiryForm({
       <input type="hidden" name="formName" value={formName} />
       {!hasName ? <input type="hidden" name="name" value={formName} /> : null}
 
-      <div className="absolute -left-[9999px]" aria-hidden="true">
-        <label htmlFor={`honey-${formName}`}>Website</label>
+      <div className="sr-only" aria-hidden="true">
+        <label htmlFor={honeyId}>Website</label>
         <input
-          id={`honey-${formName}`}
+          id={honeyId}
           type="text"
           name="_honey"
           tabIndex={-1}
@@ -70,15 +73,33 @@ export function InquiryForm({
       </div>
 
       {fields.map((field) => (
-        <label key={field.name} className="grid gap-1 text-sm">
+        <label key={field.name} className="grid min-w-0 gap-1 text-sm">
           <span className="text-ink-3">{field.label}</span>
-          <input
-            name={field.name}
-            type={field.type ?? "text"}
-            required={field.name === "email" ? true : field.required}
-            placeholder={field.placeholder}
-            className="rounded-xl border border-black/15 bg-white px-4 py-3 text-black outline-none ring-gold/40 placeholder:text-muted focus:ring-2"
-          />
+          {field.options ? (
+            <select
+              name={field.name}
+              required={field.required}
+              defaultValue={field.defaultValue ?? ""}
+              className="w-full min-w-0 max-w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-black outline-none ring-gold/40 focus:ring-2"
+            >
+              <option value="" disabled>
+                Select
+              </option>
+              {field.options.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <input
+              name={field.name}
+              type={field.type ?? "text"}
+              required={field.name === "email" ? true : field.required}
+              placeholder={field.placeholder}
+              className="w-full min-w-0 max-w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-black outline-none ring-gold/40 placeholder:text-muted focus:ring-2"
+            />
+          )}
         </label>
       ))}
       {!hasEmail ? (
@@ -88,7 +109,7 @@ export function InquiryForm({
             name="email"
             type="email"
             required
-            className="rounded-xl border border-black/15 bg-white px-4 py-3 text-black outline-none ring-gold/40"
+            className="w-full min-w-0 max-w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-black outline-none ring-gold/40"
           />
         </label>
       ) : null}

@@ -18,7 +18,7 @@ export default function NewFamilyPage() {
           in the light of His salvation. Your life will never be the same again.
         </p>
       </div>
-      <div className="rounded-3xl border border-black/10 bg-pink p-6 md:p-8">
+      <div className="rounded-3xl border border-black/10 bg-cream-2 p-6 md:p-8">
         <InquiryForm
           formName="New Family"
           fields={[

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { InquiryForm } from "@/components/InquiryForm";
+import { Kicker } from "@/components/Kicker";
 
 export const metadata: Metadata = { title: "Get Involved" };
 
@@ -8,7 +9,7 @@ export default function GetInvolvedPage() {
   return (
     <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.2fr_0.8fr]">
       <div>
-        <p className="text-xs uppercase tracking-[0.25em] text-gold">Volunteers needed</p>
+        <Kicker>Volunteers needed</Kicker>
         <h1 className="mt-3 font-display text-5xl text-black">Global 360 Partner</h1>
         <p className="mt-6 text-lg text-ink-3">
           Join the Global 360 Partner Network of Dear Daughter Bible Study (DDBS).
@@ -26,10 +27,10 @@ export default function GetInvolvedPage() {
 
         <h2 className="mt-10 font-display text-3xl text-black">Wherever you are, stand with us</h2>
         <ul className="mt-5 space-y-3 text-ink-3">
-          <li><strong className="text-gold">Prayer</strong> — Join our monthly global Zoom prayer meetings.</li>
-          <li><strong className="text-gold">Giving</strong> — Sponsor Jesus Marches, outreach events, and Bible study materials.</li>
-          <li><strong className="text-gold">Connections</strong> — Help us reach new cities and nations with your network.</li>
-          <li><strong className="text-gold">Advisory</strong> — Lend your voice, wisdom, and leadership as a spiritual or professional advisor.</li>
+          <li><strong className="text-navy">Prayer</strong> — Join our monthly global Zoom prayer meetings.</li>
+          <li><strong className="text-navy">Giving</strong> — Sponsor Jesus Marches, outreach events, and Bible study materials.</li>
+          <li><strong className="text-navy">Connections</strong> — Help us reach new cities and nations with your network.</li>
+          <li><strong className="text-navy">Advisory</strong> — Lend your voice, wisdom, and leadership as a spiritual or professional advisor.</li>
         </ul>
 
         <p className="mt-6 text-muted">
@@ -55,7 +56,7 @@ export default function GetInvolvedPage() {
         </div>
       </div>
 
-      <div className="rounded-3xl border border-black/10 bg-pink p-6 md:p-8">
+      <div className="rounded-3xl border border-black/10 bg-cream-2 p-6 md:p-8">
         <h2 className="font-display text-2xl text-black">Partner with us</h2>
         <p className="mt-2 mb-6 text-sm text-muted">Tell us how you want to serve.</p>
         <InquiryForm

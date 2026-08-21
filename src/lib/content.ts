@@ -1,3 +1,5 @@
+import { links } from "@/lib/links";
+
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/gallery", label: "Gallery" },
@@ -5,6 +7,38 @@ export const navLinks = [
   { href: "/programs", label: "Programs" },
   { href: "/getinvolved", label: "Get Involved" },
   { href: "/vision", label: "Vision" },
+] as const;
+
+export const homeShortcuts = [
+  {
+    href: "/gallery",
+    title: "Gallery",
+    body: "Experience our joy, worship, and God through sights and sounds.",
+  },
+  {
+    href: "/programs",
+    title: "Programs",
+    body: "Class of David training and The Rec Podcast.",
+  },
+  {
+    href: "/getinvolved",
+    title: "Get involved",
+    body: "Partner, pray, give, and volunteer with the March.",
+  },
+  {
+    href: "/therec",
+    title: "The Rec",
+    body: "Reconcile, recreate, and recommit with young people in Houston.",
+    featured: true,
+  },
+] as const;
+
+export const nigeriaCities = [
+  "Lagos",
+  "Ibadan",
+  "Benin",
+  "Abuja",
+  "Port Harcourt",
 ] as const;
 
 export const marches = [
@@ -39,7 +73,7 @@ export const marches = [
       "Now we have a new challenge: gather one million people to march in DC, lifting up the name of Jesus and praying over our nation. The United States is a shining light on a hill.",
     ],
     cta: "Join us in this incredible move of God, and check out videos and pictures of what He is doing through His people.",
-    images: ["/images/dc-1.jpg", "/images/dc-2.jpg", "/images/dc-3.jpg", "/images/dc-4.jpg"],
+    images: ["/images/dc-1.jpg", "/images/dc-2.jpg", "/images/dc-3.jpg"],
   },
   {
     slug: "tulsa",
@@ -53,7 +87,7 @@ export const marches = [
       "Thus, Jesus March Tulsa was born — a movement to bring the light of God into the city through worship, prayer, and bold proclamation of the gospel. In December 2024, we held the first Jesus March Tulsa, and this is just the beginning.",
     ],
     cta: "Join us in this powerful move of God and be part of history.",
-    images: ["/images/houston-3.jpg", "/images/dc-2.jpg", "/images/houston-4.jpg"],
+    images: ["/images/gallery/g13.jpg", "/images/gallery/g14.jpg"],
   },
   {
     slug: "nigeria",
@@ -67,8 +101,8 @@ export const marches = [
       "This is just the beginning. We are committed to taking the undiluted Word of God to all nations, teaching them to walk in His ways.",
     ],
     cta: "Join us as we march for Jesus, lifting His name high across Nigeria and beyond.",
-    images: ["/images/card-partners.jpg", "/images/houston-1.jpg", "/images/dc-4.jpg"],
-    href: "/jmnigeria",
+    images: ["/images/dc-4.jpg", "/images/tulsa-flag-1.png", "/images/tulsa-flag-2.png"],
+    href: links.prayerCity,
   },
 ] as const;
 
@@ -135,4 +169,75 @@ export const signs = [
   "King Jesus",
   "Jesus Saves",
   "Jesus is coming",
+] as const;
+
+export const dailyBlessings = [
+  {
+    ref: "Isaiah 61:1",
+    verse:
+      "The Spirit of the Sovereign Lord is on me, because the Lord has anointed me to proclaim good news to the poor.",
+  },
+  {
+    ref: "Matthew 5:14",
+    verse: "You are the light of the world. A city on a hill cannot be hidden.",
+  },
+  {
+    ref: "Acts 1:8",
+    verse:
+      "You will receive power when the Holy Spirit comes on you; and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth.",
+  },
+  {
+    ref: "Psalm 122:6–7",
+    verse: "Pray for the peace of the city. May those who love you be secure. May there be peace within your walls.",
+  },
+  {
+    ref: "2 Chronicles 7:14",
+    verse:
+      "If my people, who are called by my name, will humble themselves and pray and seek my face and turn from their wicked ways, then I will hear from heaven.",
+  },
+  {
+    ref: "John 8:12",
+    verse: "I am the light of the world. Whoever follows me will never walk in darkness, but will have the light of life.",
+  },
+  {
+    ref: "Mark 16:15",
+    verse: "Go ye into all the world, and preach the gospel to every creature.",
+  },
+] as const;
+
+export const houstonPrayer =
+  "Father, bless Houston. Fill our streets with worship, our neighborhoods with revival, and every heart with the love of Jesus. Let this city shine with Your light. Amen.";
+
+export const whatWeDo = [
+  {
+    title: "Citywide Marches & Worship",
+    body: "We take worship, prayer, and the gospel into Houston’s streets — lifting Jesus high and taking spiritual authority over our city.",
+    href: "/gallery",
+    image: "/images/houston-1.jpg",
+  },
+  {
+    title: "Dear Daughter Bible Study Gatherings",
+    body: "A Spirit-led, non-denominational Bible study open to all ages. Request a gathering in your community and we’ll come teach the undiluted Word.",
+    href: "/newfamily",
+    image: "/images/houston-2.jpg",
+  },
+  {
+    title: "Local Outreach & Community Impact",
+    body: "From The Rec with young people to neighborhood evangelism, we serve Houston with practical love, Bibles, and the name of Jesus.",
+    href: "/therec",
+    image: "/images/houston-3.jpg",
+  },
+] as const;
+
+export const joinRoles = [
+  "March participant",
+  "Lead marchers",
+  "Rear marchers",
+  "Prayer partners",
+  "Arrival greeters",
+  "Welfare guards",
+  "Media personnel",
+  "Medical assistants",
+  "Ministry team",
+  "Request a Community Bible Study",
 ] as const;

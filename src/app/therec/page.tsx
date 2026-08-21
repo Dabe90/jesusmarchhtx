@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { InquiryForm } from "@/components/InquiryForm";
+import { Kicker } from "@/components/Kicker";
+import { InstagramIcon } from "@/components/SocialLinks";
 import { links } from "@/lib/links";
 
 export const metadata: Metadata = { title: "The Rec" };
@@ -13,7 +15,7 @@ export default function TheRecPage() {
         <Image src="/images/quote-bg.jpg" alt="" fill className="object-cover opacity-30" />
         <div className="absolute inset-0 bg-ink/70" />
         <div className="relative mx-auto max-w-4xl px-5 py-24 text-white">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Reconcile · Recreate · Recommit</p>
+          <Kicker tone="dark">Reconcile · Recreate · Recommit</Kicker>
           <h1 className="mt-4 text-5xl font-bold text-white">Welcome to The Rec</h1>
           <p className="mt-6 text-lg text-white/90">
             As the name suggests, it’s short for Reconcile, Recreate, and Recommit — a trio of
@@ -62,14 +64,15 @@ export default function TheRecPage() {
         <div className="mx-auto max-w-6xl px-5">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Follow us on Instagram</p>
           <h2 className="mt-3 text-4xl font-bold">#theREC · @ddbs.htx</h2>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href={links.instagram}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-gold px-5 py-3 text-sm font-semibold text-black"
+              aria-label="Instagram @ddbs.htx"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gold text-black transition hover:bg-gold-2"
             >
-              Open Instagram
+              <InstagramIcon />
             </a>
             <a
               href={links.recHashtag}
