@@ -86,8 +86,13 @@ export const marches = [
       "Many people voiced their discomfort, but the Lord challenged our leader with a question: “Will you just complain, or will you take action?” We chose action.",
       "Thus, Jesus March Tulsa was born — a movement to bring the light of God into the city through worship, prayer, and bold proclamation of the gospel. In December 2024, we held the first Jesus March Tulsa, and this is just the beginning.",
     ],
-    cta: "Join us in this powerful move of God and be part of history.",
-    images: ["/images/gallery/g13.jpg", "/images/gallery/g14.jpg"],
+    cta: "Join us Saturday, September 26, 2026 at 12PM at Tulsa City Hall.",
+    images: [
+      "/images/gallery/g06.jpg",
+      "/images/gallery/g10.jpg",
+      "/images/gallery/g13.jpg",
+      "/images/gallery/g14.jpg",
+    ],
   },
   {
     slug: "nigeria",
@@ -269,8 +274,8 @@ export const marchStories = [
     slug: "tulsa",
     city: "Tulsa",
     summary: "When darkness was invited in, we chose action and brought God’s light to the city.",
-    poster: "/images/gallery/g13.jpg",
-    photos: ["/images/gallery/g13.jpg", "/images/gallery/g14.jpg"],
+    poster: "/images/gallery/g06.jpg",
+    photos: ["/images/gallery/g06.jpg", "/images/gallery/g10.jpg", "/images/gallery/g13.jpg", "/images/gallery/g14.jpg"],
   },
   {
     slug: "nigeria",
@@ -297,10 +302,10 @@ export const nextPrograms = [
   {
     city: "Tulsa",
     title: "Jesus March Tulsa",
-    when: "Saturday, 26 September 2026 · 10AM",
-    where: "Tulsa, Oklahoma",
-    href: "/marches/tulsa",
-    image: "/images/flyer-tulsa.png",
+    when: "Saturday, 26 September 2026 · 12PM",
+    where: "Tulsa City Hall, Tulsa, Oklahoma",
+    href: "/tulsa",
+    image: "/images/flyer-tulsa.jpg",
   },
   {
     city: "Washington, D.C.",
@@ -318,6 +323,28 @@ export const nextPrograms = [
     href: links.prayerCity,
     image: "/images/tulsa-flag-1.png",
   },
+] as const;
+
+export const tulsaPhotos = [
+  "/images/gallery/g06.jpg",
+  "/images/gallery/g07.jpg",
+  "/images/gallery/g08.jpg",
+  "/images/gallery/g09.jpg",
+  "/images/gallery/g10.jpg",
+  "/images/gallery/g11.jpg",
+  "/images/gallery/g12.jpg",
+  "/images/gallery/g13.jpg",
+  "/images/gallery/g14.jpg",
+] as const;
+
+export const tulsaJoinWays = [
+  "I will march with you",
+  "Lead Marcher",
+  "Rear Marcher",
+  "Worship Chants",
+  "Prayer Partner",
+  "I am bringing a group",
+  "I will watch and pray online",
 ] as const;
 
 export const joinRoles = [

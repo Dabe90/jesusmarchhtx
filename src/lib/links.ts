@@ -4,7 +4,10 @@ export const ZELLE_EMAIL = "give@jesusmarchhtx.com";
 export const links = {
   prayerCity: "https://prayercityhtx.com",
   instagram: "https://www.instagram.com/ddbs.htx",
+  instagramTulsa: "https://www.instagram.com/ddbs.tulsa/",
+  instagramGlobal: "https://www.instagram.com/ddbs.global/",
   facebook: "https://www.facebook.com/JesusMarchHTX/",
+  tulsaMaps: "https://www.google.com/maps/search/?api=1&query=Tulsa+City+Hall",
   recEventbrite: "https://theRec.eventbrite.com",
   recHashtag: "https://www.instagram.com/explore/tags/therec/",
   podcastSubscribe: "/#media",
@@ -15,5 +18,6 @@ export const links = {
   zeffy: "https://www.zeffy.com/en-US/donation-form/houston-world-cup-prayer-city-movement",
   zeffyEmbed: "https://www.zeffy.com/embed/donation-form/houston-world-cup-prayer-city-movement",
   zelleMailto: "mailto:give@jesusmarchhtx.com?subject=Zelle%20gift%20to%20Jesus%20March%20HTX",
+  zelleTulsaMailto: "mailto:give@jesusmarchhtx.com?subject=Zelle%20gift%20for%20Jesus%20March%20Tulsa",
   formMailto: "mailto:ddbs.htx@gmail.com",
 } as const;

@@ -33,8 +33,9 @@ yarn-error.log*
 .env*
 !.env.example
 
-# form submissions saved on this computer
+# form submissions and mailing-list CSVs (do not commit people's names)
 /data/submissions.json
+/private/
 
 # vercel
 .vercel

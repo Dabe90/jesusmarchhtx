@@ -77,7 +77,10 @@ export function StoryCarousel() {
                 {march.body.slice(0, 2).map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
-                <Link href={`/marches/${story.slug}`} className="inline-flex font-semibold text-navy">
+                <Link
+                  href={story.slug === "tulsa" ? "/tulsa" : `/marches/${story.slug}`}
+                  className="inline-flex font-semibold text-navy"
+                >
                   Full page →
                 </Link>
               </div>

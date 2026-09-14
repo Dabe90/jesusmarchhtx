@@ -57,6 +57,7 @@ export function Footer() {
         <div className="min-w-0 lg:col-span-2">
           <p className="text-xs uppercase tracking-[0.2em] text-gold">Explore</p>
           <ul className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/80">
+            <li><Link href="/tulsa" className="hover:text-gold">Jesus March Tulsa</Link></li>
             <li><Link href="/gallery" className="hover:text-gold">Gallery</Link></li>
             <li><Link href="/#media" className="hover:text-gold">Podcast</Link></li>
             <li><Link href="/#join" className="hover:text-gold">Join the March</Link></li>

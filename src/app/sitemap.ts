@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.jesusmarchhtx.com";
   const routes = [
     "",
+    "/tulsa",
     "/gallery",
     "/getinvolved",
     "/newfamily",

@@ -15,6 +15,9 @@ export default function SchedulePage() {
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-navy">{program.when}</p>
             <h2 className="mt-2 font-display text-2xl">{program.title}</h2>
             <p className="mt-2 text-sm text-ink-3">{program.where}</p>
+            <div className="mt-4">
+              <ButtonLink href={program.href}>Learn more</ButtonLink>
+            </div>
           </article>
         ))}
         <article className="rounded-2xl border border-black/10 border-l-4 border-l-gold bg-white p-6">
