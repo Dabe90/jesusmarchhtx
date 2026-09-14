@@ -8,45 +8,62 @@ import { chapterKinds, organizer } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Start a Bible Study Chapter",
   description:
-    "Plant a Dear Daughter Bible Study chapter in your state, city, or on a campus. Request a gathering and we will walk with you in the undiluted Word of God.",
+    "Plant a Dear Daughter Bible Study chapter in your city, state, or on a campus. Pray, form a core team, train in the Word, launch, and stay connected to the family.",
 };
 
 const tracks = [
   {
     title: "City & state chapters",
-    body: "Living in another state or a new city? Request a Dear Daughter Bible Study gathering. We will come teach the undiluted Word and walk with you as a local chapter takes root.",
+    body: "Like a satellite of the Houston study: a trained gathering in a new city that stays connected to Dear Daughter Bible Study Group each week. Meet in a home, a church (as guests), or a community room.",
   },
   {
     title: "Campus chapters",
-    body: "Students, staff, or a church near campus can host the study at school. Tell us your college — we will follow up, pray with you, and help you gather.",
+    body: "Students, staff, or a nearby church host the study where people already live and learn. Pray over the campus, find open hearts, gather a core team, and launch a weekly study.",
   },
 ];
 
-const steps = [
+const phases = [
   {
-    n: "1",
-    title: "Tell us where you are",
-    body: "City, state, or campus. We need a name, a place, and a willing heart — not a polished ministry plan.",
+    name: "Prepare",
+    kicker: "Pray first",
+    items: [
+      {
+        title: "Pray over the place",
+        body: "Walk the campus or the neighborhood. Ask the Lord who is already hungry for the Word — people of peace who will help you gather.",
+      },
+      {
+        title: "Send the request",
+        body: "Fill out the form. Dear Daughter Bible Study Group follows up from Houston, prays with you, and walks the planting with you. You are not doing this alone.",
+      },
+    ],
   },
   {
-    n: "2",
-    title: "We follow up",
-    body: "Dear Daughter Bible Study Group will reach out from Houston. We pray with you, hear the assignment, and talk through next steps.",
+    name: "Build",
+    kicker: "Don’t plant alone",
+    items: [
+      {
+        title: "Name a core team",
+        body: "Invite two or three faithful people before you launch publicly. Share the vision. A chapter needs more than one person carrying it.",
+      },
+      {
+        title: "Train in the Word",
+        body: "We send weekly materials and discussion guides. Class of David trains Glory-Carriers who can teach the undiluted Word. Your gathering stays connected to the established study, like a satellite class.",
+      },
+    ],
   },
   {
-    n: "3",
-    title: "Stay in the Word together",
-    body: "Chapters use weekly materials and discussion guides. Class of David trains Glory-Carriers who can teach the undiluted Word.",
-  },
-  {
-    n: "4",
-    title: "Gather — we come, or we walk with you",
-    body: "You can request that we come to your community. Campus chapters often start with a small, faithful group and grow from there.",
-  },
-  {
-    n: "5",
-    title: "Stay in the family",
-    body: "Thursday Zoom prayer, Jesus March, Houston Prayer City, and the work in Tulsa, D.C., and Nigeria. A chapter is not a new denomination — it is this same study in a new place.",
+    name: "Launch & grow",
+    kicker: "Then go public",
+    items: [
+      {
+        title: "Host the first gathering",
+        body: "Set a regular place and time. Invite openly. Keep it simple: Scripture, discussion, prayer, and a clear gospel. If your campus requires a student organization, we will help you think that through.",
+      },
+      {
+        title: "Stay in the family",
+        body: "Weekly Word, Thursday Zoom prayer, Jesus March, and the work in Houston, Tulsa, D.C., and Nigeria. Multiply by making disciples — not by becoming a new denomination.",
+      },
+    ],
   },
 ];
 
@@ -63,15 +80,15 @@ export default function ChaptersPage() {
             <span className="block text-gold">Bible study chapter</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base text-white/90 sm:text-lg md:mx-0">
-            Plant the study in another state, another city, or on a campus. {organizer.credit} You
-            can request a gathering in your community — and we will come.
+            Plant the study in another state, another city, or on a campus. Pray, gather a core team,
+            train in the Word, launch, and stay connected. {organizer.credit}
           </p>
           <div className="mt-8 flex w-full flex-col gap-3 sm:max-w-md sm:flex-row">
             <ButtonLink href="#start-chapter" className="w-full sm:w-auto">
               Request a chapter
             </ButtonLink>
-            <ButtonLink href="/#family" variant="light" className="w-full sm:w-auto">
-              About the study
+            <ButtonLink href="#how" variant="light" className="w-full sm:w-auto">
+              See the path
             </ButtonLink>
           </div>
         </div>
@@ -79,10 +96,10 @@ export default function ChaptersPage() {
 
       <section className="bg-white px-4 py-12 sm:px-5 md:py-20">
         <div className="mx-auto max-w-7xl">
-          <Kicker>Two ways to plant</Kicker>
-          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">States, cities, and campuses</h2>
+          <Kicker>Two kinds of chapters</Kicker>
+          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">Cities, states, and campuses</h2>
           <p className="mt-4 max-w-2xl text-ink-3">
-            {organizer.summary} The same Word. A new living room, church, or campus room.
+            {organizer.summary} The same undiluted Word. A new living room, church, or campus room.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {tracks.map((track) => (
@@ -95,19 +112,32 @@ export default function ChaptersPage() {
         </div>
       </section>
 
-      <section className="bg-mist px-4 py-12 sm:px-5 md:py-20">
+      <section id="how" className="scroll-mt-24 bg-mist px-4 py-12 sm:px-5 md:py-20">
         <div className="mx-auto max-w-7xl">
-          <Kicker>How a chapter begins</Kicker>
-          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">This is the path</h2>
-          <ol className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-            {steps.map((step) => (
-              <li key={step.n} className="rounded-3xl bg-white p-5">
-                <p className="text-sm font-black text-gold">{step.n}</p>
-                <h3 className="mt-2 text-lg font-bold text-midnight">{step.title}</h3>
-                <p className="mt-2 text-sm text-ink-3">{step.body}</p>
-              </li>
+          <Kicker>How chapters are planted</Kicker>
+          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">Prepare. Build. Launch.</h2>
+          <p className="mt-4 max-w-2xl text-ink-3">
+            Healthy plants start in prayer, grow with a core team, train before they go public, and
+            stay tied to the sending family. That is how we plant Dear Daughter chapters.
+          </p>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {phases.map((phase) => (
+              <article key={phase.name} className="rounded-3xl bg-white p-5 sm:p-8">
+                <p className="text-[10px] font-black tracking-[0.18em] text-gold uppercase">{phase.kicker}</p>
+                <h3 className="mt-2 text-2xl font-bold text-midnight">{phase.name}</h3>
+                <ol className="mt-6 space-y-5">
+                  {phase.items.map((item, i) => (
+                    <li key={item.title}>
+                      <p className="text-sm font-black text-navy">
+                        {i + 1}. {item.title}
+                      </p>
+                      <p className="mt-1 text-sm text-ink-3">{item.body}</p>
+                    </li>
+                  ))}
+                </ol>
+              </article>
             ))}
-          </ol>
+          </div>
         </div>
       </section>
 
@@ -116,25 +146,24 @@ export default function ChaptersPage() {
           <div>
             <Kicker tone="dark">Campus chapters</Kicker>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Bring the study to school</h2>
-            <p className="mt-4 text-white/85">
-              College is a door. A campus chapter is a Dear Daughter Bible Study that meets where
-              students already live, learn, and decide who they will follow.
-            </p>
             <ul className="mt-6 space-y-3 text-white/85">
-              <li>Open to men and women — students, staff, and friends nearby.</li>
-              <li>Start small. A faithful handful in the Word is a chapter.</li>
-              <li>If your school has a student-organization process, note that on the form and we will help you think it through.</li>
-              <li>Stay connected to Thursday prayer and the wider family, so you are not carrying this alone.</li>
+              <li>Pray on campus before you advertise. Ask the Lord for open, networked students.</li>
+              <li>Build a small leadership team. Don’t launch as a one-person club.</li>
+              <li>Keep a weekly rhythm: Word, discussion, prayer — then send people back to their friends.</li>
+              <li>If your school requires a recognized student organization, say so on the form. We will help you walk that.</li>
+              <li>Stay on Thursday Zoom prayer so Houston is covering you.</li>
             </ul>
           </div>
           <div>
             <Kicker tone="dark">City &amp; state chapters</Kicker>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">The Word in your city</h2>
-            <p className="mt-4 text-white/85">
-              {organizer.body[0]} We meet with weekly materials and discussion guides, Class of David
-              training, and daily prayer.
-            </p>
-            <p className="mt-4 text-white/85">{organizer.body[2]}</p>
+            <ul className="mt-6 space-y-3 text-white/85">
+              <li>{organizer.body[0]}</li>
+              <li>Start as a satellite gathering connected to the Houston study — weekly materials, discussion guides, and a trained leader.</li>
+              <li>Churches can host without the study becoming a church program. Homes and community rooms work too.</li>
+              <li>As the group grows, form a prayer covering and raise local leadership through Class of David.</li>
+              <li>You can still request that we come in person to teach and help you launch.</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -145,8 +174,8 @@ export default function ChaptersPage() {
             <Kicker>Send the request</Kicker>
             <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">We’ll walk with you</h2>
             <p className="mt-4 text-ink-3">
-              Tell us whether this is a city, a state, or a campus. We follow up from Dear Daughter
-              Bible Study Group — the same family that organizes Jesus March.
+              The first step every planting ministry uses is the same: tell someone. We follow up,
+              coach the next steps, and stay with you through launch.
             </p>
             <p className="mt-4 text-sm text-muted">
               Our vision is to teach the undiluted Word of God to all nations and to make disciples
@@ -174,7 +203,8 @@ export default function ChaptersPage() {
                 { name: "city", label: "City", required: true },
                 { name: "state", label: "State", required: true },
                 { name: "campus", label: "Campus / school (if this is a campus chapter)" },
-                { name: "note", label: "When, where, and who is gathering with you?" },
+                { name: "team", label: "Who else is on your core team?" },
+                { name: "note", label: "Place, day/time, and anything we should pray into" },
               ]}
             />
           </div>

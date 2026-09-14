@@ -15,17 +15,17 @@ const stamps = ["repeat", "logo", "date", "none"] as const;
 const dcStamp = {
   repeatLabel: "Jesus March DC",
   dateLabel: "Oct 17",
-  dateExtra: " · Washington Circle",
+  dateExtra: " · Washington Cir NW",
 };
 
 export const metadata: Metadata = {
   title: "Jesus March Washington DC",
   description:
-    "Join Jesus March Washington DC on Saturday, October 17, 2026, starting at Washington Circle. Worship, pray, and preach Jesus with Dear Daughter Bible Study Group.",
+    "Join Jesus March Washington DC on Saturday, October 17, 2026, starting at Washington Cir NW, Washington, DC 20037. Worship, pray, and preach Jesus with Dear Daughter Bible Study Group.",
   openGraph: {
     title: "Jesus March Washington DC — Saturday, October 17, 2026",
     description:
-      "Start at Washington Circle. March with us, watch live, or give. Organized by Dear Daughter Bible Study Group.",
+      "Start at Washington Cir NW, Washington, DC 20037. March with us, watch live, or give. Organized by Dear Daughter Bible Study Group.",
     url: "https://www.jesusmarchhtx.com/dc",
     images: ["/images/flyer-dc.png"],
   },
@@ -56,19 +56,16 @@ export default function DcPage() {
           <div className="tulsa-glow relative z-10 mx-auto w-full max-w-[240px] overflow-hidden rounded-[1.5rem] border-2 border-gold order-2 sm:max-w-sm md:order-1 md:max-w-md md:rounded-[2rem]">
             <Image
               src="/images/flyer-dc.png"
-              alt="Jesus March Washington DC flyer"
+              alt="Jesus March Washington DC flyer — Saturday, October 17, 2026 at 10AM, Washington Cir NW, Washington, DC 20037"
               width={1080}
               height={1350}
               className="h-auto w-full"
               priority
             />
-            <p className="bg-gold px-3 py-2 text-center text-[11px] font-black tracking-wide text-black uppercase sm:text-xs">
-              Saturday, October 17, 2026 · Washington Circle
-            </p>
           </div>
           <div className="order-1 min-w-0 text-center md:order-2 md:text-left">
             <p className="inline-flex max-w-full rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-[10px] font-black tracking-[0.12em] text-gold uppercase sm:px-4 sm:text-xs sm:tracking-[0.28em]">
-              Next march · Washington Circle
+              Next march · Washington Cir NW
             </p>
             <h1 className="mt-4 text-4xl font-black leading-[0.95] sm:text-5xl md:text-7xl">
               Jesus
@@ -76,13 +73,13 @@ export default function DcPage() {
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-base text-white/90 sm:mt-5 sm:text-lg md:mx-0">
               The Lord said make His name known in Washington. We are going back — Saturday,
-              October 17, starting at Washington Circle.
+              October 17 at 10AM, starting at Washington Cir NW, Washington, DC 20037.
             </p>
             <dl className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
               <Fact label="When" value="Saturday, October 17, 2026" />
-              <Fact label="Start" value="Washington Circle" />
-              <Fact label="City" value="Washington, D.C." />
-              <Fact label="Host" value="Dear Daughter Bible Study" />
+              <Fact label="Time" value="10:00 AM" />
+              <Fact label="Start" value="Washington Cir NW" />
+              <Fact label="City" value="Washington, DC 20037" />
             </dl>
             <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:flex sm:flex-wrap">
               <ButtonLink href="#join-dc" className="w-full sm:w-auto">
@@ -203,8 +200,9 @@ export default function DcPage() {
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">March with us, serve, or watch live</h2>
             <ol className="mt-8 space-y-5 text-white/90">
               <li>
-                <strong className="text-gold">1. Be there.</strong> Meet at Washington Circle on Saturday,
-                October 17. Wear comfortable shoes and come ready to worship.
+                <strong className="text-gold">1. Be there.</strong> Meet at Washington Cir NW,
+                Washington, DC 20037 on Saturday, October 17 at 10AM. Wear comfortable shoes and
+                come ready to worship.
               </li>
               <li>
                 <strong className="text-gold">2. Tell us you’re coming.</strong> Fill out the form so we

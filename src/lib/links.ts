@@ -8,7 +8,7 @@ export const links = {
   instagramGlobal: "https://www.instagram.com/ddbs.global/",
   facebook: "https://www.facebook.com/JesusMarchHTX/",
   tulsaMaps: "https://www.google.com/maps/search/?api=1&query=Tulsa+City+Hall",
-  dcMaps: "https://www.google.com/maps/search/?api=1&query=Washington+Circle+Washington+DC",
+  dcMaps: "https://www.google.com/maps/search/?api=1&query=Washington+Cir+NW+Washington+DC+20037",
   tulsaPrayerZoom:
     "https://us04web.zoom.us/j/78817813182?pwd=EII60Gsab4G8P5vPwHu4qhweZ1pQKa.1",
   recEventbrite: "https://theRec.eventbrite.com",

@@ -72,7 +72,7 @@ export const marches = [
       "The date was set for October 19, 2024, the only weekend without a major Christian event in the area — another confirmation that God was leading the way.",
       "Now we have a new challenge: gather one million people to march in DC, lifting up the name of Jesus and praying over our nation. The United States is a shining light on a hill.",
     ],
-    cta: "Join us Saturday, October 17, 2026 at Washington Circle in Washington, D.C.",
+    cta: "Join us Saturday, October 17, 2026 at Washington Cir NW, Washington, DC 20037.",
     images: ["/images/dc-1.jpg", "/images/gallery/g23.jpg", "/images/gallery/g21.jpg"],
   },
   {
@@ -311,10 +311,10 @@ export const nextPrograms = [
   {
     city: "Washington, D.C.",
     title: "Jesus March Washington DC",
-    when: "Saturday, 17 October 2026",
-    where: "Washington Circle, Washington D.C.",
+    when: "Saturday, 17 October 2026 · 10AM",
+    where: "Washington Cir NW, Washington, DC 20037",
     href: "/dc",
-    image: "/images/gallery/g23.jpg",
+    image: "/images/flyer-dc.png",
   },
   {
     city: "Nigeria",
