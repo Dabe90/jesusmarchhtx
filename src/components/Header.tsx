@@ -77,16 +77,16 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="py-1"
+                className="py-2"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Link href="/tulsa" className="py-1" onClick={() => setOpen(false)}>
+            <Link href="/tulsa" className="py-2" onClick={() => setOpen(false)}>
               Tulsa
             </Link>
-            <Link href="/#join" className="py-1" onClick={() => setOpen(false)}>
+            <Link href="/#join" className="py-2" onClick={() => setOpen(false)}>
               Join
             </Link>
             <Link

@@ -48,12 +48,13 @@ export function WatermarkedShot({
           alt=""
           width={72}
           height={72}
-          className="pointer-events-none absolute right-3 bottom-3 h-14 w-14 rounded-full bg-white/90 object-contain shadow-lg"
+          className="pointer-events-none absolute right-2 bottom-2 h-10 w-10 rounded-full bg-white/90 object-contain shadow-lg sm:right-3 sm:bottom-3 sm:h-14 sm:w-14"
         />
       ) : null}
       {stamp === "date" ? (
-        <p className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-gold px-3 py-1 text-[11px] font-black tracking-[0.16em] text-black uppercase">
-          Sept 26 · 12PM · City Hall
+        <p className="pointer-events-none absolute bottom-2 left-2 max-w-[calc(100%-1rem)] rounded-full bg-gold px-2.5 py-1 text-[10px] leading-tight font-black tracking-wide text-black uppercase sm:bottom-3 sm:left-3 sm:px-3 sm:text-[11px] sm:tracking-[0.16em]">
+          Sept 26 · 12PM
+          <span className="hidden sm:inline"> · City Hall</span>
         </p>
       ) : null}
     </div>

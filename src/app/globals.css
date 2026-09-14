@@ -59,3 +59,10 @@ body {
 .tulsa-glow {
   animation: tulsa-glow 2.8s ease-in-out infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .tulsa-marquee,
+  .tulsa-glow {
+    animation: none;
+  }
+}

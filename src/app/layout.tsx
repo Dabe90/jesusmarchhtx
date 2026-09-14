@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={sans.variable}>
-      <body className="min-h-screen bg-white text-ink-3 antialiased">
+      <body className="min-h-screen overflow-x-hidden bg-white text-ink-3 antialiased">
         <Header />
         <main>{children}</main>
         <Footer />

@@ -4,9 +4,10 @@ type Props = {
   href: string;
   children: React.ReactNode;
   variant?: "gold" | "outline" | "light";
+  className?: string;
 };
 
-export function ButtonLink({ href, children, variant = "gold" }: Props) {
+export function ButtonLink({ href, children, variant = "gold", className = "" }: Props) {
   const styles = {
     gold: "bg-gold text-black hover:bg-gold-2",
     outline: "border border-black text-black hover:bg-black hover:text-white",
@@ -18,7 +19,7 @@ export function ButtonLink({ href, children, variant = "gold" }: Props) {
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition ${styles}`}
+      className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition ${styles} ${className}`}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {children}

@@ -42,12 +42,12 @@ export default function TulsaPage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 overflow-hidden opacity-25 mix-blend-overlay"
         >
-          <p className="absolute top-24 -left-10 rotate-[-18deg] text-6xl font-black tracking-[0.4em] text-gold uppercase md:text-8xl">
+          <p className="absolute top-24 -left-10 hidden rotate-[-18deg] text-8xl font-black tracking-[0.4em] text-gold uppercase md:block">
             Jesus March Tulsa Jesus March Tulsa
           </p>
         </div>
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:grid-cols-[0.9fr_1.1fr] md:py-20">
-          <div className="tulsa-glow relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border-2 border-gold">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-4 py-10 sm:px-5 md:grid-cols-[0.9fr_1.1fr] md:gap-10 md:py-20">
+          <div className="tulsa-glow relative mx-auto w-full max-w-[240px] overflow-hidden rounded-[1.5rem] border-2 border-gold order-2 sm:max-w-sm md:order-1 md:max-w-md md:rounded-[2rem]">
             <Image
               src="/images/flyer-tulsa.jpg"
               alt="Jesus March Tulsa flyer — Saturday, September 26, 2026 at 12PM, Tulsa City Hall"
@@ -57,33 +57,35 @@ export default function TulsaPage() {
               priority
             />
           </div>
-          <div>
-            <p className="inline-flex rounded-full border border-gold/50 bg-gold/15 px-4 py-1 text-xs font-black tracking-[0.28em] text-gold uppercase">
+          <div className="order-1 min-w-0 text-center md:order-2 md:text-left">
+            <p className="inline-flex max-w-full rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-[10px] font-black tracking-[0.12em] text-gold uppercase sm:px-4 sm:text-xs sm:tracking-[0.28em]">
               Next march · Tulsa City Hall
             </p>
-            <h1 className="mt-5 text-5xl font-black leading-[0.9] md:text-7xl">
+            <h1 className="mt-4 text-4xl font-black leading-[0.95] sm:text-5xl md:text-7xl">
               Jesus
               <span className="block text-gold">March Tulsa</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-white/90">
+            <p className="mx-auto mt-4 max-w-xl text-base text-white/90 sm:mt-5 sm:text-lg md:mx-0">
               The streets fill with worship. Flags go up. The name of Jesus is preached out loud.
               Saturday, September 26 — 12PM — start at City Hall.
             </p>
-            <dl className="mt-8 grid gap-4 sm:grid-cols-2">
+            <dl className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
               <Fact label="When" value="Saturday, September 26, 2026" />
               <Fact label="Time" value="12:00 PM" />
               <Fact label="Start" value="Tulsa City Hall" />
               <Fact label="City" value="Tulsa, Oklahoma" />
             </dl>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href="#join-tulsa">Join the March</ButtonLink>
-              <ButtonLink href={links.tulsaPrayerZoom} variant="light">
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:flex sm:flex-wrap">
+              <ButtonLink href="#join-tulsa" className="w-full sm:w-auto">
+                Join the March
+              </ButtonLink>
+              <ButtonLink href={links.tulsaPrayerZoom} variant="light" className="w-full sm:w-auto">
                 Thursday prayer on Zoom
               </ButtonLink>
-              <ButtonLink href="#give-tulsa" variant="light">
+              <ButtonLink href="#give-tulsa" variant="light" className="w-full sm:w-auto">
                 Give
               </ButtonLink>
-              <ButtonLink href={links.tulsaMaps} variant="light">
+              <ButtonLink href={links.tulsaMaps} variant="light" className="w-full sm:w-auto">
                 Get directions
               </ButtonLink>
             </div>
@@ -94,19 +96,22 @@ export default function TulsaPage() {
       <section className="overflow-hidden bg-black py-4">
         <div className="tulsa-marquee flex w-max gap-3">
           {marqueePhotos.map((src, i) => (
-            <div key={`${src}-${i}`} className="relative h-28 w-44 shrink-0 overflow-hidden rounded-xl md:h-36 md:w-56">
+            <div key={`${src}-${i}`} className="relative h-24 w-36 shrink-0 overflow-hidden rounded-xl sm:h-28 sm:w-44 md:h-36 md:w-56">
               <Image src={src} alt="" fill className="object-cover" sizes="224px" />
             </div>
           ))}
         </div>
       </section>
 
-      <section id="prayer" className="scroll-mt-24 bg-gold px-5 py-12 text-black">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <div>
-            <p className="text-xs font-black tracking-[0.28em] uppercase">Every Thursday</p>
-            <h2 className="mt-2 text-3xl font-black md:text-4xl">Join us for prayer · 5:00 PM CST</h2>
-            <p className="mt-2 max-w-2xl text-black/80">
+      <section id="prayer" className="scroll-mt-24 bg-gold px-4 py-10 text-black sm:px-5 md:py-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-5 md:flex-row md:items-center md:justify-between md:gap-6">
+          <div className="min-w-0">
+            <p className="text-[10px] font-black tracking-[0.2em] uppercase sm:text-xs sm:tracking-[0.28em]">Every Thursday</p>
+            <h2 className="mt-2 text-2xl font-black sm:text-3xl md:text-4xl">
+              Join us for prayer
+              <span className="block sm:inline"> · 5:00 PM CST</span>
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-black/80 sm:text-base">
               Prayer is on Zoom. Come pray with Dear Daughter Bible Study Group as we cover Tulsa,
               the March, and the nations.
             </p>
@@ -115,18 +120,18 @@ export default function TulsaPage() {
             href={links.tulsaPrayerZoom}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white"
+            className="inline-flex w-full shrink-0 items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white md:w-auto"
           >
             Open the Zoom prayer
           </a>
         </div>
       </section>
 
-      <section className="bg-white px-5 py-16 md:py-20">
+      <section className="bg-white px-4 py-12 sm:px-5 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <Kicker>What this is</Kicker>
-            <h2 className="mt-3 text-4xl font-bold text-midnight md:text-5xl">Light in the streets of Tulsa</h2>
+            <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl md:text-5xl">Light in the streets of Tulsa</h2>
             <div className="mt-6 space-y-4 text-ink-3">
               {tulsa?.body.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -146,10 +151,10 @@ export default function TulsaPage() {
         </div>
       </section>
 
-      <section className="bg-midnight px-5 py-16 text-white md:py-20">
+      <section className="bg-midnight px-4 py-12 text-white sm:px-5 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker tone="dark">From the Tulsa marches</Kicker>
-          <h2 className="mt-3 text-4xl font-black md:text-6xl">
+          <h2 className="mt-3 text-3xl font-black sm:text-4xl md:text-6xl">
             This is what it looks like
             <span className="block text-gold">when a city lifts up Jesus.</span>
           </h2>
@@ -169,11 +174,11 @@ export default function TulsaPage() {
         </div>
       </section>
 
-      <section id="join-tulsa" className="scroll-mt-24 bg-navy px-5 py-16 text-white md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.05fr]">
-          <div>
+      <section id="join-tulsa" className="scroll-mt-24 bg-navy px-4 py-12 text-white sm:px-5 md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1.05fr] lg:gap-10">
+          <div className="min-w-0">
             <Kicker tone="dark">How to join</Kicker>
-            <h2 className="mt-3 text-4xl font-bold md:text-5xl">March with us, serve, or watch live</h2>
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">March with us, serve, or watch live</h2>
             <ol className="mt-8 space-y-5 text-white/90">
               <li>
                 <strong className="text-gold">1. Be there.</strong> Meet at Tulsa City Hall on Saturday,
@@ -210,7 +215,7 @@ export default function TulsaPage() {
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-white p-6 text-ink md:p-8">
+          <div className="min-w-0 overflow-hidden rounded-3xl bg-white p-4 text-ink sm:p-6 md:p-8">
             <h3 className="text-2xl font-bold text-midnight">I’m coming to Tulsa</h3>
             <p className="mt-2 mb-6 text-sm text-muted">
               We’ll follow up from Dear Daughter Bible Study Group.
@@ -238,47 +243,48 @@ export default function TulsaPage() {
         </div>
       </section>
 
-      <section id="give-tulsa" className="scroll-mt-24 bg-mist px-5 py-16 md:py-20">
+      <section id="give-tulsa" className="scroll-mt-24 bg-mist px-4 py-12 sm:px-5 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker>How to give</Kicker>
-          <h2 className="mt-3 text-4xl font-bold text-midnight md:text-5xl">Help send the March</h2>
+          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl md:text-5xl">Help send the March</h2>
           <p className="mt-4 max-w-2xl text-ink-3">
             Your gift sponsors Jesus March Tulsa — flags, Bibles, outreach, and getting the team to
             the city. 100% goes to Dear Daughter Bible Study Group.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <article className="rounded-3xl bg-gold p-8 text-black">
+          <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2">
+            <article className="rounded-3xl bg-gold p-5 text-black sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em]">Card · Apple Pay · Google Pay</p>
-              <h3 className="mt-3 text-3xl font-bold">Give online with Zeffy</h3>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">Give online with Zeffy</h3>
               <p className="mt-3 text-sm">No platform fees. Mention Jesus March Tulsa if you can.</p>
               <a
                 href={links.zeffy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex rounded-full bg-black px-5 py-3 text-sm font-semibold text-white"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-black px-5 py-3 text-sm font-semibold text-white sm:w-auto"
               >
                 Open the giving form
               </a>
             </article>
-            <article className="rounded-3xl border border-navy/10 bg-white p-8">
+            <article className="rounded-3xl border border-navy/10 bg-white p-5 sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy">Zelle</p>
-              <h3 className="mt-3 text-3xl font-bold text-midnight">Zelle {ZELLE_EMAIL}</h3>
+              <h3 className="mt-3 text-2xl font-bold break-words text-midnight sm:text-3xl">Zelle</h3>
+              <p className="mt-1 text-lg font-semibold break-all text-midnight">{ZELLE_EMAIL}</p>
               <p className="mt-3 text-sm text-ink-3">
                 Send your gift by Zelle and note <strong>Jesus March Tulsa</strong> in the memo.
               </p>
               <a
                 href={links.zelleTulsaMailto}
-                className="mt-6 inline-flex rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white sm:w-auto"
               >
                 Email {ZELLE_EMAIL}
               </a>
             </article>
           </div>
-          <div className="mt-10 overflow-hidden rounded-3xl border border-navy/10 bg-white">
+          <div className="mt-8 max-w-full overflow-hidden rounded-3xl border border-navy/10 bg-white sm:mt-10">
             <iframe
               title="Give to Jesus March Tulsa"
               src={links.zeffyEmbed}
-              className="h-[720px] w-full"
+              className="h-[560px] w-full max-w-full sm:h-[720px]"
               loading="lazy"
             />
           </div>
@@ -290,9 +296,9 @@ export default function TulsaPage() {
 
 function Fact({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-white/15 bg-white/5 px-4 py-3">
-      <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">{label}</dt>
-      <dd className="mt-1 text-lg font-semibold">{value}</dd>
+    <div className="rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-left">
+      <dt className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold sm:text-xs">{label}</dt>
+      <dd className="mt-1 text-base font-semibold break-words sm:text-lg">{value}</dd>
     </div>
   );
 }

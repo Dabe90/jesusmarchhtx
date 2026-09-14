@@ -117,7 +117,7 @@ export function InquiryForm({
       <button
         type="submit"
         disabled={sending}
-        className="mt-2 rounded-full bg-gold px-5 py-3 text-sm font-medium text-ink transition hover:bg-gold-2 disabled:opacity-60"
+        className="mt-2 w-full rounded-full bg-gold px-5 py-3 text-sm font-medium text-ink transition hover:bg-gold-2 disabled:opacity-60 sm:w-auto"
       >
         {sending ? "Sending…" : submitLabel}
       </button>

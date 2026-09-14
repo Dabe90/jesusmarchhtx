@@ -24,7 +24,7 @@ export function GalleryGrid({ title, images }: { title: string; images: string[]
       {active ? (
         <button
           type="button"
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-black/85 p-6"
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-black/85 p-3 sm:p-6"
           onClick={() => setActive(null)}
         >
           <Image src={active} alt="" width={1400} height={1000} className="max-h-[90vh] w-auto max-w-full object-contain" />
