@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { nextPrograms } from "@/lib/content";
+import { links } from "@/lib/links";
 
 export const metadata: Metadata = { title: "Schedule" };
 
@@ -21,8 +22,12 @@ export default function SchedulePage() {
           </article>
         ))}
         <article className="rounded-2xl border border-black/10 border-l-4 border-l-gold bg-white p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-navy">Last Sunday of the month</p>
-          <h2 className="mt-2 font-display text-2xl">The Rec Special Service</h2>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-navy">Every Thursday · 5:00 PM CST</p>
+          <h2 className="mt-2 font-display text-2xl">Zoom prayer</h2>
+          <p className="mt-2 text-sm text-ink-3">Join us on Zoom as we pray for Tulsa, the March, and the nations.</p>
+          <div className="mt-4">
+            <ButtonLink href={links.tulsaPrayerZoom}>Open Zoom</ButtonLink>
+          </div>
         </article>
       </div>
       <div className="mt-10 flex flex-wrap justify-center gap-3">

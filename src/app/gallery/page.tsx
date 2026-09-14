@@ -27,6 +27,9 @@ const tulsa = [
   "/images/gallery/g12.jpg",
   "/images/gallery/g13.jpg",
   "/images/gallery/g14.jpg",
+  "/images/gallery/g42.jpg",
+  "/images/gallery/g43.jpg",
+  "/images/gallery/g44.jpg",
 ];
 const dc = [
   "/images/gallery/g15.jpg",

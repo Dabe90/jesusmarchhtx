@@ -335,6 +335,9 @@ export const tulsaPhotos = [
   "/images/gallery/g12.jpg",
   "/images/gallery/g13.jpg",
   "/images/gallery/g14.jpg",
+  "/images/gallery/g42.jpg",
+  "/images/gallery/g43.jpg",
+  "/images/gallery/g44.jpg",
 ] as const;
 
 export const tulsaDrivePhotos = [
@@ -358,6 +361,9 @@ export const tulsaDrivePhotos = [
   "/images/tulsa/d18.jpg",
   "/images/tulsa/d19.jpg",
   "/images/tulsa/d20.jpg",
+  "/images/tulsa/d21.jpg",
+  "/images/tulsa/d22.jpg",
+  "/images/tulsa/d23.jpg",
 ] as const;
 
 export const tulsaJoinWays = [

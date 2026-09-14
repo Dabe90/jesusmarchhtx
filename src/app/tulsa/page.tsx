@@ -77,6 +77,9 @@ export default function TulsaPage() {
             </dl>
             <div className="mt-8 flex flex-wrap gap-3">
               <ButtonLink href="#join-tulsa">Join the March</ButtonLink>
+              <ButtonLink href={links.tulsaPrayerZoom} variant="light">
+                Thursday prayer on Zoom
+              </ButtonLink>
               <ButtonLink href="#give-tulsa" variant="light">
                 Give
               </ButtonLink>
@@ -98,6 +101,27 @@ export default function TulsaPage() {
         </div>
       </section>
 
+      <section id="prayer" className="scroll-mt-24 bg-gold px-5 py-12 text-black">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <p className="text-xs font-black tracking-[0.28em] uppercase">Every Thursday</p>
+            <h2 className="mt-2 text-3xl font-black md:text-4xl">Join us for prayer · 5:00 PM CST</h2>
+            <p className="mt-2 max-w-2xl text-black/80">
+              Prayer is on Zoom. Come pray with Dear Daughter Bible Study Group as we cover Tulsa,
+              the March, and the nations.
+            </p>
+          </div>
+          <a
+            href={links.tulsaPrayerZoom}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white"
+          >
+            Open the Zoom prayer
+          </a>
+        </div>
+      </section>
+
       <section className="bg-white px-5 py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
@@ -116,8 +140,8 @@ export default function TulsaPage() {
           <div className="grid grid-cols-2 gap-3">
             <WatermarkedShot src="/images/tulsa/d09.jpg" alt="Marchers carrying Jesus Loves You banner" stamp="date" className="aspect-[4/5] rounded-3xl" />
             <WatermarkedShot src="/images/tulsa/d14.jpg" alt="Preaching during Jesus March Tulsa" stamp="logo" className="aspect-[4/5] rounded-3xl" />
-            <WatermarkedShot src="/images/gallery/g06.jpg" alt="Jesus March Tulsa gathering" stamp="none" className="aspect-[4/5] rounded-3xl" />
-            <WatermarkedShot src="/images/tulsa/d12.jpg" alt="Jesus is the Answer flag" stamp="repeat" className="aspect-[4/5] rounded-3xl" />
+            <WatermarkedShot src="/images/tulsa/d21.jpg" alt="Jesus March Tulsa at City Hall" stamp="none" className="aspect-[4/5] rounded-3xl" />
+            <WatermarkedShot src="/images/tulsa/d22.jpg" alt="Friends at Jesus March Tulsa" stamp="logo" className="aspect-[4/5] rounded-3xl" />
           </div>
         </div>
       </section>
@@ -160,7 +184,11 @@ export default function TulsaPage() {
                 can count you, connect groups, and help with travel or carpooling.
               </li>
               <li>
-                <strong className="text-gold">3. Can’t come in person?</strong> Watch live on Facebook,
+                <strong className="text-gold">3. Pray with us every Thursday.</strong> Join Zoom prayer at
+                5:00 PM CST.
+              </li>
+              <li>
+                <strong className="text-gold">4. Can’t come in person?</strong> Watch live on Facebook,
                 YouTube, and Instagram — @ddbs.tulsa and @ddbs.global.
               </li>
             </ol>
