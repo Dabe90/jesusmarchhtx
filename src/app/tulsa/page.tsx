@@ -4,10 +4,13 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Kicker } from "@/components/Kicker";
 import { FacebookIcon, InstagramIcon, YouTubeIcon } from "@/components/SocialLinks";
-import { marches, tulsaJoinWays, tulsaPhotos } from "@/lib/content";
+import { WatermarkedShot } from "@/components/WatermarkedShot";
+import { marches, tulsaDrivePhotos, tulsaJoinWays, tulsaPhotos } from "@/lib/content";
 import { links, ZELLE_EMAIL } from "@/lib/links";
 
 const tulsa = marches.find((march) => march.slug === "tulsa");
+const marqueePhotos = [...tulsaDrivePhotos, ...tulsaPhotos, ...tulsaDrivePhotos, ...tulsaPhotos];
+const stamps = ["repeat", "logo", "date", "none"] as const;
 
 export const metadata: Metadata = {
   title: "Jesus March Tulsa",
@@ -33,16 +36,18 @@ export default function TulsaPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-midnight text-white">
-        <Image
-          src="/images/gallery/g06.jpg"
-          alt=""
-          fill
-          priority
-          className="object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight/70 via-navy/80 to-midnight" />
+        <Image src="/images/tulsa/d01.jpg" alt="" fill priority className="object-cover opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-midnight/55 via-navy/70 to-midnight" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 overflow-hidden opacity-25 mix-blend-overlay"
+        >
+          <p className="absolute top-24 -left-10 rotate-[-18deg] text-6xl font-black tracking-[0.4em] text-gold uppercase md:text-8xl">
+            Jesus March Tulsa Jesus March Tulsa
+          </p>
+        </div>
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:grid-cols-[0.9fr_1.1fr] md:py-20">
-          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border border-gold/40 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+          <div className="tulsa-glow relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border-2 border-gold">
             <Image
               src="/images/flyer-tulsa.jpg"
               alt="Jesus March Tulsa flyer — Saturday, September 26, 2026 at 12PM, Tulsa City Hall"
@@ -53,11 +58,16 @@ export default function TulsaPage() {
             />
           </div>
           <div>
-            <Kicker tone="dark">Dear Daughter Bible Study Group</Kicker>
-            <h1 className="mt-4 text-5xl font-bold leading-tight md:text-7xl">Jesus March Tulsa</h1>
+            <p className="inline-flex rounded-full border border-gold/50 bg-gold/15 px-4 py-1 text-xs font-black tracking-[0.28em] text-gold uppercase">
+              Next march · Tulsa City Hall
+            </p>
+            <h1 className="mt-5 text-5xl font-black leading-[0.9] md:text-7xl">
+              Jesus
+              <span className="block text-gold">March Tulsa</span>
+            </h1>
             <p className="mt-5 max-w-xl text-lg text-white/90">
-              Declaring the gospel, lifting up the name of Jesus, and winning souls with love.
-              Come ready to worship, pray, and share the Good News.
+              The streets fill with worship. Flags go up. The name of Jesus is preached out loud.
+              Saturday, September 26 — 12PM — start at City Hall.
             </p>
             <dl className="mt-8 grid gap-4 sm:grid-cols-2">
               <Fact label="When" value="Saturday, September 26, 2026" />
@@ -78,6 +88,16 @@ export default function TulsaPage() {
         </div>
       </section>
 
+      <section className="overflow-hidden bg-black py-4">
+        <div className="tulsa-marquee flex w-max gap-3">
+          {marqueePhotos.map((src, i) => (
+            <div key={`${src}-${i}`} className="relative h-28 w-44 shrink-0 overflow-hidden rounded-xl md:h-36 md:w-56">
+              <Image src={src} alt="" fill className="object-cover" sizes="224px" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="bg-white px-5 py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
@@ -94,23 +114,31 @@ export default function TulsaPage() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {tulsaPhotos.slice(0, 4).map((src) => (
-              <div key={src} className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-                <Image src={src} alt="Jesus March Tulsa" fill className="object-cover" sizes="(min-width: 1024px) 25vw, 50vw" />
-              </div>
-            ))}
+            <WatermarkedShot src="/images/tulsa/d09.jpg" alt="Marchers carrying Jesus Loves You banner" stamp="date" className="aspect-[4/5] rounded-3xl" />
+            <WatermarkedShot src="/images/tulsa/d14.jpg" alt="Preaching during Jesus March Tulsa" stamp="logo" className="aspect-[4/5] rounded-3xl" />
+            <WatermarkedShot src="/images/gallery/g06.jpg" alt="Jesus March Tulsa gathering" stamp="none" className="aspect-[4/5] rounded-3xl" />
+            <WatermarkedShot src="/images/tulsa/d12.jpg" alt="Jesus is the Answer flag" stamp="repeat" className="aspect-[4/5] rounded-3xl" />
           </div>
         </div>
       </section>
 
-      <section className="bg-mist px-5 py-16 md:py-20">
+      <section className="bg-midnight px-5 py-16 text-white md:py-20">
         <div className="mx-auto max-w-7xl">
-          <Kicker>From the last Tulsa March</Kicker>
-          <h2 className="mt-3 text-4xl font-bold text-midnight">See what God is doing</h2>
-          <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3">
-            {tulsaPhotos.map((src) => (
-              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src={src} alt="Jesus March Tulsa gathering" fill className="object-cover" sizes="(min-width: 768px) 33vw, 50vw" />
+          <Kicker tone="dark">From the Tulsa marches</Kicker>
+          <h2 className="mt-3 text-4xl font-black md:text-6xl">
+            This is what it looks like
+            <span className="block text-gold">when a city lifts up Jesus.</span>
+          </h2>
+          <div className="mt-10 columns-2 gap-3 md:columns-3">
+            {[...tulsaDrivePhotos, ...tulsaPhotos].map((src, i) => (
+              <div key={src} className="mb-3 break-inside-avoid overflow-hidden rounded-2xl">
+                <WatermarkedShot
+                  src={src}
+                  alt="Jesus March Tulsa"
+                  stamp={stamps[i % stamps.length]}
+                  className={i % 5 === 0 ? "aspect-[3/4]" : "aspect-[4/3]"}
+                  sizes="(min-width: 768px) 33vw, 50vw"
+                />
               </div>
             ))}
           </div>

@@ -32,3 +32,30 @@ body {
   background: var(--color-gold);
   color: #000000;
 }
+
+@keyframes tulsa-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes tulsa-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 203, 5, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 40px 8px rgba(255, 203, 5, 0.45);
+  }
+}
+
+.tulsa-marquee {
+  animation: tulsa-marquee 42s linear infinite;
+}
+
+.tulsa-glow {
+  animation: tulsa-glow 2.8s ease-in-out infinite;
+}

@@ -337,6 +337,29 @@ export const tulsaPhotos = [
   "/images/gallery/g14.jpg",
 ] as const;
 
+export const tulsaDrivePhotos = [
+  "/images/tulsa/d01.jpg",
+  "/images/tulsa/d02.jpg",
+  "/images/tulsa/d03.jpg",
+  "/images/tulsa/d04.jpg",
+  "/images/tulsa/d05.jpg",
+  "/images/tulsa/d06.jpg",
+  "/images/tulsa/d07.jpg",
+  "/images/tulsa/d08.jpg",
+  "/images/tulsa/d09.jpg",
+  "/images/tulsa/d10.jpg",
+  "/images/tulsa/d11.jpg",
+  "/images/tulsa/d12.jpg",
+  "/images/tulsa/d13.jpg",
+  "/images/tulsa/d14.jpg",
+  "/images/tulsa/d15.jpg",
+  "/images/tulsa/d16.jpg",
+  "/images/tulsa/d17.jpg",
+  "/images/tulsa/d18.jpg",
+  "/images/tulsa/d19.jpg",
+  "/images/tulsa/d20.jpg",
+] as const;
+
 export const tulsaJoinWays = [
   "I will march with you",
   "Lead Marcher",

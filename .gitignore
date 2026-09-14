@@ -40,6 +40,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw Drive dumps (too large for git)
+/public/images/tulsa-drive/
+/public/images/tulsa-raw/
+
 # typescript
 next-env.d.ts
 *.tsbuildinfo
