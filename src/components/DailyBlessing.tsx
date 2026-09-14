@@ -12,18 +12,18 @@ export function DailyBlessing() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative z-10 -mt-16 px-5">
-      <div className="mx-auto grid max-w-7xl gap-6 rounded-3xl border border-gold/40 bg-white p-6 shadow-[0_24px_60px_rgba(5,13,40,0.22)] md:grid-cols-2 md:p-10">
+    <section className="relative z-10 -mt-16 px-4 sm:px-5">
+      <div className="mx-auto grid max-w-7xl gap-6 rounded-3xl border border-gold/40 bg-white p-5 shadow-[0_24px_60px_rgba(5,13,40,0.22)] sm:p-6 md:grid-cols-2 md:p-10">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-navy">Blessed first</p>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy sm:text-xs sm:tracking-[0.28em]">Blessed first</p>
           <h2 className="mt-2 text-2xl font-bold text-midnight md:text-3xl">Daily blessing</h2>
-          <p className="mt-5 text-xl font-medium italic leading-relaxed text-navy md:text-2xl">
+          <p className="mt-5 text-lg font-medium italic leading-relaxed text-navy sm:text-xl md:text-2xl">
             “{blessing.verse}”
           </p>
           <p className="mt-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">{blessing.ref}</p>
           <p className="mt-5 text-ink-3">{houstonPrayer}</p>
         </div>
-        <div className="rounded-2xl bg-mist p-6">
+        <div className="rounded-2xl bg-mist p-5 sm:p-6">
           <h3 className="text-xl font-bold text-midnight">Salvation prayer</h3>
           <p className="mt-3 text-ink-3">{salvationPrayer}</p>
           <button

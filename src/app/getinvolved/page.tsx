@@ -12,7 +12,7 @@ export default function GetInvolvedPage() {
     <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.2fr_0.8fr]">
       <div>
         <Kicker>Volunteers needed</Kicker>
-        <h1 className="mt-3 font-display text-5xl text-black">Global 360 Partner</h1>
+        <h1 className="mt-3 font-display text-3xl text-black sm:text-5xl">Global 360 Partner</h1>
         <p className="mt-6 text-lg text-ink-3">
           Join the Global 360 Partner Network of {organizer.name}.
         </p>

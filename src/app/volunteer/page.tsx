@@ -9,7 +9,7 @@ export default function VolunteerPage() {
   return (
     <section className="mx-auto max-w-6xl px-5 py-16">
       <Kicker>Let’s march</Kicker>
-      <h1 className="mt-3 font-display text-5xl text-black">Volunteer</h1>
+      <h1 className="mt-3 font-display text-3xl text-black sm:text-5xl">Volunteer</h1>
       <p className="mt-4 max-w-2xl text-ink-3">
         Come and be part of this extraordinary event as we lift up the banner of our King, Jesus,
         and make a positive impact on our nation and the world.
@@ -22,7 +22,7 @@ export default function VolunteerPage() {
           </article>
         ))}
       </div>
-      <div className="mt-12 max-w-xl rounded-3xl border border-black/10 bg-cream-2 p-8">
+      <div className="mt-12 max-w-xl rounded-3xl border border-black/10 bg-cream-2 p-5 sm:p-8">
         <h2 className="font-display text-2xl text-black">Volunteer form</h2>
         <p className="mt-2 mb-6 text-sm text-muted">Please state the area where you would like to volunteer.</p>
         <InquiryForm

@@ -19,7 +19,7 @@ export function ButtonLink({ href, children, variant = "gold", className = "" }:
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition ${styles} ${className}`}
+      className={`inline-flex max-w-full min-w-0 items-center justify-center rounded-full px-5 py-2.5 text-center text-sm font-semibold transition ${styles} ${className}`}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {children}

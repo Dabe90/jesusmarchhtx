@@ -14,7 +14,7 @@ export default function NigeriaPage() {
       <section className="bg-mist">
         <div className="mx-auto max-w-4xl px-5 py-24 text-left">
           <Kicker>#ReviveOurStreets</Kicker>
-          <h1 className="mt-4 text-5xl font-bold text-black md:text-6xl">Jesus March Nigeria</h1>
+          <h1 className="mt-4 text-3xl font-bold text-black sm:text-5xl md:text-6xl">Jesus March Nigeria</h1>
           <p className="mt-6 text-lg text-ink-3">
             This January 2027, thousands will walk the streets of Nigeria to proclaim the name of Jesus.
             Join the movement.
@@ -34,10 +34,10 @@ export default function NigeriaPage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-5 py-16">
-        <p className="text-center text-sm font-semibold uppercase tracking-[0.2em] text-navy">
+        <p className="text-center text-[10px] font-semibold uppercase tracking-[0.12em] text-navy sm:text-sm sm:tracking-[0.2em]">
           Worship rally · Prayer walk · Street evangelism · Live music
         </p>
-        <h2 className="mt-8 text-center text-4xl font-bold text-black">Mission statement</h2>
+        <h2 className="mt-8 text-center text-3xl font-bold text-black sm:text-4xl">Mission statement</h2>
         <p className="mx-auto mt-6 max-w-3xl text-center text-ink-3">
           The Jesus March Nigeria is a prophetic gathering of believers across Nigeria, united to
           exalt the name of Jesus in public worship, prayer, and declaration. We march to awaken
@@ -70,7 +70,7 @@ export default function NigeriaPage() {
       <section className="bg-navy">
         <div className="mx-auto grid max-w-5xl gap-10 px-5 py-16 md:grid-cols-2">
           <div>
-            <h2 className="text-4xl font-bold text-white">Register now</h2>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">Register now</h2>
             <p className="mt-4 text-white/80">
               Join the nationwide movement. Tell us your city and we’ll connect you with the March
               nearest you.

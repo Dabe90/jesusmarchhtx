@@ -7,7 +7,7 @@ import { FORM_INBOX, ZELLE_EMAIL, links } from "@/lib/links";
 export function Footer() {
   return (
     <footer className="overflow-x-hidden bg-midnight text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-5 md:py-16 md:grid-cols-2 lg:grid-cols-4">
         <div className="min-w-0">
           <Image src="/images/logo-march.png" alt="Jesus March" width={64} height={64} className="mb-4 h-14 w-14 rounded-full bg-white object-contain" />
           <p className="max-w-sm text-2xl font-semibold text-white">
@@ -24,12 +24,12 @@ export function Footer() {
               Give
             </Link>
           </div>
-          <p className="mt-4 text-sm text-white/80">
+          <p className="mt-4 text-sm break-all text-white/80">
             <a className="hover:text-gold" href={`mailto:${FORM_INBOX}`}>
               {FORM_INBOX}
             </a>
           </p>
-          <p className="mt-1 text-sm text-white/80">
+          <p className="mt-1 text-sm break-all text-white/80">
             Zelle {ZELLE_EMAIL}
           </p>
           <SocialLinks className="mt-6" />

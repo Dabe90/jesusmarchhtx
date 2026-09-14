@@ -49,7 +49,7 @@ export default function GalleryPage() {
       <section className="border-b border-black/10 bg-black px-5 py-16">
         <div className="mx-auto max-w-6xl">
           <Kicker tone="dark">Sights and sounds</Kicker>
-          <h1 className="mt-3 text-5xl font-bold text-white">Gallery</h1>
+          <h1 className="mt-3 text-4xl font-bold text-white sm:text-5xl">Gallery</h1>
           <p className="mt-4 max-w-2xl text-white/80">
             Experience our joy, worship, and God through pictures from Houston, Tulsa, and Washington, D.C.
             Press any photo to zoom.
@@ -59,7 +59,7 @@ export default function GalleryPage() {
 
       <div className="bg-mist">
         <SectionFrame>
-          <h2 className="text-4xl font-bold text-black">Videos</h2>
+          <h2 className="text-3xl font-bold text-black sm:text-4xl">Videos</h2>
           <p className="mt-3 max-w-2xl text-ink-3">Watch Jesus March 01 and COMBINE AD.</p>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <PlayableVideo
@@ -88,7 +88,7 @@ export default function GalleryPage() {
 
       <section className="bg-cream text-ink">
         <div className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="text-4xl font-bold">Downloadables</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">Downloadables</h2>
           <p className="mt-3 text-ink/70">
             Please download the file to print your own shirts or use as signs.
           </p>

@@ -63,10 +63,10 @@ export function JoinHub() {
           ];
 
   return (
-    <section id="join" className="scroll-mt-24 bg-midnight px-5 py-16 text-white md:py-20">
+    <section id="join" className="scroll-mt-24 bg-midnight px-4 py-12 text-white sm:px-5 md:py-20">
       <div className="mx-auto max-w-7xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Action center</p>
-        <h2 className="mt-3 text-4xl font-bold md:text-5xl">Join us &amp; get involved</h2>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold sm:text-xs sm:tracking-[0.28em]">Action center</p>
+        <h2 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">Join us &amp; get involved</h2>
         <p className="mt-4 max-w-2xl text-white/80">
           Volunteer, request a Bible study, or become a Global 360 Partner — all from this page.
         </p>
@@ -92,7 +92,7 @@ export function JoinHub() {
             ))}
           </div>
 
-          <div className="rounded-3xl bg-white p-6 text-ink md:p-8">
+          <div className="min-w-0 rounded-3xl bg-white p-4 text-ink sm:p-6 md:p-8">
             <h3 className="text-2xl font-bold text-midnight">{tab.label}</h3>
             <p className="mt-2 mb-6 text-sm text-muted">{tab.intro}</p>
             <InquiryForm key={tab.id} formName={tab.formName} submitLabel="Send my request" fields={fields} />

@@ -89,14 +89,14 @@ export function StoryCarousel() {
               <button
                 type="button"
                 onClick={() => go(index - 1)}
-                className="rounded-full border border-navy/20 px-4 py-2 text-sm font-semibold text-navy"
+                className="flex-1 rounded-full border border-navy/20 px-4 py-2 text-sm font-semibold text-navy sm:flex-none"
               >
                 Previous
               </button>
               <button
                 type="button"
                 onClick={() => go(index + 1)}
-                className="rounded-full bg-gold px-4 py-2 text-sm font-semibold text-black"
+                className="flex-1 rounded-full bg-gold px-4 py-2 text-sm font-semibold text-black sm:flex-none"
               >
                 Next city
               </button>

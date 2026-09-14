@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "DD Cinemas" };
 export default function CinemasPage() {
   return (
     <section className="mx-auto max-w-3xl px-5 py-24 text-center">
-      <h1 className="font-display text-5xl text-black">DD Cinemas</h1>
+      <h1 className="font-display text-3xl text-black sm:text-5xl">DD Cinemas</h1>
       <p className="mt-6 text-ink-3">
         Media, stories, and films from Dear Daughter Bible Study. More to come.
       </p>

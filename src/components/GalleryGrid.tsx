@@ -8,7 +8,7 @@ export function GalleryGrid({ title, images }: { title: string; images: string[]
 
   return (
     <div>
-      <h2 className="text-4xl font-bold text-black">{title}</h2>
+      <h2 className="text-3xl font-bold text-black sm:text-4xl">{title}</h2>
       <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
         {images.map((src) => (
           <button

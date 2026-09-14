@@ -12,7 +12,7 @@ export default function ProgramsPage() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-16">
       <Kicker>Upcoming marches · Class of David · The Rec</Kicker>
-      <h1 className="mt-3 text-5xl font-bold text-midnight">Programs</h1>
+      <h1 className="mt-3 text-3xl font-bold text-midnight sm:text-5xl">Programs</h1>
 
       <h2 className="mt-12 text-3xl font-bold text-midnight">Next marches</h2>
       <div className="mt-6 grid gap-6 md:grid-cols-3">

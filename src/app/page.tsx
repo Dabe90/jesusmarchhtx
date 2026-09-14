@@ -18,25 +18,27 @@ export default function HomePage() {
       <section className="relative min-h-[100svh] overflow-hidden text-white">
         <BackgroundVideo src="/videos/hero.mp4" poster="/images/hero-banner.jpg" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight/50 via-navy/50 to-midnight/90" />
-        <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-5 py-28 text-center">
+        <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-4 py-24 text-center sm:px-5 md:py-28">
           <Image
             src="/images/logo-march.png"
             alt="Jesus March"
             width={140}
             height={140}
-            className="mb-6 h-28 w-28 rounded-full bg-white object-contain shadow-[0_12px_40px_rgba(0,0,0,0.35)] md:h-36 md:w-36"
+            className="mb-6 h-24 w-24 rounded-full bg-white object-contain shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:h-28 sm:w-28 md:h-36 md:w-36"
             priority
           />
           <Kicker tone="dark">Organized by Dear Daughter Bible Study Group</Kicker>
-          <h1 className="mt-6 text-4xl leading-tight font-bold text-white md:text-6xl">
+          <h1 className="mt-5 max-w-[16ch] text-3xl leading-[1.1] font-bold text-balance text-white sm:max-w-none sm:text-4xl md:text-6xl">
             Uniting Believers. Lifting Up Cities. Preaching Jesus.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/90">
+          <p className="mt-5 max-w-2xl text-base text-white/90 sm:mt-6 sm:text-lg">
             A movement born in Houston, taking the undiluted Word of God to the streets and the nations.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <ButtonLink href="/#next">Join the Next March</ButtonLink>
-            <ButtonLink href="/#media" variant="light">
+          <div className="mt-8 flex w-full max-w-sm flex-col gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
+            <ButtonLink href="/#next" className="w-full sm:w-auto">
+              Join the Next March
+            </ButtonLink>
+            <ButtonLink href="/#media" variant="light" className="w-full sm:w-auto">
               Listen to The REC Podcast
             </ButtonLink>
           </div>
@@ -48,7 +50,7 @@ export default function HomePage() {
       <section className="bg-white px-5 py-16 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker>Clear action</Kicker>
-          <h2 className="mt-3 text-4xl font-bold text-midnight md:text-5xl">What we do</h2>
+          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl md:text-5xl">What we do</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {whatWeDo.map((item) => (
               <Link
@@ -72,7 +74,7 @@ export default function HomePage() {
       <section id="family" className="scroll-mt-24 bg-mist px-5 py-16 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker>The family behind the March</Kicker>
-          <h2 className="mt-3 text-4xl font-bold text-midnight md:text-5xl">{organizer.name}</h2>
+          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl md:text-5xl">{organizer.name}</h2>
           <p className="mt-4 max-w-3xl text-lg text-ink-3">{organizer.credit}</p>
           <p className="mt-4 max-w-3xl text-ink-3">{organizer.summary}</p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -89,9 +91,9 @@ export default function HomePage() {
               </p>
             ))}
           </div>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href="/#join">Request a Bible study</ButtonLink>
-            <ButtonLink href={links.prayerCity} variant="outline">
+          <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+            <ButtonLink href="/#join" className="w-full sm:w-auto">Request a Bible study</ButtonLink>
+            <ButtonLink href={links.prayerCity} variant="outline" className="w-full sm:w-auto">
               Houston Prayer City
             </ButtonLink>
           </div>
@@ -101,7 +103,7 @@ export default function HomePage() {
       <section id="next" className="scroll-mt-24 bg-navy px-5 py-16 text-white md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker tone="dark">Next programs</Kicker>
-          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Mark your calendar</h2>
+          <h2 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">Mark your calendar</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {nextPrograms.map((program) => (
               <article key={program.title} className="overflow-hidden rounded-3xl bg-white text-ink">
@@ -125,7 +127,7 @@ export default function HomePage() {
       <section className="bg-mist px-5 py-16 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker>From Houston to the nations</Kicker>
-          <h2 className="mt-3 text-4xl font-bold text-midnight">March stories</h2>
+          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">March stories</h2>
           <p className="mt-3 max-w-2xl text-ink-3">
             Swipe the cities. Watch, look, then expand only if you want the longer story.
           </p>
@@ -143,7 +145,7 @@ export default function HomePage() {
       <section id="media" className="scroll-mt-24 bg-white px-5 py-16 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker>The REC Podcast Hub</Kicker>
-          <h2 className="mt-3 text-4xl font-bold text-midnight md:text-5xl">Hit play right here</h2>
+          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl md:text-5xl">Hit play right here</h2>
           <p className="mt-4 max-w-2xl text-ink-3">
             Recent teachings and worship from the March. Press play, then subscribe so you don’t miss The Rec.
           </p>

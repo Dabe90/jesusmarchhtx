@@ -109,7 +109,10 @@ export default function TulsaPage() {
             <p className="text-[10px] font-black tracking-[0.2em] uppercase sm:text-xs sm:tracking-[0.28em]">Every Thursday</p>
             <h2 className="mt-2 text-2xl font-black sm:text-3xl md:text-4xl">
               Join us for prayer
-              <span className="block sm:inline"> · 5:00 PM CST</span>
+              <span className="block sm:inline">
+                <span className="hidden sm:inline"> · </span>
+                5:00 PM CST
+              </span>
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-black/80 sm:text-base">
               Prayer is on Zoom. Come pray with Dear Daughter Bible Study Group as we cover Tulsa,

@@ -44,6 +44,9 @@ yarn-error.log*
 /public/images/tulsa-drive/
 /public/images/tulsa-raw/
 
+# local mobile screenshot dumps
+/.mobile-check/
+
 # typescript
 next-env.d.ts
 *.tsbuildinfo

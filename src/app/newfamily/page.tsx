@@ -8,7 +8,7 @@ export default function NewFamilyPage() {
   return (
     <section className="mx-auto grid max-w-5xl gap-10 px-5 py-16 md:grid-cols-2">
       <div>
-        <h1 className="font-display text-5xl text-black">Welcome to the family</h1>
+        <h1 className="font-display text-3xl text-black sm:text-5xl">Welcome to the family</h1>
         <p className="mt-6 text-ink-3">{organizer.credit}</p>
         <p className="mt-4 text-ink-3">{organizer.summary}</p>
         <p className="mt-4 text-muted">

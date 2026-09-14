@@ -16,7 +16,7 @@ export default function TheRecPage() {
         <div className="absolute inset-0 bg-ink/70" />
         <div className="relative mx-auto max-w-4xl px-5 py-24 text-white">
           <Kicker tone="dark">Reconcile · Recreate · Recommit</Kicker>
-          <h1 className="mt-4 text-5xl font-bold text-white">Welcome to The Rec</h1>
+          <h1 className="mt-4 text-3xl font-bold text-white sm:text-5xl">Welcome to The Rec</h1>
           <p className="mt-6 text-lg text-white/90">
             As the name suggests, it’s short for Reconcile, Recreate, and Recommit — a trio of
             principles that guide our mission to serve young people and share the gospel of Jesus.
@@ -32,9 +32,9 @@ export default function TheRecPage() {
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2">
-        <article className="rounded-3xl bg-gold p-8 text-ink">
+        <article className="rounded-3xl bg-gold p-5 text-ink sm:p-8">
           <p className="text-xs uppercase tracking-[0.2em]">Upcoming event</p>
-          <h2 className="mt-3 text-4xl font-bold">Back to School, Back to God</h2>
+          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Back to School, Back to God</h2>
           <p className="mt-4">Free T-shirt for the first 50 attendees.</p>
           <a
             href={links.recEventbrite}
@@ -45,7 +45,7 @@ export default function TheRecPage() {
             Get tickets on Eventbrite
           </a>
         </article>
-        <div className="rounded-3xl border border-black/10 bg-pink p-8">
+        <div className="rounded-3xl border border-black/10 bg-pink p-5 sm:p-8">
           <h2 className="text-2xl font-bold text-black">Sign up</h2>
           <p className="mt-2 mb-6 text-sm text-muted">Missions, gatherings, and The Rec special service.</p>
           <InquiryForm
@@ -62,8 +62,8 @@ export default function TheRecPage() {
 
       <section className="bg-black py-16 text-white">
         <div className="mx-auto max-w-6xl px-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Follow us on Instagram</p>
-          <h2 className="mt-3 text-4xl font-bold">#theREC · @ddbs.htx</h2>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold sm:text-xs sm:tracking-[0.25em]">Follow us on Instagram</p>
+          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">#theREC · @ddbs.htx</h2>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href={links.instagram}
@@ -87,7 +87,7 @@ export default function TheRecPage() {
             <iframe
               title="Dear Daughter Bible Study on Instagram"
               src="https://www.instagram.com/ddbs.htx/embed"
-              className="h-[720px] w-full"
+              className="h-[480px] w-full max-w-full sm:h-[720px]"
               loading="lazy"
             />
           </div>

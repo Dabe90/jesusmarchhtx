@@ -10,17 +10,17 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-midnight/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5">
+        <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" onClick={() => setOpen(false)}>
           <Image
             src="/images/logo-march.png"
             alt="Jesus March"
             width={56}
             height={56}
-            className="h-12 w-12 rounded-full bg-white object-contain"
+            className="h-10 w-10 shrink-0 rounded-full bg-white object-contain sm:h-12 sm:w-12"
             priority
           />
-          <span className="hidden text-lg font-semibold tracking-wide text-white sm:block">
+          <span className="truncate text-sm font-semibold tracking-wide text-white sm:text-lg">
             Jesus March
           </span>
         </Link>

@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Privacy Policy" };
 export default function PrivacyPage() {
   return (
     <section className="mx-auto max-w-3xl px-5 py-16">
-      <h1 className="font-display text-5xl text-black">Privacy policy</h1>
+      <h1 className="font-display text-3xl text-black sm:text-5xl">Privacy policy</h1>
       <p className="mt-6 text-muted">
         Jesus March HTX and Dear Daughter Bible Study collect information you choose to share with
         us through forms on this website, including your name, email, phone number, city, and how

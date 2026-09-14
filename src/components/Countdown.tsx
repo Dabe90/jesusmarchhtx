@@ -39,11 +39,11 @@ export function Countdown({ target }: { target?: string }) {
   ];
 
   return (
-    <div className="mt-8 grid grid-cols-4 gap-3">
+    <div className="mt-8 grid grid-cols-4 gap-2 sm:gap-3">
       {cells.map((cell) => (
-        <div key={cell.label} className="rounded-2xl bg-black/50 px-2 py-4 text-center">
-          <p className="text-3xl font-bold text-gold md:text-4xl">{String(cell.value).padStart(2, "0")}</p>
-          <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/80">{cell.label}</p>
+        <div key={cell.label} className="rounded-2xl bg-black/50 px-1 py-3 text-center sm:px-2 sm:py-4">
+          <p className="text-xl font-bold text-gold sm:text-3xl md:text-4xl">{String(cell.value).padStart(2, "0")}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-wide text-white/80 sm:text-[10px] sm:tracking-[0.2em]">{cell.label}</p>
         </div>
       ))}
     </div>

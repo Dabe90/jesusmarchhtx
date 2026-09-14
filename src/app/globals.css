@@ -20,12 +20,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   font-family: var(--font-sans);
   background: #ffffff;
   color: #333333;
+  overflow-wrap: break-word;
 }
 
 ::selection {

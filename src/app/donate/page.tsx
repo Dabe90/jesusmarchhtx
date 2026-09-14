@@ -6,11 +6,11 @@ export const metadata: Metadata = { title: "Give" };
 
 export default function DonatePage() {
   return (
-    <section className="mx-auto max-w-4xl px-5 py-16">
+    <section className="mx-auto max-w-4xl px-4 py-12 sm:px-5 md:py-16">
       <div className="text-center">
         <Kicker>Partner through giving</Kicker>
-        <h1 className="mt-4 text-5xl font-bold text-black">Give</h1>
-        <blockquote className="mt-10 text-2xl italic text-ink-3">
+        <h1 className="mt-4 text-4xl font-bold text-black sm:text-5xl">Give</h1>
+        <blockquote className="mt-8 text-lg italic text-ink-3 sm:mt-10 sm:text-2xl">
           “Give, and it shall be given unto you; good measure, pressed down, and shaken together, and
           running over, shall men give into your bosom. For with the same measure that ye mete withal
           it shall be measured to you again.”
@@ -23,9 +23,9 @@ export default function DonatePage() {
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
-        <article className="rounded-3xl bg-gold p-8 text-black">
+        <article className="rounded-3xl bg-gold p-5 text-black sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em]">Card · Apple Pay · Google Pay</p>
-          <h2 className="mt-3 text-3xl font-bold">Give online with Zeffy</h2>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Give online with Zeffy</h2>
           <p className="mt-3 text-sm">
             100% of your gift goes to Dear Daughter Bible Study. No platform fees.
           </p>
@@ -33,23 +33,23 @@ export default function DonatePage() {
             href={links.zeffy}
             target="_blank"
             rel="noreferrer"
-            className="mt-6 inline-flex rounded-full bg-black px-5 py-3 text-sm font-semibold text-white"
+            className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-black px-5 py-3 text-sm font-semibold text-white sm:w-auto"
           >
             Open the Zeffy form
           </a>
         </article>
-        <article className="rounded-3xl border border-black/10 bg-cream-2 p-8">
+        <article className="rounded-3xl border border-black/10 bg-cream-2 p-5 sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy">Zelle</p>
-          <h2 className="mt-3 text-3xl font-bold text-black">Zelle to our ministry inbox</h2>
-          <p className="mt-3 text-sm text-ink-3">
+          <h2 className="mt-3 text-2xl font-bold text-black sm:text-3xl">Zelle to our ministry inbox</h2>
+          <p className="mt-3 text-sm break-words text-ink-3">
             Send your gift by Zelle to{" "}
-            <strong>{ZELLE_EMAIL}</strong>.
+            <strong className="break-all">{ZELLE_EMAIL}</strong>.
           </p>
           <a
             href={links.zelleMailto}
-            className="mt-6 inline-flex rounded-full bg-black px-5 py-3 text-sm font-semibold text-white"
+            className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-black px-5 py-3 text-sm font-semibold break-all text-white sm:w-auto"
           >
-            Copy / email {ZELLE_EMAIL}
+            Email {ZELLE_EMAIL}
           </a>
         </article>
       </div>
@@ -58,7 +58,7 @@ export default function DonatePage() {
         <iframe
           title="Zeffy donation form"
           src={links.zeffyEmbed}
-          className="h-[720px] w-full"
+          className="h-[560px] w-full max-w-full sm:h-[720px]"
           loading="lazy"
         />
       </div>
