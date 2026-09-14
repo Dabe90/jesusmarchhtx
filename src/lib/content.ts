@@ -243,7 +243,7 @@ export const whatWeDo = [
   {
     title: "Dear Daughter Bible Study",
     body: "Weekly Scripture, discussion guides, and discipleship. Young people carrying the Word — the same Spirit that moved the early church moves us today.",
-    href: "/#family",
+    href: "/chapters",
     image: "/images/houston-2.jpg",
   },
   {
@@ -411,4 +411,10 @@ export const joinRoles = [
   "Medical assistants",
   "Ministry team",
   "Request a Community Bible Study",
+] as const;
+
+export const chapterKinds = [
+  "City or state chapter",
+  "Campus chapter",
+  "Not sure yet",
 ] as const;

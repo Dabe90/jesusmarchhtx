@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/dc",
     "/gallery",
     "/getinvolved",
+    "/chapters",
     "/newfamily",
     "/vision",
     "/donate",

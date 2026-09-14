@@ -67,6 +67,7 @@ export function Footer() {
                 Jesus March Nigeria
               </a>
             </li>
+            <li><Link href="/chapters" className="hover:text-gold">Start a chapter</Link></li>
             <li><Link href="/volunteer" className="hover:text-gold">Volunteer</Link></li>
             <li><Link href="/getinvolved" className="hover:text-gold">Global 360 Partners</Link></li>
             <li><Link href="/donate" className="hover:text-gold">Give</Link></li>

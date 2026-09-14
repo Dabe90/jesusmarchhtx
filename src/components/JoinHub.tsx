@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { InquiryForm } from "@/components/InquiryForm";
 import { partnerWays, volunteerMarchRoles } from "@/lib/content";
@@ -68,7 +69,7 @@ export function JoinHub() {
         <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold sm:text-xs sm:tracking-[0.28em]">Action center</p>
         <h2 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">Join us &amp; get involved</h2>
         <p className="mt-4 max-w-2xl text-white/80">
-          Volunteer, request a Bible study, or become a Global 360 Partner — all from this page.
+          Volunteer, request a Bible study, start a chapter, or become a Global 360 Partner.
         </p>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
@@ -96,6 +97,15 @@ export function JoinHub() {
             <h3 className="text-2xl font-bold text-midnight">{tab.label}</h3>
             <p className="mt-2 mb-6 text-sm text-muted">{tab.intro}</p>
             <InquiryForm key={tab.id} formName={tab.formName} submitLabel="Send my request" fields={fields} />
+            {tab.id === "study" ? (
+              <p className="mt-6 text-sm text-ink-3">
+                Starting a standing chapter in another state or on a campus?{" "}
+                <Link href="/chapters" className="font-semibold text-navy underline decoration-gold decoration-2 underline-offset-4">
+                  Go to Start a chapter
+                </Link>
+                .
+              </p>
+            ) : null}
           </div>
         </div>
       </div>

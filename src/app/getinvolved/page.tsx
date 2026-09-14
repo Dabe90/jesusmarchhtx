@@ -48,6 +48,7 @@ export default function GetInvolvedPage() {
         <div className="mt-8 flex flex-wrap gap-3">
           <ButtonLink href="/donate">Contribute</ButtonLink>
           <ButtonLink href="/volunteer" variant="outline">Volunteer roles</ButtonLink>
+          <ButtonLink href="/chapters" variant="outline">Start a chapter</ButtonLink>
           <ButtonLink href="/newfamily" variant="outline">Request a Bible study</ButtonLink>
           <ButtonLink href={links.prayerCity} variant="outline">Houston Prayer City</ButtonLink>
         </div>

@@ -92,6 +92,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+            <ButtonLink href="/chapters" className="w-full sm:w-auto">Start a chapter</ButtonLink>
             <ButtonLink href="/#join" className="w-full sm:w-auto">Request a Bible study</ButtonLink>
             <ButtonLink href={links.prayerCity} variant="outline" className="w-full sm:w-auto">
               Houston Prayer City

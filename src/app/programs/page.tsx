@@ -77,6 +77,23 @@ export default function ProgramsPage() {
           </div>
         </article>
       </div>
+
+      <article className="mt-8 overflow-hidden rounded-3xl border border-navy/10 bg-white md:grid md:grid-cols-2">
+        <div className="relative min-h-56">
+          <Image src="/images/houston-2.jpg" alt="Dear Daughter Bible Study" fill className="object-cover" />
+        </div>
+        <div className="p-6 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy">New chapters</p>
+          <h2 className="mt-3 text-3xl font-bold text-black">Start a Bible study chapter</h2>
+          <p className="mt-4 text-muted">
+            Plant Dear Daughter Bible Study in another state, another city, or on a campus. Request
+            a gathering — we will come and walk with you.
+          </p>
+          <div className="mt-6">
+            <ButtonLink href="/chapters">How to start a chapter</ButtonLink>
+          </div>
+        </div>
+      </article>
       <div className="mt-12 max-w-xl rounded-3xl border border-black/10 bg-cream-2 p-8">
         <h3 className="text-2xl font-bold text-black">Subscribe now</h3>
         <p className="mt-2 mb-6 text-sm text-muted">Links will be sent to you.</p>
