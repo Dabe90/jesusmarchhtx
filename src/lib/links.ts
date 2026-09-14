@@ -8,6 +8,7 @@ export const links = {
   instagramGlobal: "https://www.instagram.com/ddbs.global/",
   facebook: "https://www.facebook.com/JesusMarchHTX/",
   tulsaMaps: "https://www.google.com/maps/search/?api=1&query=Tulsa+City+Hall",
+  dcMaps: "https://www.google.com/maps/search/?api=1&query=Washington+Circle+Washington+DC",
   tulsaPrayerZoom:
     "https://us04web.zoom.us/j/78817813182?pwd=EII60Gsab4G8P5vPwHu4qhweZ1pQKa.1",
   recEventbrite: "https://theRec.eventbrite.com",
@@ -21,5 +22,6 @@ export const links = {
   zeffyEmbed: "https://www.zeffy.com/embed/donation-form/houston-world-cup-prayer-city-movement",
   zelleMailto: "mailto:give@jesusmarchhtx.com?subject=Zelle%20gift%20to%20Jesus%20March%20HTX",
   zelleTulsaMailto: "mailto:give@jesusmarchhtx.com?subject=Zelle%20gift%20for%20Jesus%20March%20Tulsa",
+  zelleDcMailto: "mailto:give@jesusmarchhtx.com?subject=Zelle%20gift%20for%20Jesus%20March%20DC",
   formMailto: "mailto:ddbs.htx@gmail.com",
 } as const;

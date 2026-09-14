@@ -32,6 +32,9 @@ const tulsa = [
   "/images/gallery/g44.jpg",
 ];
 const dc = [
+  "/images/dc-1.jpg",
+  "/images/dc-2.jpg",
+  "/images/dc-3.jpg",
   "/images/gallery/g15.jpg",
   "/images/gallery/g16.jpg",
   "/images/gallery/g17.jpg",

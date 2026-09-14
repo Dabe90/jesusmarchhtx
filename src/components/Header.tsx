@@ -42,6 +42,12 @@ export function Header() {
             Tulsa
           </Link>
           <Link
+            href="/dc"
+            className="transition hover:text-gold"
+          >
+            D.C.
+          </Link>
+          <Link
             href="/#join"
             className="transition hover:text-gold"
           >
@@ -85,6 +91,9 @@ export function Header() {
             ))}
             <Link href="/tulsa" className="py-2" onClick={() => setOpen(false)}>
               Tulsa
+            </Link>
+            <Link href="/dc" className="py-2" onClick={() => setOpen(false)}>
+              D.C.
             </Link>
             <Link href="/#join" className="py-2" onClick={() => setOpen(false)}>
               Join

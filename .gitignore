@@ -43,6 +43,7 @@ yarn-error.log*
 # raw Drive dumps (too large for git)
 /public/images/tulsa-drive/
 /public/images/tulsa-raw/
+/public/images/dc-raw/
 
 # local mobile screenshot dumps
 /.mobile-check/

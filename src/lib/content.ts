@@ -72,8 +72,8 @@ export const marches = [
       "The date was set for October 19, 2024, the only weekend without a major Christian event in the area — another confirmation that God was leading the way.",
       "Now we have a new challenge: gather one million people to march in DC, lifting up the name of Jesus and praying over our nation. The United States is a shining light on a hill.",
     ],
-    cta: "Join us in this incredible move of God, and check out videos and pictures of what He is doing through His people.",
-    images: ["/images/dc-1.jpg", "/images/dc-2.jpg", "/images/dc-3.jpg"],
+    cta: "Join us Saturday, October 17, 2026 at Washington Circle in Washington, D.C.",
+    images: ["/images/dc-1.jpg", "/images/gallery/g23.jpg", "/images/gallery/g21.jpg"],
   },
   {
     slug: "tulsa",
@@ -267,8 +267,9 @@ export const marchStories = [
     slug: "dc",
     city: "Washington, D.C.",
     summary: "The Lord said go to D.C. and make His name known — and we obeyed.",
-    poster: "/images/dc-1.jpg",
-    photos: ["/images/dc-1.jpg", "/images/dc-2.jpg", "/images/dc-3.jpg"],
+    video: "/videos/dc.mp4",
+    poster: "/images/gallery/g23.jpg",
+    photos: ["/images/dc-1.jpg", "/images/gallery/g21.jpg", "/images/gallery/g23.jpg"],
   },
   {
     slug: "tulsa",
@@ -310,10 +311,10 @@ export const nextPrograms = [
   {
     city: "Washington, D.C.",
     title: "Jesus March Washington DC",
-    when: "Monday, 19 October 2026 · 10AM",
-    where: "The National Mall, Washington D.C.",
-    href: "/marches/dc",
-    image: "/images/flyer-dc.png",
+    when: "Saturday, 17 October 2026",
+    where: "Washington Circle, Washington D.C.",
+    href: "/dc",
+    image: "/images/gallery/g23.jpg",
   },
   {
     city: "Nigeria",
@@ -364,6 +365,29 @@ export const tulsaDrivePhotos = [
   "/images/tulsa/d21.jpg",
   "/images/tulsa/d22.jpg",
   "/images/tulsa/d23.jpg",
+] as const;
+
+export const dcPhotos = [
+  "/images/dc-1.jpg",
+  "/images/dc-2.jpg",
+  "/images/dc-3.jpg",
+  "/images/gallery/g16.jpg",
+  "/images/gallery/g17.jpg",
+  "/images/gallery/g18.jpg",
+  "/images/gallery/g19.jpg",
+  "/images/gallery/g21.jpg",
+  "/images/gallery/g22.jpg",
+  "/images/gallery/g23.jpg",
+] as const;
+
+export const dcJoinWays = [
+  "I will march with you",
+  "Lead Marcher",
+  "Rear Marcher",
+  "Worship Chants",
+  "Prayer Partner",
+  "I am bringing a group",
+  "I will watch and pray online",
 ] as const;
 
 export const tulsaJoinWays = [

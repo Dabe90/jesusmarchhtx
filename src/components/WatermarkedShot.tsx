@@ -9,6 +9,9 @@ export function WatermarkedShot({
   className = "",
   sizes,
   priority = false,
+  repeatLabel = "Jesus March Tulsa",
+  dateLabel = "Sept 26 · 12PM",
+  dateExtra = " · City Hall",
 }: {
   src: string;
   alt: string;
@@ -16,6 +19,9 @@ export function WatermarkedShot({
   className?: string;
   sizes?: string;
   priority?: boolean;
+  repeatLabel?: string;
+  dateLabel?: string;
+  dateExtra?: string;
 }) {
   return (
     <div className={`relative overflow-hidden bg-midnight ${className}`}>
@@ -37,7 +43,7 @@ export function WatermarkedShot({
               key={i}
               className="-rotate-12 text-[11px] font-black tracking-[0.35em] text-gold uppercase"
             >
-              Jesus March Tulsa
+              {repeatLabel}
             </span>
           ))}
         </div>
@@ -53,8 +59,8 @@ export function WatermarkedShot({
       ) : null}
       {stamp === "date" ? (
         <p className="pointer-events-none absolute bottom-2 left-2 max-w-[calc(100%-1rem)] rounded-full bg-gold px-2.5 py-1 text-[10px] leading-tight font-black tracking-wide text-black uppercase sm:bottom-3 sm:left-3 sm:px-3 sm:text-[11px] sm:tracking-[0.16em]">
-          Sept 26 · 12PM
-          <span className="hidden sm:inline"> · City Hall</span>
+          {dateLabel}
+          <span className="hidden sm:inline">{dateExtra}</span>
         </p>
       ) : null}
     </div>

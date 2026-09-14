@@ -78,7 +78,7 @@ export function StoryCarousel() {
                   <p key={paragraph}>{paragraph}</p>
                 ))}
                 <Link
-                  href={story.slug === "tulsa" ? "/tulsa" : `/marches/${story.slug}`}
+                  href={story.slug === "tulsa" ? "/tulsa" : story.slug === "dc" ? "/dc" : `/marches/${story.slug}`}
                   className="inline-flex font-semibold text-navy"
                 >
                   Full page →
