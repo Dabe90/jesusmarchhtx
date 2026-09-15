@@ -91,6 +91,15 @@ export function JoinHub() {
                 </p>
               </button>
             ))}
+            <Link
+              href="/chapters"
+              className="rounded-2xl border border-gold/40 bg-gold/10 px-5 py-4 text-left transition hover:border-gold hover:bg-gold/20"
+            >
+              <p className="font-semibold">Start a Bible study chapter</p>
+              <p className="mt-1 text-sm text-white/70">
+                Plant Dear Daughter in another city, state, or on a campus. We’ll walk with you.
+              </p>
+            </Link>
           </div>
 
           <div className="min-w-0 rounded-3xl bg-white p-4 text-ink sm:p-6 md:p-8">

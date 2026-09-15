@@ -13,17 +13,26 @@ export const metadata: Metadata = {
 
 const tracks = [
   {
-    title: "City & state chapters",
-    body: "Like a satellite of the Houston study: a trained gathering in a new city that stays connected to Dear Daughter Bible Study Group each week. Meet in a home, a church (as guests), or a community room.",
+    id: "city",
+    title: "City & state",
+    kicker: "Homes · churches · community rooms",
+    body: "Like a satellite of the Houston study: a trained gathering in a new city that stays connected to Dear Daughter Bible Study Group each week.",
+    image: "/images/houston-1.jpg",
+    object: "object-[center_78%]",
   },
   {
-    title: "Campus chapters",
-    body: "Students, staff, or a nearby church host the study where people already live and learn. Pray over the campus, find open hearts, gather a core team, and launch a weekly study.",
+    id: "campus",
+    title: "Campus",
+    kicker: "Students · staff · nearby churches",
+    body: "Host the study where people already live and learn. Pray over the campus, find open hearts, gather a core team, and launch a weekly gathering.",
+    image: "/images/houston-3.jpg",
+    object: "object-[center_45%]",
   },
 ];
 
 const phases = [
   {
+    num: "01",
     name: "Prepare",
     kicker: "Pray first",
     items: [
@@ -38,6 +47,7 @@ const phases = [
     ],
   },
   {
+    num: "02",
     name: "Build",
     kicker: "Don’t plant alone",
     items: [
@@ -47,17 +57,18 @@ const phases = [
       },
       {
         title: "Train in the Word",
-        body: "We send weekly materials and discussion guides. Class of David trains Glory-Carriers who can teach the undiluted Word. Your gathering stays connected to the established study, like a satellite class.",
+        body: "We send weekly materials and discussion guides. Class of David trains Glory-Carriers who can teach the undiluted Word. Your gathering stays connected, like a satellite class.",
       },
     ],
   },
   {
-    name: "Launch & grow",
+    num: "03",
+    name: "Launch",
     kicker: "Then go public",
     items: [
       {
         title: "Host the first gathering",
-        body: "Set a regular place and time. Invite openly. Keep it simple: Scripture, discussion, prayer, and a clear gospel. If your campus requires a student organization, we will help you think that through.",
+        body: "Set a regular place and time. Keep it simple: Scripture, discussion, prayer, and a clear gospel. If your campus requires a student organization, we will help you think that through.",
       },
       {
         title: "Stay in the family",
@@ -71,118 +82,187 @@ export default function ChaptersPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-midnight text-white">
-        <Image src="/images/houston-2.jpg" alt="" fill priority className="object-cover opacity-35" />
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight/60 via-navy/75 to-midnight" />
-        <div className="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-5 md:py-24 md:text-left">
-          <Kicker tone="dark">Dear Daughter Bible Study Group</Kicker>
-          <h1 className="mt-4 text-3xl font-black leading-[1.05] sm:text-5xl md:text-6xl">
-            Start a new
-            <span className="block text-gold">Bible study chapter</span>
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base text-white/90 sm:text-lg md:mx-0">
-            Plant the study in another state, another city, or on a campus. Pray, gather a core team,
-            train in the Word, launch, and stay connected. {organizer.credit}
-          </p>
-          <div className="mt-8 flex w-full flex-col gap-3 sm:max-w-md sm:flex-row">
-            <ButtonLink href="#start-chapter" className="w-full sm:w-auto">
-              Request a chapter
-            </ButtonLink>
-            <ButtonLink href="#how" variant="light" className="w-full sm:w-auto">
-              See the path
-            </ButtonLink>
+        <Image src="/images/houston-2.jpg" alt="" fill priority className="object-cover object-[center_35%] opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-midnight/80 via-navy/70 to-midnight/90" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-24 top-10 hidden h-72 w-72 rounded-full bg-gold/15 blur-3xl lg:block"
+        />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-5 md:py-24 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="min-w-0 text-center lg:text-left">
+            <p className="mx-auto max-w-full rounded-full border border-gold/40 bg-gold/10 px-3 py-1.5 text-center text-[10px] font-semibold leading-snug tracking-[0.14em] text-gold uppercase sm:px-4 sm:tracking-[0.18em] lg:mx-0 lg:inline-block">
+              Dear Daughter Bible Study Group
+            </p>
+            <h1 className="mx-auto mt-6 max-w-[13ch] text-[2rem] font-bold leading-[1.08] tracking-tight sm:max-w-none sm:text-5xl md:text-7xl lg:mx-0">
+              Plant the Word
+              <span className="mt-2 block font-normal italic text-gold">
+                where you
+                <span className="block">already live</span>
+              </span>
+            </h1>
+            <p className="mx-auto mt-6 w-full max-w-xl text-base leading-relaxed text-white/85 sm:text-lg lg:mx-0">
+              A new chapter is a living room, a church, or a campus room — still the same undiluted
+              Scripture. Pray, gather a core team, train, launch, and stay connected. {organizer.credit}
+            </p>
+            <p className="mt-5 text-[10px] font-semibold tracking-[0.18em] text-gold uppercase">
+              Houston · Tulsa · D.C. · nations
+            </p>
+            <div className="mt-8 flex w-full flex-col gap-3 sm:max-w-md sm:flex-row lg:max-w-none">
+              <ButtonLink href="#start-chapter" className="w-full sm:w-auto">
+                Request a chapter
+              </ButtonLink>
+              <ButtonLink href="#how" variant="light" className="w-full sm:w-auto">
+                See the path
+              </ButtonLink>
+            </div>
+          </div>
+
+          <div className="relative mx-auto hidden h-[28rem] w-full max-w-md lg:block">
+            <div className="absolute top-0 right-0 h-[22rem] w-[17rem] overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_24px_60px_rgba(0,0,0,0.35)]">
+              <Image src="/images/houston-2.jpg" alt="Marchers lifting a Jesus Saves sign" fill className="object-cover" priority />
+            </div>
+            <div className="absolute bottom-0 left-0 h-48 w-44 overflow-hidden rounded-[1.5rem] border-4 border-midnight shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+              <Image src="/images/houston-3.jpg" alt="The team gathered in prayer" fill className="object-cover" />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-4 py-12 sm:px-5 md:py-20">
+      <section className="border-y border-navy/10 bg-navy px-4 py-6 text-center sm:px-5">
+        <p className="mx-auto max-w-md px-2 text-sm leading-relaxed text-white/80 sm:max-w-2xl sm:text-base">
+          <span className="font-semibold text-gold">Colossians 3:16</span>
+          <span className="mx-3 hidden text-gold/50 sm:inline">—</span>
+          <span className="mt-1 block italic sm:mt-0 sm:inline">Let the message of Christ dwell among you.</span>
+        </p>
+      </section>
+
+      <section className="bg-paper px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <Kicker>Two kinds of chapters</Kicker>
-          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">Cities, states, and campuses</h2>
-          <p className="mt-4 max-w-2xl text-ink-3">
-            {organizer.summary} The same undiluted Word. A new living room, church, or campus room.
-          </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="max-w-2xl min-w-0">
+            <Kicker>Two doors</Kicker>
+            <h2 className="mt-3 text-[1.75rem] font-bold leading-tight tracking-tight text-midnight md:text-5xl">
+              Cities, states,{" "}
+              <span className="block md:inline">and campuses</span>
+            </h2>
+            <p className="mt-4 text-ink-3">
+              {organizer.summary} Choose the kind of chapter that fits the people you already know.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {tracks.map((track) => (
-              <article key={track.title} className="rounded-3xl border border-navy/10 bg-mist p-5 sm:p-8">
-                <h3 className="text-2xl font-bold text-midnight">{track.title}</h3>
-                <p className="mt-3 text-ink-3">{track.body}</p>
+              <article
+                key={track.id}
+                id={track.id}
+                className="scroll-mt-28 overflow-hidden rounded-[2rem] bg-midnight text-white shadow-[0_20px_50px_rgba(14,41,115,0.12)]"
+              >
+                <div className="relative aspect-[16/10] sm:aspect-[16/9]">
+                  <Image
+                    src={track.image}
+                    alt=""
+                    fill
+                    className={`object-cover ${track.object}`}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-midnight from-30% via-midnight/25 to-black/20" />
+                  <p className="absolute bottom-4 left-5 right-5 text-[10px] font-semibold tracking-[0.18em] text-gold uppercase">
+                    {track.kicker}
+                  </p>
+                </div>
+                <div className="p-6 sm:p-8">
+                  <h3 className="text-3xl font-bold">{track.title}</h3>
+                  <p className="mt-3 leading-relaxed text-white/80">{track.body}</p>
+                  <div className="mt-6">
+                    <ButtonLink href="#start-chapter">Request this chapter</ButtonLink>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="how" className="scroll-mt-24 bg-mist px-4 py-12 sm:px-5 md:py-20">
+      <section id="how" className="scroll-mt-24 bg-white px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <Kicker>How chapters are planted</Kicker>
-          <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">Prepare. Build. Launch.</h2>
-          <p className="mt-4 max-w-2xl text-ink-3">
-            Healthy plants start in prayer, grow with a core team, train before they go public, and
-            stay tied to the sending family. That is how we plant Dear Daughter chapters.
-          </p>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {phases.map((phase) => (
-              <article key={phase.name} className="rounded-3xl bg-white p-5 sm:p-8">
-                <p className="text-[10px] font-black tracking-[0.18em] text-gold uppercase">{phase.kicker}</p>
-                <h3 className="mt-2 text-2xl font-bold text-midnight">{phase.name}</h3>
-                <ol className="mt-6 space-y-5">
-                  {phase.items.map((item, i) => (
-                    <li key={item.title}>
-                      <p className="text-sm font-black text-navy">
-                        {i + 1}. {item.title}
-                      </p>
-                      <p className="mt-1 text-sm text-ink-3">{item.body}</p>
-                    </li>
-                  ))}
-                </ol>
-              </article>
-            ))}
+          <div className="max-w-2xl">
+            <Kicker>How chapters are planted</Kicker>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-midnight sm:text-5xl">
+              Prepare. Build. Launch.
+            </h2>
+            <p className="mt-4 text-ink-3">
+              Healthy plants start in prayer, grow with a core team, train before they go public, and
+              stay tied to the sending family.
+            </p>
           </div>
+
+          <ol className="mt-14 space-y-0">
+            {phases.map((phase, index) => (
+              <li
+                key={phase.name}
+                className={`grid gap-6 border-navy/10 py-10 md:grid-cols-[8rem_1fr] md:gap-12 ${
+                  index === 0 ? "border-t" : ""
+                } border-b`}
+              >
+                <p className="font-display text-5xl font-bold leading-none text-gold md:text-6xl">{phase.num}</p>
+                <div>
+                  <p className="text-[10px] font-semibold tracking-[0.22em] text-navy uppercase">{phase.kicker}</p>
+                  <h3 className="mt-1 text-3xl font-bold text-midnight">{phase.name}</h3>
+                  <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                    {phase.items.map((item) => (
+                      <div key={item.title}>
+                        <p className="font-semibold text-navy">{item.title}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-ink-3">{item.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
-      <section className="bg-navy px-4 py-12 text-white sm:px-5 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
-          <div>
-            <Kicker tone="dark">Campus chapters</Kicker>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Bring the study to school</h2>
-            <ul className="mt-6 space-y-3 text-white/85">
-              <li>Pray on campus before you advertise. Ask the Lord for open, networked students.</li>
-              <li>Build a small leadership team. Don’t launch as a one-person club.</li>
-              <li>Keep a weekly rhythm: Word, discussion, prayer — then send people back to their friends.</li>
-              <li>If your school requires a recognized student organization, say so on the form. We will help you walk that.</li>
-              <li>Stay on Thursday Zoom prayer so Houston is covering you.</li>
+      <section className="bg-paper px-4 py-16 sm:px-5 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
+          <article id="campus-detail" className="rounded-[2rem] bg-white p-7 shadow-[0_16px_40px_rgba(14,41,115,0.06)] sm:p-10">
+            <Kicker>Campus chapters</Kicker>
+            <h2 className="mt-3 text-3xl font-bold text-midnight">Bring the study to school</h2>
+            <ul className="mt-6 space-y-4 text-ink-3">
+              <li className="border-l-2 border-gold pl-4">Pray on campus before you advertise. Ask the Lord for open, networked students.</li>
+              <li className="border-l-2 border-gold pl-4">Build a small leadership team. Don’t launch as a one-person club.</li>
+              <li className="border-l-2 border-gold pl-4">Keep a weekly rhythm: Word, discussion, prayer — then send people back to their friends.</li>
+              <li className="border-l-2 border-gold pl-4">If your school requires a recognized student organization, say so on the form. We will help you walk that.</li>
+              <li className="border-l-2 border-gold pl-4">Stay on Thursday Zoom prayer so Houston is covering you.</li>
             </ul>
-          </div>
-          <div>
+          </article>
+          <article className="rounded-[2rem] bg-navy p-7 text-white sm:p-10">
             <Kicker tone="dark">City &amp; state chapters</Kicker>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">The Word in your city</h2>
-            <ul className="mt-6 space-y-3 text-white/85">
+            <h2 className="mt-3 text-3xl font-bold">The Word in your city</h2>
+            <ul className="mt-6 space-y-4 text-white/85">
               <li>{organizer.body[0]}</li>
               <li>Start as a satellite gathering connected to the Houston study — weekly materials, discussion guides, and a trained leader.</li>
               <li>Churches can host without the study becoming a church program. Homes and community rooms work too.</li>
               <li>As the group grows, form a prayer covering and raise local leadership through Class of David.</li>
               <li>You can still request that we come in person to teach and help you launch.</li>
             </ul>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section id="start-chapter" className="scroll-mt-24 bg-white px-4 py-12 sm:px-5 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.05fr]">
+      <section id="start-chapter" className="scroll-mt-24 bg-midnight px-4 py-16 text-white sm:px-5 md:py-24">
+        <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="min-w-0">
-            <Kicker>Send the request</Kicker>
-            <h2 className="mt-3 text-3xl font-bold text-midnight sm:text-4xl">We’ll walk with you</h2>
-            <p className="mt-4 text-ink-3">
+            <p className="text-[10px] font-semibold tracking-[0.22em] text-gold uppercase">Send the request</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">We’ll walk with you</h2>
+            <p className="mt-5 max-w-md text-white/80">
               The first step every planting ministry uses is the same: tell someone. We follow up,
               coach the next steps, and stay with you through launch.
             </p>
-            <p className="mt-4 text-sm text-muted">
+            <p className="mt-5 max-w-md text-sm text-white/60">
               Our vision is to teach the undiluted Word of God to all nations and to make disciples
               of Christ. New chapters are one way that happens.
             </p>
           </div>
-          <div className="min-w-0 overflow-hidden rounded-3xl border border-navy/10 bg-mist p-4 sm:p-6 md:p-8">
+          <div className="min-w-0 overflow-hidden rounded-[2rem] bg-white p-5 text-ink sm:p-8">
             <h3 className="text-2xl font-bold text-midnight">I want to start a chapter</h3>
             <p className="mt-2 mb-6 text-sm text-muted">We’ll reply from Dear Daughter Bible Study Group.</p>
             <InquiryForm

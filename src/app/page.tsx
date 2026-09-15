@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BackgroundVideo } from "@/components/BackgroundVideo";
 import { ButtonLink } from "@/components/ButtonLink";
+import { ChapterInvite } from "@/components/ChapterInvite";
 import { DailyBlessing } from "@/components/DailyBlessing";
 import { InquiryForm } from "@/components/InquiryForm";
 import { JoinHub } from "@/components/JoinHub";
@@ -92,7 +93,6 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
-            <ButtonLink href="/chapters" className="w-full sm:w-auto">Start a chapter</ButtonLink>
             <ButtonLink href="/#join" className="w-full sm:w-auto">Request a Bible study</ButtonLink>
             <ButtonLink href={links.prayerCity} variant="outline" className="w-full sm:w-auto">
               Houston Prayer City
@@ -100,6 +100,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ChapterInvite />
 
       <section id="next" className="scroll-mt-24 bg-navy px-5 py-16 text-white md:py-20">
         <div className="mx-auto max-w-7xl">
