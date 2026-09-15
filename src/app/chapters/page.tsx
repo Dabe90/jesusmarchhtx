@@ -81,12 +81,16 @@ const phases = [
 export default function ChaptersPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-midnight text-white">
-        <Image src="/images/houston-2.jpg" alt="" fill priority className="object-cover object-[center_35%] opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-br from-midnight/80 via-navy/70 to-midnight/90" />
+      <section className="relative overflow-hidden bg-espresso text-white">
+        <Image src="/images/houston-2.jpg" alt="" fill priority className="object-cover object-[center_35%] opacity-45" />
+        <div className="absolute inset-0 bg-gradient-to-br from-espresso/75 via-clay/55 to-espresso/88" />
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-24 top-10 hidden h-72 w-72 rounded-full bg-gold/15 blur-3xl lg:block"
+          className="pointer-events-none absolute -right-24 top-10 hidden h-72 w-72 rounded-full bg-gold/25 blur-3xl lg:block"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-16 bottom-0 hidden h-64 w-64 rounded-full bg-olive/25 blur-3xl lg:block"
         />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-5 md:py-24 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="min-w-0 text-center lg:text-left">
@@ -121,17 +125,17 @@ export default function ChaptersPage() {
             <div className="absolute top-0 right-0 h-[22rem] w-[17rem] overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_24px_60px_rgba(0,0,0,0.35)]">
               <Image src="/images/houston-2.jpg" alt="Marchers lifting a Jesus Saves sign" fill className="object-cover" priority />
             </div>
-            <div className="absolute bottom-0 left-0 h-48 w-44 overflow-hidden rounded-[1.5rem] border-4 border-midnight shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+            <div className="absolute bottom-0 left-0 h-48 w-44 overflow-hidden rounded-[1.5rem] border-4 border-espresso shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
               <Image src="/images/houston-3.jpg" alt="The team gathered in prayer" fill className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-navy/10 bg-navy px-4 py-6 text-center sm:px-5">
-        <p className="mx-auto max-w-md px-2 text-sm leading-relaxed text-white/80 sm:max-w-2xl sm:text-base">
-          <span className="font-semibold text-gold">Colossians 3:16</span>
-          <span className="mx-3 hidden text-gold/50 sm:inline">—</span>
+      <section className="border-y border-clay/20 bg-clay px-4 py-6 text-center sm:px-5">
+        <p className="mx-auto max-w-md px-2 text-sm leading-relaxed text-white/90 sm:max-w-2xl sm:text-base">
+          <span className="font-semibold text-white">Colossians 3:16</span>
+          <span className="mx-3 hidden text-white/50 sm:inline">—</span>
           <span className="mt-1 block italic sm:mt-0 sm:inline">Let the message of Christ dwell among you.</span>
         </p>
       </section>
@@ -139,8 +143,8 @@ export default function ChaptersPage() {
       <section className="bg-paper px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl min-w-0">
-            <Kicker>Two doors</Kicker>
-            <h2 className="mt-3 text-[1.75rem] font-bold leading-tight tracking-tight text-midnight md:text-5xl">
+            <Kicker tone="warm">Two doors</Kicker>
+            <h2 className="mt-3 text-[1.75rem] font-bold leading-tight tracking-tight text-espresso md:text-5xl">
               Cities, states,{" "}
               <span className="block md:inline">and campuses</span>
             </h2>
@@ -153,7 +157,7 @@ export default function ChaptersPage() {
               <article
                 key={track.id}
                 id={track.id}
-                className="scroll-mt-28 overflow-hidden rounded-[2rem] bg-midnight text-white shadow-[0_20px_50px_rgba(14,41,115,0.12)]"
+                className="scroll-mt-28 overflow-hidden rounded-[2rem] bg-espresso text-white shadow-[0_20px_50px_rgba(184,92,56,0.14)]"
               >
                 <div className="relative aspect-[16/10] sm:aspect-[16/9]">
                   <Image
@@ -163,7 +167,7 @@ export default function ChaptersPage() {
                     className={`object-cover ${track.object}`}
                     sizes="(min-width: 1024px) 50vw, 100vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-midnight from-30% via-midnight/25 to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso from-30% via-clay/20 to-black/10" />
                   <p className="absolute bottom-4 left-5 right-5 text-[10px] font-semibold tracking-[0.18em] text-gold uppercase">
                     {track.kicker}
                   </p>
@@ -184,8 +188,8 @@ export default function ChaptersPage() {
       <section id="how" className="scroll-mt-24 bg-white px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
-            <Kicker>How chapters are planted</Kicker>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-midnight sm:text-5xl">
+            <Kicker tone="warm">How chapters are planted</Kicker>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-espresso sm:text-5xl">
               Prepare. Build. Launch.
             </h2>
             <p className="mt-4 text-ink-3">
@@ -198,18 +202,18 @@ export default function ChaptersPage() {
             {phases.map((phase, index) => (
               <li
                 key={phase.name}
-                className={`grid gap-6 border-navy/10 py-10 md:grid-cols-[8rem_1fr] md:gap-12 ${
+                className={`grid gap-6 border-clay/20 py-10 md:grid-cols-[8rem_1fr] md:gap-12 ${
                   index === 0 ? "border-t" : ""
                 } border-b`}
               >
-                <p className="font-display text-5xl font-bold leading-none text-gold md:text-6xl">{phase.num}</p>
+                <p className="font-display text-5xl font-bold leading-none text-clay md:text-6xl">{phase.num}</p>
                 <div>
-                  <p className="text-[10px] font-semibold tracking-[0.22em] text-navy uppercase">{phase.kicker}</p>
-                  <h3 className="mt-1 text-3xl font-bold text-midnight">{phase.name}</h3>
+                  <p className="text-[10px] font-semibold tracking-[0.22em] text-olive uppercase">{phase.kicker}</p>
+                  <h3 className="mt-1 text-3xl font-bold text-espresso">{phase.name}</h3>
                   <div className="mt-6 grid gap-6 sm:grid-cols-2">
                     {phase.items.map((item) => (
                       <div key={item.title}>
-                        <p className="font-semibold text-navy">{item.title}</p>
+                        <p className="font-semibold text-olive">{item.title}</p>
                         <p className="mt-2 text-sm leading-relaxed text-ink-3">{item.body}</p>
                       </div>
                     ))}
@@ -223,9 +227,9 @@ export default function ChaptersPage() {
 
       <section className="bg-paper px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
-          <article id="campus-detail" className="rounded-[2rem] bg-white p-7 shadow-[0_16px_40px_rgba(14,41,115,0.06)] sm:p-10">
-            <Kicker>Campus chapters</Kicker>
-            <h2 className="mt-3 text-3xl font-bold text-midnight">Bring the study to school</h2>
+          <article id="campus-detail" className="rounded-[2rem] bg-white p-7 shadow-[0_16px_40px_rgba(44,33,28,0.06)] sm:p-10">
+            <Kicker tone="warm">Campus chapters</Kicker>
+            <h2 className="mt-3 text-3xl font-bold text-espresso">Bring the study to school</h2>
             <ul className="mt-6 space-y-4 text-ink-3">
               <li className="border-l-2 border-gold pl-4">Pray on campus before you advertise. Ask the Lord for open, networked students.</li>
               <li className="border-l-2 border-gold pl-4">Build a small leadership team. Don’t launch as a one-person club.</li>
@@ -234,7 +238,7 @@ export default function ChaptersPage() {
               <li className="border-l-2 border-gold pl-4">Stay on Thursday Zoom prayer so Houston is covering you.</li>
             </ul>
           </article>
-          <article className="rounded-[2rem] bg-navy p-7 text-white sm:p-10">
+          <article className="rounded-[2rem] bg-clay p-7 text-white sm:p-10">
             <Kicker tone="dark">City &amp; state chapters</Kicker>
             <h2 className="mt-3 text-3xl font-bold">The Word in your city</h2>
             <ul className="mt-6 space-y-4 text-white/85">
@@ -248,7 +252,7 @@ export default function ChaptersPage() {
         </div>
       </section>
 
-      <section id="start-chapter" className="scroll-mt-24 bg-midnight px-4 py-16 text-white sm:px-5 md:py-24">
+      <section id="start-chapter" className="scroll-mt-24 bg-espresso px-4 py-16 text-white sm:px-5 md:py-24">
         <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="min-w-0">
             <p className="text-[10px] font-semibold tracking-[0.22em] text-gold uppercase">Send the request</p>
@@ -263,7 +267,7 @@ export default function ChaptersPage() {
             </p>
           </div>
           <div className="min-w-0 overflow-hidden rounded-[2rem] bg-white p-5 text-ink sm:p-8">
-            <h3 className="text-2xl font-bold text-midnight">I want to start a chapter</h3>
+            <h3 className="text-2xl font-bold text-espresso">I want to start a chapter</h3>
             <p className="mt-2 mb-6 text-sm text-muted">We’ll reply from Dear Daughter Bible Study Group.</p>
             <InquiryForm
               formName="New chapter request"
