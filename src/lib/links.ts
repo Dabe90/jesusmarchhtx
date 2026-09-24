@@ -10,7 +10,7 @@ export const links = {
   tulsaMaps: "https://www.google.com/maps/search/?api=1&query=Tulsa+City+Hall",
   dcMaps: "https://www.google.com/maps/search/?api=1&query=Washington+Cir+NW+Washington+DC+20037",
   tulsaPrayerZoom:
-    "https://us04web.zoom.us/j/78817813182?pwd=EII60Gsab4G8P5vPwHu4qhweZ1pQKa.1",
+    "https://us06web.zoom.us/j/82248986793?pwd=8d5i9hrb0TzgpGpKabYefFzugtpW5P.1",
   recEventbrite: "https://theRec.eventbrite.com",
   recHashtag: "https://www.instagram.com/explore/tags/therec/",
   podcastSubscribe: "/#media",
