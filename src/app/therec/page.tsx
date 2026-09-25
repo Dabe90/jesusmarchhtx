@@ -6,7 +6,12 @@ import { Kicker } from "@/components/Kicker";
 import { InstagramIcon } from "@/components/SocialLinks";
 import { links } from "@/lib/links";
 
-export const metadata: Metadata = { title: "The Rec" };
+export const metadata: Metadata = {
+  title: "The Rec",
+  description:
+    "The Rec is real talk, real faith, and real life from Jesus March. Listen, subscribe, and join the conversation.",
+  alternates: { canonical: "/therec" },
+};
 
 export default function TheRecPage() {
   return (

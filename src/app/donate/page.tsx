@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Kicker } from "@/components/Kicker";
 import { links, ZELLE_EMAIL } from "@/lib/links";
 
-export const metadata: Metadata = { title: "Give" };
+export const metadata: Metadata = {
+  title: "Give",
+  description:
+    "Give to Jesus March through Zeffy or Zelle. 100% of online gifts support Dear Daughter Bible Study Group, marches, and Bible materials.",
+  alternates: { canonical: "/donate" },
+};
 
 export default function DonatePage() {
   return (

@@ -5,7 +5,12 @@ import { Kicker } from "@/components/Kicker";
 import { organizer } from "@/lib/content";
 import { links } from "@/lib/links";
 
-export const metadata: Metadata = { title: "Get Involved" };
+export const metadata: Metadata = {
+  title: "Get Involved",
+  description:
+    "Pray, give, connect, or advise with Dear Daughter Bible Study Group. Become a Global 360 Partner of Jesus March.",
+  alternates: { canonical: "/getinvolved" },
+};
 
 export default function GetInvolvedPage() {
   return (

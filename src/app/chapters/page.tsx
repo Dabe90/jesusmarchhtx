@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Start a Bible Study Chapter",
   description:
     "Plant a Dear Daughter Bible Study chapter in your city, state, or on a campus. Pray, form a core team, train in the Word, launch, and stay connected to the family.",
+  alternates: { canonical: "/chapters" },
+  openGraph: {
+    title: "Start a Bible Study Chapter",
+    description:
+      "Plant Dear Daughter Bible Study in your city, state, or on a campus. Houston walks with you.",
+    url: "/chapters",
+    images: [{ url: "/images/houston-2.jpg", alt: "Marchers holding a Jesus Saves sign" }],
+  },
 };
 
 const tracks = [

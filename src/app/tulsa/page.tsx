@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { InquiryForm } from "@/components/InquiryForm";
+import { JsonLd } from "@/components/JsonLd";
 import { Kicker } from "@/components/Kicker";
 import { FacebookIcon, InstagramIcon, YouTubeIcon } from "@/components/SocialLinks";
 import { WatermarkedShot } from "@/components/WatermarkedShot";
@@ -16,11 +17,18 @@ export const metadata: Metadata = {
   title: "Jesus March Tulsa",
   description:
     "Join Jesus March Tulsa on Saturday, September 26, 2026 at 12PM, starting at Tulsa City Hall. Worship, pray, and preach Jesus with Dear Daughter Bible Study Group.",
+  alternates: { canonical: "/tulsa" },
   openGraph: {
     title: "Jesus March Tulsa — Saturday, September 26, 2026",
     description:
       "12PM at Tulsa City Hall. March with us, watch live, or give. Organized by Dear Daughter Bible Study Group.",
-    url: "https://www.jesusmarchhtx.com/tulsa",
+    url: "/tulsa",
+    images: [{ url: "/images/flyer-tulsa.jpg", alt: "Jesus March Tulsa flyer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jesus March Tulsa — September 26, 2026",
+    description: "12PM at Tulsa City Hall. Worship, prayer, and the name of Jesus in the streets.",
     images: ["/images/flyer-tulsa.jpg"],
   },
 };
@@ -35,6 +43,35 @@ const liveLinks = [
 export default function TulsaPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: "Jesus March Tulsa",
+          startDate: "2026-09-26T12:00:00-05:00",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          eventStatus: "https://schema.org/EventScheduled",
+          url: "https://www.jesusmarchhtx.com/tulsa",
+          image: "https://www.jesusmarchhtx.com/images/flyer-tulsa.jpg",
+          description:
+            "Worship, prayer, and the gospel in the streets of Tulsa, starting at Tulsa City Hall.",
+          location: {
+            "@type": "Place",
+            name: "Tulsa City Hall",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Tulsa",
+              addressRegion: "OK",
+              addressCountry: "US",
+            },
+          },
+          organizer: {
+            "@type": "Organization",
+            name: "Dear Daughter Bible Study Group",
+            url: "https://www.jesusmarchhtx.com",
+          },
+        }}
+      />
       <section className="relative overflow-hidden bg-midnight text-white">
         <Image src="/images/tulsa/d01.jpg" alt="" fill priority className="object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight/55 via-navy/70 to-midnight" />

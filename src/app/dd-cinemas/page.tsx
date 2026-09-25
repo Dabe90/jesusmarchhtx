@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-export const metadata: Metadata = { title: "DD Cinemas" };
+export const metadata: Metadata = {
+  title: "DD Cinemas",
+  description:
+    "DD Cinemas shares films and stories from Dear Daughter Bible Study Group and Jesus March.",
+  alternates: { canonical: "/dd-cinemas" },
+};
 
 export default function CinemasPage() {
   return (

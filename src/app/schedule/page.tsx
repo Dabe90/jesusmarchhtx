@@ -3,7 +3,12 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { nextPrograms } from "@/lib/content";
 import { links } from "@/lib/links";
 
-export const metadata: Metadata = { title: "Schedule" };
+export const metadata: Metadata = {
+  title: "Schedule",
+  description:
+    "Thursday Zoom prayer at 5:00 PM CST, plus upcoming Jesus March gatherings with Dear Daughter Bible Study Group.",
+  alternates: { canonical: "/schedule" },
+};
 
 export default function SchedulePage() {
   return (

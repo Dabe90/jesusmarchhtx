@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { InquiryForm } from "@/components/InquiryForm";
 import { organizer } from "@/lib/content";
 
-export const metadata: Metadata = { title: "New Family" };
+export const metadata: Metadata = {
+  title: "Welcome to the Family",
+  description:
+    "New to Jesus March? Request a Dear Daughter Bible Study in your community. We will come and teach the Word with you.",
+  alternates: { canonical: "/newfamily" },
+};
 
 export default function NewFamilyPage() {
   return (

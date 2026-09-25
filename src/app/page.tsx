@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BackgroundVideo } from "@/components/BackgroundVideo";
@@ -12,6 +13,20 @@ import { StoryCarousel } from "@/components/StoryCarousel";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { nextPrograms, organizer, whatWeDo } from "@/lib/content";
 import { links } from "@/lib/links";
+
+export const metadata: Metadata = {
+  title: { absolute: "Jesus March Houston | Dear Daughter Bible Study" },
+  description:
+    "Join Jesus March in Houston, Tulsa, and Washington DC. Worship, prayer, Bible study, and the gospel — organized by Dear Daughter Bible Study Group.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Jesus March Houston",
+    description:
+      "Uniting believers. Lifting up cities. Preaching Jesus. Next marches in Tulsa and Washington DC.",
+    url: "/",
+    images: [{ url: "/images/hero-banner.jpg", alt: "Jesus March in the streets" }],
+  },
+};
 
 export default function HomePage() {
   return (

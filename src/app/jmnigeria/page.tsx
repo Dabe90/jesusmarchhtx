@@ -6,7 +6,12 @@ import { Kicker } from "@/components/Kicker";
 import { nigeriaCities } from "@/lib/content";
 import { links } from "@/lib/links";
 
-export const metadata: Metadata = { title: "Jesus March Nigeria" };
+export const metadata: Metadata = {
+  title: "Jesus March Nigeria",
+  description:
+    "Jesus March Nigeria lifts the name of Jesus across Lagos, Ibadan, Benin, Abuja, and Port Harcourt. A nationwide January march.",
+  alternates: { canonical: "/jmnigeria" },
+};
 
 export default function NigeriaPage() {
   return (

@@ -15,7 +15,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const march = marches.find((item) => item.slug === slug);
   if (!march) return { title: "March" };
-  return { title: march.title };
+  const canonical =
+    march.slug === "tulsa" ? "/tulsa" : march.slug === "dc" ? "/dc" : `/marches/${march.slug}`;
+  return {
+    title: march.title,
+    description: march.subtitle,
+    alternates: { canonical },
+    openGraph: {
+      title: march.title,
+      description: march.subtitle,
+      url: canonical,
+      images: march.images[0] ? [{ url: march.images[0] }] : undefined,
+    },
+  };
 }
 
 export default async function MarchPage({

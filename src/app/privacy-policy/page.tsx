@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy Policy" };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "How Jesus March and Dear Daughter Bible Study Group handle the information you share with us.",
+  alternates: { canonical: "/privacy-policy" },
+};
 
 export default function PrivacyPage() {
   return (

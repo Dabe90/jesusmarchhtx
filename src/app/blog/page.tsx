@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 
-export const metadata: Metadata = { title: "Blog" };
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Stories and updates from Jesus March and Dear Daughter Bible Study Group.",
+  alternates: { canonical: "/blog" },
+};
 
 export default function BlogPage() {
   return (

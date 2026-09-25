@@ -11,8 +11,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/marches/tulsa", destination: "/tulsa", permanent: false },
-      { source: "/marches/dc", destination: "/dc", permanent: false },
+      { source: "/marches/tulsa", destination: "/tulsa", permanent: true },
+      { source: "/marches/dc", destination: "/dc", permanent: true },
       { source: "/friendswoodrally", destination: "/", permanent: false },
       { source: "/contact", destination: "/vision", permanent: false },
       { source: "/about", destination: "/newfamily", permanent: false },

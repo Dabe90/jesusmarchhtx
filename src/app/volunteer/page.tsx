@@ -3,7 +3,12 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { Kicker } from "@/components/Kicker";
 import { volunteerRoles } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Volunteer" };
+export const metadata: Metadata = {
+  title: "Volunteer",
+  description:
+    "Volunteer for the next Jesus March. Lead from the front, cover the rear, or lift worship as we preach Jesus in the streets.",
+  alternates: { canonical: "/volunteer" },
+};
 
 export default function VolunteerPage() {
   return (

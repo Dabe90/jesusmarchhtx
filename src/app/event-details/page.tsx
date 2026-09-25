@@ -3,7 +3,12 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { Kicker } from "@/components/Kicker";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Event Details" };
+export const metadata: Metadata = {
+  title: "Event Details",
+  description:
+    "Event details and registration for Jesus March gatherings organized by Dear Daughter Bible Study Group.",
+  alternates: { canonical: "/event-details" },
+};
 
 export default function EventDetailsPage() {
   return (

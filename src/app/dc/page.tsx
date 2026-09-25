@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { InquiryForm } from "@/components/InquiryForm";
+import { JsonLd } from "@/components/JsonLd";
 import { Kicker } from "@/components/Kicker";
 import { PlayableVideo } from "@/components/PlayableVideo";
 import { FacebookIcon, InstagramIcon, YouTubeIcon } from "@/components/SocialLinks";
@@ -21,12 +22,19 @@ const dcStamp = {
 export const metadata: Metadata = {
   title: "Jesus March Washington DC",
   description:
-    "Join Jesus March Washington DC on Saturday, October 17, 2026, starting at Washington Cir NW, Washington, DC 20037. Worship, pray, and preach Jesus with Dear Daughter Bible Study Group.",
+    "Join Jesus March Washington DC on Saturday, October 17, 2026 at 10AM, starting at Washington Cir NW, Washington, DC 20037.",
+  alternates: { canonical: "/dc" },
   openGraph: {
     title: "Jesus March Washington DC — Saturday, October 17, 2026",
     description:
-      "Start at Washington Cir NW, Washington, DC 20037. March with us, watch live, or give. Organized by Dear Daughter Bible Study Group.",
-    url: "https://www.jesusmarchhtx.com/dc",
+      "10AM at Washington Cir NW, Washington, DC 20037. March with us, watch live, or give.",
+    url: "/dc",
+    images: [{ url: "/images/flyer-dc.png", alt: "Jesus March Washington DC flyer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jesus March Washington DC — October 17, 2026",
+    description: "10AM at Washington Cir NW. Worship, prayer, and the name of Jesus over the nation.",
     images: ["/images/flyer-dc.png"],
   },
 };
@@ -41,6 +49,37 @@ const liveLinks = [
 export default function DcPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: "Jesus March Washington DC",
+          startDate: "2026-10-17T10:00:00-04:00",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          eventStatus: "https://schema.org/EventScheduled",
+          url: "https://www.jesusmarchhtx.com/dc",
+          image: "https://www.jesusmarchhtx.com/images/flyer-dc.png",
+          description:
+            "Worship, prayer, and the gospel in Washington DC, starting at Washington Cir NW.",
+          location: {
+            "@type": "Place",
+            name: "Washington Cir NW",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Washington Cir NW",
+              addressLocality: "Washington",
+              addressRegion: "DC",
+              postalCode: "20037",
+              addressCountry: "US",
+            },
+          },
+          organizer: {
+            "@type": "Organization",
+            name: "Dear Daughter Bible Study Group",
+            url: "https://www.jesusmarchhtx.com",
+          },
+        }}
+      />
       <section className="relative overflow-hidden bg-midnight text-white">
         <Image src="/images/gallery/g23.jpg" alt="" fill priority className="object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight/55 via-navy/70 to-midnight" />

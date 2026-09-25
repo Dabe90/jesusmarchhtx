@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Kicker } from "@/components/Kicker";
 
-export const metadata: Metadata = { title: "Our Vision" };
+export const metadata: Metadata = {
+  title: "Our Vision",
+  description:
+    "The vision of Jesus March and Dear Daughter Bible Study Group: teach the undiluted Word and reach the nations with the gospel of Jesus.",
+  alternates: { canonical: "/vision" },
+};
 
 export default function VisionPage() {
   return (

@@ -6,7 +6,12 @@ import { Kicker } from "@/components/Kicker";
 import { nextPrograms } from "@/lib/content";
 import { links } from "@/lib/links";
 
-export const metadata: Metadata = { title: "Programs" };
+export const metadata: Metadata = {
+  title: "Programs",
+  description:
+    "Upcoming Jesus Marches, Class of David training, The Rec podcast, and how to start a Dear Daughter Bible Study chapter.",
+  alternates: { canonical: "/programs" },
+};
 
 export default function ProgramsPage() {
   return (

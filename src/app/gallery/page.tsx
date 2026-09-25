@@ -7,7 +7,12 @@ import { PlayableVideo } from "@/components/PlayableVideo";
 import { SectionFrame } from "@/components/SectionFrame";
 import { shirtArt, signs, vendors } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Gallery" };
+export const metadata: Metadata = {
+  title: "Gallery",
+  description:
+    "Photos and video from Jesus March in Houston, Tulsa, and Washington DC. Worship, prayer, and the gospel in the streets.",
+  alternates: { canonical: "/gallery" },
+};
 
 /** Original Wix /gallery Pro Galleries, in page order. */
 const houston = [

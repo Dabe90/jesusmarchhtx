@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 
-export const metadata: Metadata = { title: "Thank you" };
+export const metadata: Metadata = {
+  title: "Thank you",
+  robots: { index: false, follow: false },
+};
 
 export default function ThanksPage() {
   return (
