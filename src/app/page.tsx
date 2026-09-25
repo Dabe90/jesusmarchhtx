@@ -133,7 +133,7 @@ export default function HomePage() {
                   <h3 className="mt-2 text-2xl font-bold text-midnight">{program.title}</h3>
                   <p className="mt-2 text-sm text-ink-3">{program.where}</p>
                   <div className="mt-5">
-                    <ButtonLink href={program.href}>Learn more</ButtonLink>
+                    <ButtonLink href={program.href}>{program.title}</ButtonLink>
                   </div>
                 </div>
               </article>

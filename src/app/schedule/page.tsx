@@ -22,7 +22,7 @@ export default function SchedulePage() {
             <h2 className="mt-2 font-display text-2xl">{program.title}</h2>
             <p className="mt-2 text-sm text-ink-3">{program.where}</p>
             <div className="mt-4">
-              <ButtonLink href={program.href}>Learn more</ButtonLink>
+              <ButtonLink href={program.href}>{program.title}</ButtonLink>
             </div>
           </article>
         ))}

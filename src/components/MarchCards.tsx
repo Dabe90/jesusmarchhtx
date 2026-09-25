@@ -20,7 +20,7 @@ export function MarchCards() {
               href={`/marches/${march.slug}`}
               className="mt-auto inline-flex w-fit rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-gold-2"
             >
-              Learn more
+              {march.title}
             </Link>
           </div>
         </article>
