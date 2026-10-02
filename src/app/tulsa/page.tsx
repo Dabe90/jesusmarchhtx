@@ -194,13 +194,53 @@ export default function TulsaPage() {
 
       <section className="bg-midnight px-4 py-12 text-white sm:px-5 md:py-20">
         <div className="mx-auto max-w-7xl">
+          <Kicker tone="dark">September 26, 2026 · Tulsa City Hall</Kicker>
+          <h2 className="mt-3 text-3xl font-black sm:text-4xl md:text-6xl">
+            Jesus March Tulsa 2026
+          </h2>
+          <p className="mt-4 max-w-2xl text-white/80">
+            Photos and clips from the latest march. Older Tulsa pictures stay in the gallery below.
+          </p>
+          <div className="mt-10 columns-2 gap-3 md:columns-3">
+            {tulsa2026Photos.map((src, i) => (
+              <div key={src} className="mb-3 break-inside-avoid overflow-hidden rounded-2xl">
+                <WatermarkedShot
+                  src={src}
+                  alt="Jesus March Tulsa 2026"
+                  stamp={stamps[i % stamps.length]}
+                  className={i % 5 === 0 ? "aspect-[3/4]" : "aspect-[4/3]"}
+                  sizes="(min-width: 768px) 33vw, 50vw"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {tulsa2026Videos.map((clip, i) => (
+              <video
+                key={clip.src}
+                className="h-auto w-full rounded-2xl bg-black"
+                controls
+                playsInline
+                preload="metadata"
+                poster={clip.poster}
+                aria-label={`Jesus March Tulsa 2026 clip ${i + 1}`}
+              >
+                <source src={clip.src} type="video/mp4" />
+              </video>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-navy px-4 py-12 text-white sm:px-5 md:py-20">
+        <div className="mx-auto max-w-7xl">
           <Kicker tone="dark">From the Tulsa marches</Kicker>
           <h2 className="mt-3 text-3xl font-black sm:text-4xl md:text-6xl">
             This is what it looks like
             <span className="block text-gold">when a city lifts up Jesus.</span>
           </h2>
           <div className="mt-10 columns-2 gap-3 md:columns-3">
-            {[...tulsa2026Photos, ...tulsaDrivePhotos, ...tulsaPhotos].map((src, i) => (
+            {[...tulsaDrivePhotos, ...tulsaPhotos, ...tulsa2026Photos].map((src, i) => (
               <div key={src} className="mb-3 break-inside-avoid overflow-hidden rounded-2xl">
                 <WatermarkedShot
                   src={src}
@@ -210,30 +250,6 @@ export default function TulsaPage() {
                   sizes="(min-width: 768px) 33vw, 50vw"
                 />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-black px-4 py-12 text-white sm:px-5 md:py-20">
-        <div className="mx-auto max-w-7xl">
-          <Kicker tone="dark">Clips from the march</Kicker>
-          <h2 className="mt-3 text-3xl font-black sm:text-4xl md:text-5xl">
-            Watch Tulsa lift up Jesus
-          </h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {tulsa2026Videos.map((clip, i) => (
-              <video
-                key={clip.src}
-                className="h-auto w-full rounded-2xl bg-midnight"
-                controls
-                playsInline
-                preload="metadata"
-                poster={clip.poster}
-                aria-label={`Jesus March Tulsa clip ${i + 1}`}
-              >
-                <source src={clip.src} type="video/mp4" />
-              </video>
             ))}
           </div>
         </div>

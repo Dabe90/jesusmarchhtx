@@ -6,6 +6,7 @@ import { Kicker } from "@/components/Kicker";
 import { PlayableVideo } from "@/components/PlayableVideo";
 import { SectionFrame } from "@/components/SectionFrame";
 import { shirtArt, signs, vendors } from "@/lib/content";
+import { tulsa2026Photos } from "@/lib/tulsa-media";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -88,6 +89,9 @@ export default function GalleryPage() {
         </SectionFrame>
         <SectionFrame>
           <GalleryGrid title="Tulsa" images={tulsa} />
+        </SectionFrame>
+        <SectionFrame>
+          <GalleryGrid title="Jesus March Tulsa 2026" images={[...tulsa2026Photos]} />
         </SectionFrame>
         <SectionFrame>
           <GalleryGrid title="D.C." images={dc} />
