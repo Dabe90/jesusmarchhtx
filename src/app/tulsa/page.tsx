@@ -7,6 +7,7 @@ import { Kicker } from "@/components/Kicker";
 import { FacebookIcon, InstagramIcon, YouTubeIcon } from "@/components/SocialLinks";
 import { WatermarkedShot } from "@/components/WatermarkedShot";
 import { marches, tulsaDrivePhotos, tulsaJoinWays, tulsaPhotos } from "@/lib/content";
+import { tulsa2026Photos, tulsa2026Videos } from "@/lib/tulsa-media";
 import { links, ZELLE_EMAIL } from "@/lib/links";
 
 const tulsa = marches.find((march) => march.slug === "tulsa");
@@ -199,7 +200,7 @@ export default function TulsaPage() {
             <span className="block text-gold">when a city lifts up Jesus.</span>
           </h2>
           <div className="mt-10 columns-2 gap-3 md:columns-3">
-            {[...tulsaDrivePhotos, ...tulsaPhotos].map((src, i) => (
+            {[...tulsa2026Photos, ...tulsaDrivePhotos, ...tulsaPhotos].map((src, i) => (
               <div key={src} className="mb-3 break-inside-avoid overflow-hidden rounded-2xl">
                 <WatermarkedShot
                   src={src}
@@ -209,6 +210,30 @@ export default function TulsaPage() {
                   sizes="(min-width: 768px) 33vw, 50vw"
                 />
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-black px-4 py-12 text-white sm:px-5 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <Kicker tone="dark">Clips from the march</Kicker>
+          <h2 className="mt-3 text-3xl font-black sm:text-4xl md:text-5xl">
+            Watch Tulsa lift up Jesus
+          </h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {tulsa2026Videos.map((clip, i) => (
+              <video
+                key={clip.src}
+                className="h-auto w-full rounded-2xl bg-midnight"
+                controls
+                playsInline
+                preload="metadata"
+                poster={clip.poster}
+                aria-label={`Jesus March Tulsa clip ${i + 1}`}
+              >
+                <source src={clip.src} type="video/mp4" />
+              </video>
             ))}
           </div>
         </div>
