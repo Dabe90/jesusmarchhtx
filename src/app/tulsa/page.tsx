@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Kicker } from "@/components/Kicker";
 import { FacebookIcon, InstagramIcon, YouTubeIcon } from "@/components/SocialLinks";
 import { WatermarkedShot } from "@/components/WatermarkedShot";
-import { marches, tulsaDrivePhotos, tulsaJoinWays, tulsaPhotos } from "@/lib/content";
+import { marches, tulsaDrivePhotos, tulsaPhotos } from "@/lib/content";
 import { tulsa2026Photos, tulsa2026Videos } from "@/lib/tulsa-media";
 import { links, ZELLE_EMAIL } from "@/lib/links";
 
@@ -17,20 +17,20 @@ const stamps = ["repeat", "logo", "date", "none"] as const;
 export const metadata: Metadata = {
   title: "Jesus March Tulsa",
   description:
-    "Join Jesus March Tulsa on Saturday, September 26, 2026 at 12PM, starting at Tulsa City Hall. Worship, pray, and preach Jesus with Dear Daughter Bible Study Group.",
+    "Jesus March Tulsa 2026 is done. Jesus is glorified in the streets of Tulsa. We look forward to marching again next year.",
   alternates: { canonical: "/tulsa" },
   openGraph: {
-    title: "Jesus March Tulsa — Saturday, September 26, 2026",
+    title: "Jesus March Tulsa 2026 is done",
     description:
-      "12PM at Tulsa City Hall. March with us, watch live, or give. Organized by Dear Daughter Bible Study Group.",
+      "Jesus is glorified. Photos and clips from September 26 at Tulsa City Hall. We look forward to next year.",
     url: "/tulsa",
-    images: [{ url: "/images/flyer-tulsa.jpg", alt: "Jesus March Tulsa flyer" }],
+    images: [{ url: "/images/tulsa/2026/t05.jpg", alt: "Jesus March Tulsa 2026 at City Hall" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jesus March Tulsa — September 26, 2026",
-    description: "12PM at Tulsa City Hall. Worship, prayer, and the name of Jesus in the streets.",
-    images: ["/images/flyer-tulsa.jpg"],
+    title: "Jesus March Tulsa 2026 is done",
+    description: "Jesus is glorified in Tulsa. We look forward to next year.",
+    images: ["/images/tulsa/2026/t05.jpg"],
   },
 };
 
@@ -55,7 +55,7 @@ export default function TulsaPage() {
           url: "https://www.jesusmarchhtx.com/tulsa",
           image: "https://www.jesusmarchhtx.com/images/flyer-tulsa.jpg",
           description:
-            "Worship, prayer, and the gospel in the streets of Tulsa, starting at Tulsa City Hall.",
+            "Jesus March Tulsa on September 26, 2026 is complete. Jesus is glorified. We look forward to next year.",
           location: {
             "@type": "Place",
             name: "Tulsa City Hall",
@@ -97,34 +97,31 @@ export default function TulsaPage() {
           </div>
           <div className="order-1 min-w-0 text-center md:order-2 md:text-left">
             <p className="inline-flex max-w-full rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-[10px] font-black tracking-[0.12em] text-gold uppercase sm:px-4 sm:text-xs sm:tracking-[0.28em]">
-              Next march · Tulsa City Hall
+              Jesus March Tulsa 2026 · Done
             </p>
             <h1 className="mt-4 text-4xl font-black leading-[0.95] sm:text-5xl md:text-7xl">
               Jesus
-              <span className="block text-gold">March Tulsa</span>
+              <span className="block text-gold">is glorified</span>
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-base text-white/90 sm:mt-5 sm:text-lg md:mx-0">
-              The streets fill with worship. Flags go up. The name of Jesus is preached out loud.
-              Saturday, September 26 — 12PM — start at City Hall.
+              Jesus March Tulsa 2026 is done. On September 26 the name of Jesus was lifted at City Hall.
+              We give Him the glory, and we look forward to next year.
             </p>
             <dl className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
               <Fact label="When" value="Saturday, September 26, 2026" />
-              <Fact label="Time" value="12:00 PM" />
-              <Fact label="Start" value="Tulsa City Hall" />
-              <Fact label="City" value="Tulsa, Oklahoma" />
+              <Fact label="Status" value="Done" />
+              <Fact label="Place" value="Tulsa City Hall" />
+              <Fact label="Next" value="We look forward to 2027" />
             </dl>
             <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:flex sm:flex-wrap">
-              <ButtonLink href="#join-tulsa" className="w-full sm:w-auto">
-                Join the March
+              <ButtonLink href="#tulsa-2026" className="w-full sm:w-auto">
+                See the 2026 march
               </ButtonLink>
               <ButtonLink href={links.tulsaPrayerZoom} variant="light" className="w-full sm:w-auto">
                 Thursday prayer on Zoom
               </ButtonLink>
               <ButtonLink href="#give-tulsa" variant="light" className="w-full sm:w-auto">
                 Give
-              </ButtonLink>
-              <ButtonLink href={links.tulsaMaps} variant="light" className="w-full sm:w-auto">
-                Get directions
               </ButtonLink>
             </div>
           </div>
@@ -192,14 +189,15 @@ export default function TulsaPage() {
         </div>
       </section>
 
-      <section className="bg-midnight px-4 py-12 text-white sm:px-5 md:py-20">
+      <section id="tulsa-2026" className="scroll-mt-24 bg-midnight px-4 py-12 text-white sm:px-5 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker tone="dark">September 26, 2026 · Tulsa City Hall</Kicker>
           <h2 className="mt-3 text-3xl font-black sm:text-4xl md:text-6xl">
             Jesus March Tulsa 2026
           </h2>
           <p className="mt-4 max-w-2xl text-white/80">
-            Photos and clips from the latest march. Older Tulsa pictures stay in the gallery below.
+            The march is done. Jesus is glorified. These are the photos and clips from that day.
+            We look forward to next year.
           </p>
           <div className="mt-10 columns-2 gap-3 md:columns-3">
             {tulsa2026Photos.map((src, i) => (
@@ -258,24 +256,23 @@ export default function TulsaPage() {
       <section id="join-tulsa" className="scroll-mt-24 bg-navy px-4 py-12 text-white sm:px-5 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1.05fr] lg:gap-10">
           <div className="min-w-0">
-            <Kicker tone="dark">How to join</Kicker>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">March with us, serve, or watch live</h2>
+            <Kicker tone="dark">Until next year</Kicker>
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">Jesus is glorified. We’ll see you in 2027.</h2>
             <ol className="mt-8 space-y-5 text-white/90">
               <li>
-                <strong className="text-gold">1. Be there.</strong> Meet at Tulsa City Hall on Saturday,
-                September 26 at 12PM. Wear comfortable shoes and come ready to worship.
+                <strong className="text-gold">1. Give Jesus the glory.</strong> Jesus March Tulsa 2026 is done.
+                His name was lifted at City Hall.
               </li>
               <li>
-                <strong className="text-gold">2. Tell us you’re coming.</strong> Fill out the form so we
-                can count you, connect groups, and help with travel or carpooling.
+                <strong className="text-gold">2. Look through the day.</strong> The photos and clips above are from
+                September 26.
               </li>
               <li>
-                <strong className="text-gold">3. Pray with us every Thursday.</strong> Join Zoom prayer at
-                5:00 PM CST.
+                <strong className="text-gold">3. Keep praying.</strong> Thursday Zoom prayer is still at 5:00 PM CST.
               </li>
               <li>
-                <strong className="text-gold">4. Can’t come in person?</strong> Watch live on Facebook,
-                YouTube, and Instagram — @ddbs.tulsa and @ddbs.global.
+                <strong className="text-gold">4. Look forward to next year.</strong> Leave your name if you want to
+                march in Tulsa again. Follow @ddbs.tulsa and @ddbs.global.
               </li>
             </ol>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -297,27 +294,20 @@ export default function TulsaPage() {
             </div>
           </div>
           <div className="min-w-0 overflow-hidden rounded-3xl bg-white p-4 text-ink sm:p-6 md:p-8">
-            <h3 className="text-2xl font-bold text-midnight">I’m coming to Tulsa</h3>
+            <h3 className="text-2xl font-bold text-midnight">Count me in for next year</h3>
             <p className="mt-2 mb-6 text-sm text-muted">
-              We’ll follow up from Dear Daughter Bible Study Group.
+              Jesus March Tulsa 2026 is done. Leave your name and we’ll reach out when the next march is set.
             </p>
             <InquiryForm
-              formName="Jesus March Tulsa 2026"
-              submitLabel="Count me in"
+              formName="Jesus March Tulsa next year"
+              submitLabel="Look for me next year"
               fields={[
                 { name: "firstName", label: "First name", required: true },
                 { name: "lastName", label: "Last name", required: true },
                 { name: "email", label: "Email", type: "email", required: true },
                 { name: "phone", label: "Phone", type: "tel", required: true },
-                { name: "city", label: "City you are coming from" },
-                {
-                  name: "how",
-                  label: "How are you joining?",
-                  required: true,
-                  options: tulsaJoinWays,
-                  defaultValue: "I will march with you",
-                },
-                { name: "note", label: "Travel, carpool, or group notes" },
+                { name: "city", label: "City" },
+                { name: "note", label: "Anything we should know for next year" },
               ]}
             />
           </div>

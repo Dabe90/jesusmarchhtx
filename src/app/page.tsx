@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jesus March Houston",
     description:
-      "Uniting believers. Lifting up cities. Preaching Jesus. Next marches in Tulsa and Washington DC.",
+      "Uniting believers. Lifting up cities. Preaching Jesus. Next march in Washington DC.",
     url: "/",
     images: [{ url: "/images/hero-banner.jpg", alt: "Jesus March in the streets" }],
   },

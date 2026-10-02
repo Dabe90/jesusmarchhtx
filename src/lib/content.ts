@@ -87,7 +87,7 @@ export const marches = [
       "Many people voiced their discomfort, but the Lord challenged our leader with a question: “Will you just complain, or will you take action?” We chose action.",
       "Thus, Jesus March Tulsa was born — a movement to bring the light of God into the city through worship, prayer, and bold proclamation of the gospel. In December 2024, we held the first Jesus March Tulsa, and this is just the beginning.",
     ],
-    cta: "Join us Saturday, September 26, 2026 at 12PM at Tulsa City Hall.",
+    cta: "Jesus March Tulsa 2026 is done. Jesus is glorified. We look forward to next year.",
     images: [
       "/images/gallery/g06.jpg",
       "/images/gallery/g10.jpg",
@@ -304,8 +304,8 @@ export const nextPrograms = [
   {
     city: "Tulsa",
     title: "Jesus March Tulsa",
-    when: "Saturday, 26 September 2026 · 12PM",
-    where: "Tulsa City Hall, Tulsa, Oklahoma",
+    when: "Done · September 26, 2026",
+    where: "Jesus is glorified. We look forward to next year.",
     href: "/tulsa",
     image: "/images/flyer-tulsa.jpg",
   },
