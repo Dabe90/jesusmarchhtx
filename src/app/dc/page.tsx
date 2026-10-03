@@ -22,12 +22,12 @@ const dcStamp = {
 export const metadata: Metadata = {
   title: "Jesus March Washington DC",
   description:
-    "Join Jesus March Washington DC on Saturday, October 17, 2026 at 10AM, starting at Washington Cir NW, Washington, DC 20037.",
+    "Join Jesus March Washington DC on Saturday, October 17, 2026 at 10AM at Washington Cir NW. Plan your visit — airports, nearby stays, Metro, and how to meet Dear Daughter Bible Study Group.",
   alternates: { canonical: "/dc" },
   openGraph: {
     title: "Jesus March Washington DC — Saturday, October 17, 2026",
     description:
-      "10AM at Washington Cir NW, Washington, DC 20037. March with us, watch live, or give.",
+      "10AM at Washington Cir NW. Plan your visit, march with us, watch live, or give.",
     url: "/dc",
     images: [{ url: "/images/flyer-dc.png", alt: "Jesus March Washington DC flyer" }],
   },
@@ -124,6 +124,9 @@ export default function DcPage() {
               <ButtonLink href="#join-dc" className="w-full sm:w-auto">
                 Join the March
               </ButtonLink>
+              <ButtonLink href="#plan-visit" variant="light" className="w-full sm:w-auto">
+                Plan your visit
+              </ButtonLink>
               <ButtonLink href={links.tulsaPrayerZoom} variant="light" className="w-full sm:w-auto">
                 Thursday prayer on Zoom
               </ButtonLink>
@@ -208,6 +211,144 @@ export default function DcPage() {
         </div>
       </section>
 
+      <section id="plan-visit" className="scroll-mt-24 bg-mist px-4 py-12 sm:px-5 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <Kicker>Coming to D.C.</Kicker>
+          <h2 className="mt-3 max-w-3xl text-3xl font-bold text-midnight sm:text-4xl md:text-5xl">
+            Plan your visit
+            <span className="block text-navy">so you arrive ready to worship.</span>
+          </h2>
+          <p className="mt-4 max-w-2xl text-ink-3">
+            We meet Saturday, October 17 at 10AM at Washington Cir NW — Foggy Bottom, by George
+            Washington University. This is not a Mall meetup. Land near the circle, rest close by,
+            and walk in with your heart already turned toward Jesus.
+          </p>
+
+          <dl className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <VisitFact label="Meet us" value="Washington Cir NW, DC 20037" />
+            <VisitFact label="Nearest Metro" value="Foggy Bottom–GWU · Blue / Orange / Silver" />
+            <VisitFact label="Easiest airport" value="DCA · Reagan National" />
+            <VisitFact label="Day & time" value="Sat, Oct 17 · 10:00 AM" />
+          </dl>
+
+          <div className="mt-14 space-y-14">
+            <div>
+              <p className="text-xs font-black tracking-[0.22em] text-navy uppercase">Arrive</p>
+              <h3 className="mt-2 text-2xl font-bold text-midnight sm:text-3xl">Fly into the capital</h3>
+              <p className="mt-3 max-w-2xl text-ink-3">
+                Three airports serve the region. If you can choose, come through Reagan National —
+                you will be closest to Foggy Bottom and the Metro will carry you the rest of the way.
+              </p>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                {dcAirports.map((airport) => (
+                  <article
+                    key={airport.code}
+                    className={`rounded-3xl p-5 sm:p-6 ${
+                      airport.preferred
+                        ? "bg-navy text-white"
+                        : "border border-navy/10 bg-white text-ink"
+                    }`}
+                  >
+                    {airport.preferred ? (
+                      <p className="text-[10px] font-black tracking-[0.2em] text-gold uppercase">
+                        Prefer this one
+                      </p>
+                    ) : null}
+                    <p
+                      className={`text-sm font-black tracking-[0.14em] uppercase ${
+                        airport.preferred ? "text-gold" : "text-navy"
+                      } ${airport.preferred ? "mt-2" : ""}`}
+                    >
+                      {airport.code}
+                    </p>
+                    <h4 className="mt-1 text-xl font-bold">{airport.name}</h4>
+                    <p className={`mt-1 text-sm ${airport.preferred ? "text-white/70" : "text-muted"}`}>
+                      {airport.distance}
+                    </p>
+                    <p className={`mt-3 text-sm leading-relaxed ${airport.preferred ? "text-white/90" : "text-ink-3"}`}>
+                      {airport.note}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="text-xs font-black tracking-[0.22em] text-navy uppercase">Rest</p>
+              <h3 className="mt-2 text-2xl font-bold text-midnight sm:text-3xl">Stay near the circle</h3>
+              <p className="mt-3 max-w-2xl text-ink-3">
+                Book Foggy Bottom or the West End when you can. Washington Cir is a short walk from
+                both, so Saturday morning is calm instead of rushed. Georgetown and Dupont Circle also
+                work with a brief Metro ride or rideshare. October weekends fill early — reserve when
+                you know you are coming.
+              </p>
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
+                <div>
+                  <p className="text-sm font-bold text-midnight">Walkable to the start</p>
+                  <ul className="mt-3 space-y-3">
+                    {dcStayNear.map((place) => (
+                      <li key={place.name} className="border-b border-navy/10 pb-3">
+                        <p className="font-semibold text-ink">{place.name}</p>
+                        <p className="text-sm text-muted">{place.detail}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-midnight">Also practical</p>
+                  <ul className="mt-3 space-y-3">
+                    {dcStayValue.map((place) => (
+                      <li key={place.name} className="border-b border-navy/10 pb-3">
+                        <p className="font-semibold text-ink">{place.name}</p>
+                        <p className="text-sm text-muted">{place.detail}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 text-sm text-ink-3">
+                    Traveling with a group? Note it on the form below — we will help connect rides and
+                    rooms where we can. We do not hold a private hotel block right now.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-xs font-black tracking-[0.22em] text-navy uppercase">Gather</p>
+              <h3 className="mt-2 text-2xl font-bold text-midnight sm:text-3xl">Get to Washington Cir</h3>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                {dcTransit.map((item) => (
+                  <div key={item.title} className="rounded-3xl border border-navy/10 bg-white p-5 sm:p-6">
+                    <h4 className="text-lg font-bold text-midnight">{item.title}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-ink-3">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <ButtonLink href={links.dcMaps} className="w-full sm:w-auto">
+                  Open Washington Cir on Maps
+                </ButtonLink>
+                <ButtonLink href="#join-dc" variant="outline" className="w-full sm:w-auto">
+                  Tell us you are coming
+                </ButtonLink>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-14 border-t border-navy/10 pt-12">
+            <Kicker>Before you pack</Kicker>
+            <h3 className="mt-3 text-2xl font-bold text-midnight sm:text-3xl">A few quiet answers</h3>
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {dcVisitFaqs.map((faq) => (
+                <div key={faq.q}>
+                  <p className="font-bold text-midnight">{faq.q}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-3">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-midnight px-4 py-12 text-white sm:px-5 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Kicker tone="dark">From the D.C. marches</Kicker>
@@ -240,8 +381,11 @@ export default function DcPage() {
             <ol className="mt-8 space-y-5 text-white/90">
               <li>
                 <strong className="text-gold">1. Be there.</strong> Meet at Washington Cir NW,
-                Washington, DC 20037 on Saturday, October 17 at 10AM. Wear comfortable shoes and
-                come ready to worship.
+                Washington, DC 20037 on Saturday, October 17 at 10AM. Use{" "}
+                <a href="#plan-visit" className="text-gold underline underline-offset-2">
+                  Plan your visit
+                </a>{" "}
+                for airports, nearby stays, and Metro. Wear comfortable shoes and come ready to worship.
               </li>
               <li>
                 <strong className="text-gold">2. Tell us you’re coming.</strong> Fill out the form so we
@@ -361,3 +505,100 @@ function Fact({ label, value }: { label: string; value: string }) {
     </div>
   );
 }
+
+function VisitFact({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-2xl border border-navy/10 bg-white px-4 py-3 text-left">
+      <dt className="text-[10px] font-semibold uppercase tracking-[0.2em] text-navy sm:text-xs">{label}</dt>
+      <dd className="mt-1 text-sm font-semibold break-words text-midnight sm:text-base">{value}</dd>
+    </div>
+  );
+}
+
+const dcAirports = [
+  {
+    code: "DCA",
+    name: "Ronald Reagan Washington National",
+    distance: "About 4 miles from Foggy Bottom",
+    preferred: true,
+    note: "Closest door to our meeting point. Blue and Yellow Metro lines run from the airport — ride to Foggy Bottom–GWU and walk a few minutes to Washington Cir.",
+  },
+  {
+    code: "IAD",
+    name: "Washington Dulles International",
+    distance: "About 26 miles west",
+    preferred: false,
+    note: "Good for wider flight choices and international arrivals. Silver Line Metro reaches Foggy Bottom; give yourself a little more than an hour door to door.",
+  },
+  {
+    code: "BWI",
+    name: "Baltimore/Washington International",
+    distance: "About 32 miles northeast",
+    preferred: false,
+    note: "Often kind to the budget. Train or rideshare into D.C., then Metro to Foggy Bottom–GWU. Plan extra time on Saturday morning.",
+  },
+] as const;
+
+const dcStayNear = [
+  {
+    name: "Foggy Bottom & West End",
+    detail: "Best base. Many rooms are a 5–15 minute walk to Washington Cir NW.",
+  },
+  {
+    name: "The Watergate Hotel",
+    detail: "Along the river, a short walk from the circle and the Metro.",
+  },
+  {
+    name: "Residence Inn Foggy Bottom",
+    detail: "Suites help if you are bringing family or a small team.",
+  },
+] as const;
+
+const dcStayValue = [
+  {
+    name: "Hotel Hive",
+    detail: "Compact rooms near Foggy Bottom Metro — simple and close.",
+  },
+  {
+    name: "State Plaza Hotel",
+    detail: "Practical Foggy Bottom stay within walking distance of the start.",
+  },
+  {
+    name: "Georgetown or Dupont Circle",
+    detail: "Livelier evenings; short Metro or rideshare to Washington Cir in the morning.",
+  },
+] as const;
+
+const dcTransit = [
+  {
+    title: "Metro",
+    body: "Ride Blue, Orange, or Silver to Foggy Bottom–GWU. Exit toward campus / Washington Circle — the start is a short walk. Saturday morning trains are usually calm if you leave a buffer.",
+  },
+  {
+    title: "On foot",
+    body: "If your hotel sits in Foggy Bottom or the West End, walk over. Bring shoes you can stand and march in. The circle is open air — check the forecast and dress for October.",
+  },
+  {
+    title: "Rideshare",
+    body: "Uber and Lyft drop near Washington Cir NW. Pin the circle, not the Lincoln Memorial or the Capitol. Expect slower traffic as the city wakes up; leave early.",
+  },
+] as const;
+
+const dcVisitFaqs = [
+  {
+    q: "Is there a cost to march?",
+    a: "No. Jesus March Washington DC with Dear Daughter Bible Study Group is free. We only ask you to tell us you are coming so we can pray for you and plan for the crowd.",
+  },
+  {
+    q: "Can children come?",
+    a: "Yes. Families are welcome. Keep little ones close in the crowd, bring water, and dress them for walking and weather.",
+  },
+  {
+    q: "What should I bring?",
+    a: "A willing heart, comfortable shoes, water, and weather layers. Flags and banners from past marches are welcome. Come ready to worship, pray, and lift the name of Jesus.",
+  },
+  {
+    q: "How else can I prepare?",
+    a: "Join Thursday Zoom prayer at 5:00 PM CST. Ask the Lord for D.C., for open hearts, and for safe travel. If you cannot stand with us in person, watch live and pray from where you are.",
+  },
+] as const;
