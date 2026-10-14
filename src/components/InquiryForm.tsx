@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
-import { FORM_INBOX } from "@/lib/links";
+import { FORM_INBOX, FORM_WEBHOOK } from "@/lib/links";
 
 type Field = {
   name: string;
@@ -33,15 +33,24 @@ export function InquiryForm({
     setNextUrl(`${window.location.origin}/thanks`);
   }, []);
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     setSending(true);
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ formName, ...data }),
-    }).catch(() => undefined);
+
+    // Wait so the mailing-list notify finishes before FormSubmit navigates away.
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formName, ...data }),
+      });
+    } catch {
+      // Still send the FormSubmit email even if the list notify fails.
+    }
+
+    form.submit();
   }
 
   const hasName = fields.some((field) => field.name === "name");
@@ -58,6 +67,7 @@ export function InquiryForm({
       <input type="hidden" name="_subject" value={`${formName} — Jesus March HTX`} />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_next" value={nextUrl} />
+      <input type="hidden" name="_webhook" value={FORM_WEBHOOK} />
       <input type="hidden" name="formName" value={formName} />
       {!hasName ? <input type="hidden" name="name" value={formName} /> : null}
 

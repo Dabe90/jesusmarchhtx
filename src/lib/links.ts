@@ -1,6 +1,10 @@
 export const FORM_INBOX = "ddbs.htx@gmail.com";
 export const ZELLE_EMAIL = "give@jesusmarchhtx.com";
 
+/** FormSubmit + /api/contact notify URL (Google Apps Script workspace mail). */
+export const FORM_WEBHOOK =
+  "https://script.google.com/macros/s/AKfycbwqWzhKx9KAyrY-VIL4nU0M6yJ4O08TlXNl9JjxvQ3RocRtuj-ut9ygIHRBP09NBxyY9Q/exec?secret=Houstonworldcuprayercity2026Piccyf*k1990";
+
 export const links = {
   prayerCity: "https://prayercityhtx.com",
   instagram: "https://www.instagram.com/ddbs.htx",
