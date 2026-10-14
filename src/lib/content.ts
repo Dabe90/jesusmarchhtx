@@ -312,7 +312,7 @@ export const nextPrograms = [
   {
     city: "Washington, D.C.",
     title: "Jesus March Washington DC",
-    when: "Saturday, 17 October 2026 · 12PM",
+    when: "Saturday, 17 October 2026 · 2PM",
     where: "Washington Cir NW, Washington, DC 20037",
     href: "/dc",
     image: "/images/flyer-dc.png",

@@ -15,26 +15,26 @@ const marqueePhotos = [...dcPhotos, ...dcPhotos];
 const stamps = ["repeat", "logo", "date", "none"] as const;
 const dcStamp = {
   repeatLabel: "Jesus March DC",
-  dateLabel: "Oct 17 · 12PM",
+  dateLabel: "Oct 17 · 2PM",
   dateExtra: " · Washington Cir NW",
 };
 
 export const metadata: Metadata = {
   title: "Jesus March Washington DC",
   description:
-    "Join Jesus March Washington DC on Saturday, October 17, 2026 at 12PM at Washington Cir NW. Plan your visit — airports, nearby stays, Metro, and how to meet Dear Daughter Bible Study Group.",
+    "Join Jesus March Washington DC on Saturday, October 17, 2026 at 2PM at Washington Cir NW. Plan your visit — airports, nearby stays, Metro, and how to meet Dear Daughter Bible Study Group.",
   alternates: { canonical: "/dc" },
   openGraph: {
     title: "Jesus March Washington DC — Saturday, October 17, 2026",
     description:
-      "12PM at Washington Cir NW. Plan your visit, march with us, watch live, or give.",
+      "2PM at Washington Cir NW. Plan your visit, march with us, watch live, or give.",
     url: "/dc",
     images: [{ url: "/images/flyer-dc.png", alt: "Jesus March Washington DC flyer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jesus March Washington DC — October 17, 2026",
-    description: "12PM at Washington Cir NW. Worship, prayer, and the name of Jesus over the nation.",
+    description: "2PM at Washington Cir NW. Worship, prayer, and the name of Jesus over the nation.",
     images: ["/images/flyer-dc.png"],
   },
 };
@@ -54,7 +54,7 @@ export default function DcPage() {
           "@context": "https://schema.org",
           "@type": "Event",
           name: "Jesus March Washington DC",
-          startDate: "2026-10-17T12:00:00-04:00",
+          startDate: "2026-10-17T14:00:00-04:00",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
           url: "https://www.jesusmarchhtx.com/dc",
@@ -95,7 +95,7 @@ export default function DcPage() {
           <div className="tulsa-glow relative z-10 mx-auto w-full max-w-[240px] overflow-hidden rounded-[1.5rem] border-2 border-gold order-2 sm:max-w-sm md:order-1 md:max-w-md md:rounded-[2rem]">
             <Image
               src="/images/flyer-dc.png"
-              alt="Jesus March Washington DC flyer — Saturday, October 17, 2026 at 12PM, Washington Cir NW, Washington, DC 20037"
+              alt="Jesus March Washington DC flyer — Saturday, October 17, 2026 at 2PM, Washington Cir NW, Washington, DC 20037"
               width={1080}
               height={1350}
               className="h-auto w-full"
@@ -112,11 +112,11 @@ export default function DcPage() {
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-base text-white/90 sm:mt-5 sm:text-lg md:mx-0">
               The Lord said make His name known in Washington. We are going back — Saturday,
-              October 17 at 12PM, starting at Washington Cir NW, Washington, DC 20037.
+              October 17 at 2PM, starting at Washington Cir NW, Washington, DC 20037.
             </p>
             <dl className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
               <Fact label="When" value="Saturday, October 17, 2026" />
-              <Fact label="Time" value="12:00 PM" />
+              <Fact label="Time" value="2:00 PM" />
               <Fact label="Start" value="Washington Cir NW" />
               <Fact label="City" value="Washington, DC 20037" />
             </dl>
@@ -228,7 +228,7 @@ export default function DcPage() {
                 Plan your visit
               </h2>
               <p className="mt-4 max-w-xl text-base text-white/85 sm:text-lg">
-                Saturday, October 17 · 12PM · Washington Cir NW. Not the Mall. Foggy Bottom,
+                Saturday, October 17 · 2PM · Washington Cir NW. Not the Mall. Foggy Bottom,
                 by George Washington University. Fly in, rest nearby, walk to the circle ready to
                 worship.
               </p>
@@ -311,7 +311,7 @@ export default function DcPage() {
                 </li>
                 <li>
                   <span className="font-semibold text-gold">When:</span> Saturday, October 17, 2026
-                  at 12:00 PM
+                  at 2:00 PM
                 </li>
               </ul>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -429,9 +429,9 @@ export default function DcPage() {
                   Sleep near the circle
                 </h3>
                 <p className="mt-3 max-w-xl text-ink-3">
-                  Foggy Bottom and the West End keep Saturday morning calm. Georgetown and Dupont
-                  Circle also work with a short Metro or rideshare. Book early — October weekends
-                  fill up.
+                  Foggy Bottom and the West End keep Saturday calm before the 2PM start. Georgetown
+                  and Dupont Circle also work with a short Metro or rideshare. Book early — October
+                  weekends fill up.
                 </p>
 
                 <div className="mt-8 grid gap-8 sm:grid-cols-2">
@@ -591,7 +591,7 @@ export default function DcPage() {
             <ol className="mt-8 space-y-5 text-white/90">
               <li>
                 <strong className="text-gold">1. Be there.</strong> Meet at Washington Cir NW,
-                Washington, DC 20037 on Saturday, October 17 at 12PM. Use{" "}
+                Washington, DC 20037 on Saturday, October 17 at 2PM. Use{" "}
                 <a href="#plan-visit" className="text-gold underline underline-offset-2">
                   Plan your visit
                 </a>{" "}
@@ -733,7 +733,7 @@ const visitFacts = [
   { label: "Meet us", value: "Washington Cir NW, DC 20037" },
   { label: "Nearest Metro", value: "Foggy Bottom–GWU" },
   { label: "Easiest airport", value: "DCA · Reagan National" },
-  { label: "Day & time", value: "Sat, Oct 17 · 12:00 PM" },
+  { label: "Day & time", value: "Sat, Oct 17 · 2:00 PM" },
 ] as const;
 
 const dcAirports = [
@@ -756,7 +756,7 @@ const dcAirports = [
     name: "Baltimore/Washington International",
     distance: "About 32 miles northeast",
     preferred: false,
-    note: "Often kind to the budget. Train or rideshare into D.C., then Metro to Foggy Bottom–GWU. Plan extra time on Saturday morning.",
+    note: "Often kind to the budget. Train or rideshare into D.C., then Metro to Foggy Bottom–GWU. Plan extra time on Saturday.",
   },
 ] as const;
 
@@ -786,14 +786,14 @@ const dcStayValue = [
   },
   {
     name: "Georgetown or Dupont Circle",
-    detail: "Livelier evenings; short Metro or rideshare to Washington Cir in the morning.",
+    detail: "Livelier evenings; short Metro or rideshare to Washington Cir before 2PM.",
   },
 ] as const;
 
 const dcTransit = [
   {
     title: "Metro",
-    body: "Ride Blue, Orange, or Silver to Foggy Bottom–GWU. Exit toward campus / Washington Circle — the start is a short walk. Saturday morning trains are usually calm if you leave a buffer.",
+    body: "Ride Blue, Orange, or Silver to Foggy Bottom–GWU. Exit toward campus / Washington Circle — the start is a short walk. Leave a buffer so you are at the circle before 2PM.",
   },
   {
     title: "On foot",
@@ -801,7 +801,7 @@ const dcTransit = [
   },
   {
     title: "Rideshare",
-    body: "Uber and Lyft drop near Washington Cir NW. Pin the circle, not the Lincoln Memorial or the Capitol. Expect slower traffic as the city wakes up; leave early.",
+    body: "Uber and Lyft drop near Washington Cir NW. Pin the circle, not the Lincoln Memorial or the Capitol. Expect slower traffic around the event; leave early.",
   },
 ] as const;
 
